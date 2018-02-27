@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- $Id: bootstrap.xml.in 10856 2014-08-14 11:21:45Z laszlo $ -->
+
+<!-- note : currently we have 2 path replacements in the DOCTYPE.  for the future
+     the plan is to try (somehow) to reduce this to 1, so there is only 1 replacement
+     done at build time -->
+
+<!DOCTYPE bootstrap SYSTEM '@CONFIGDIR@/ShineGeneral.dtd' [
+  <!ENTITY standardStaticDetConfig SYSTEM '@CONFIGDIR@/standardStaticDetConfig.xml'>
+]>
+
+
+<bootstrap
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:xlink="http://cern.ch/na61/schema/types"
+   xsi:noNamespaceSchemaLocation='[SCHEMAPATH]/bootstrap.xsd'>
+
+  <schemaPathReplacements>
+    <replace old="[CONFIGDIR]" new="&configDir;"/>
+    <replace old="[SCHEMAPATH]" new="&configDir;"/>
+    <replace old="[SCHEMAPATH_IMPORTS]" new="&configDir;"/>
+    <replace old="[DATADIR]" new="&dataDir;"/>
+  </schemaPathReplacements>
+
+  &standardStaticDetConfig;
+
+  <centralConfig>
+
+    <!-- This link points to the module sequencing file.  The id is used by the
+         RunManager to look up the sequence file, so you shouldn't change it.
+         To use an alternative sequence, change the filename in xlink:href -->
+
+    <configLink
+      id         = "ModuleSequence"
+      xlink:href = "./ModuleSequence.xml"/>
+
+    <configLink
+      id         = "DSInterface"
+      xlink:href = "&configDir;/DSInterface.xml"/>
+
+    <configLink
+      id         = "EventFileReader"
+      xlink:href = "./EventFileReader.xml"/>
+
+    <configLink
+      id         = "EventSelectorSG"
+      xlink:href = "./EventSelectorSG.xml"/>
+
+    <configLink
+      id         = "TPCPhaseShiftCalibratorAL"
+      xlink:href = "&configDir;/TPCPhaseShiftCalibratorAL.xml"/>
+
+    <configLink
+      id         = "MHTDCCalibratorAL"
+      xlink:href = "&configDir;/MHTDCCalibratorAL.xml"/>
+
+  </centralConfig>
+
+</bootstrap>

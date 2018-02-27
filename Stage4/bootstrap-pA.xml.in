@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE bootstrap SYSTEM "@CONFIGDIR@/ShineGeneral.dtd" [
+  <!ENTITY standardIdealDetConfig SYSTEM '@SHINEDBDIR@/detConfig/16_901/standardIdealDetConfig.xml'>
+  <!ENTITY setupLegacy '@SHINEDBDIR@/detConfig/16_901/SetupLegacy.xml'>
+]>
+
+<bootstrap
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xlink="http://cern.ch/na61/schema/types"
+  xsi:noNamespaceSchemaLocation='[SCHEMAPATH]/bootstrap.xsd'>
+
+  <schemaPathReplacements>
+    <replace old="[CONFIGDIR]" new="&configDir;"/>
+    <replace old="[SCHEMAPATH]" new="&schemaDir;"/>
+    <replace old="[SCHEMAPATH_IMPORTS]" new="&schemaDir;"/>
+    <replace old="[DATADIR]" new="&dataDir;"/>
+  </schemaPathReplacements>
+
+  &standardIdealDetConfig;
+  &standardLegacyClientConfig;
+
+ <centralConfig>
+
+    <configLink
+      id         = "ModuleSequence"
+      xlink:href = "./ModuleSequence.xml"/>
+
+    <configLink
+      id         = "EventFileReader"
+      xlink:href = "./EventFileReader.xml"/>
+
+    <!--<configLink
+      id         = "ShineFileExporter"
+      xlink:href = "./ShineFileExporter.xml"/>-->
+
+    <configLink
+      id         = "SetupLegacy"
+      xlink:href = "&setupLegacy;"/>
+
+    <configLink
+      id         = "EventSelectorSG"
+      xlink:href = "./EventSelectorSG.xml"/>
+
+    <configLink
+      id         = "DriftVelocityFromTOFPK"
+      xlink:href = "&configDir;/DriftVelocityFromTOFPK.xml"/>
+
+  </centralConfig>
+
+</bootstrap>

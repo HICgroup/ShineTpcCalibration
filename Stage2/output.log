@@ -1,0 +1,3554 @@
+
+------ Shared Memory Limits --------
+max number of segments = 4096
+max seg size (kbytes) = 67108864
+max total shared memory (kbytes) = 17179869184
+min seg size (bytes) = 1
+
+------ Semaphore Limits --------
+max number of arrays = 128
+max semaphores per array = 250
+max semaphores system wide = 32000
+max ops per semop call = 32
+semaphore max value = 32767
+
+------ Messages: Limits --------
+max queues system wide = 32768
+max size of message (bytes) = 65536
+default max size of queue (bytes) = 65536
+
+[INFO] Tools/Main/ShineOfflineMain.cc:139: main: 
+              _     _
+          ___| |__ (_)_ __   ___
+         / __| '_ \| | '_ \ / _ \
+         \__ \ | | | | | | |  __/
+         |___/_| |_|_|_| |_|\___|
+
+ Shine Offline Framework v1r7p0-svn_trunk
+ based on NIM A 580 (2007) 1485.
+ home page: https://twiki.cern.ch/twiki/bin/view/NA61/SHINEOfflineHome
+ SVN revision number: 13001M
+ bug reports to: https://its.cern.ch/jira/browse/SHINEJIRA
+ ____________________________________________________
+
+[WARN] Framework/CentralConfig/CentralConfig.cc:651: CheckFingerprints: No configuration-time MD5 fingerprint found for the following configuration files. Checking the validity of these configuration files is impossible.
+  - BPDGeometryXMLManager
+  - DManagerRegisterConfig
+  - GasBagStatusXMLManager
+  - MHTDCCalibrationXMLManager
+  - PSDCalibXMLManager
+  - SetupLegacy
+  - TOFAlignmentGeometryXMLManager
+  - TOFInternalGeometryXMLManager
+  - TPCAlignmentGeometryXMLManager
+  - TPCChamberT0XMLManager
+  - TPCChargeLossCorrectionXMLManager
+  - TPCDriftVelocityDCSDumpManager
+  - TPCGlobalT0XMLManager
+  - TPCPadGainXMLManager
+  - TPCPadGeometryXMLManager
+  - TPCPadT0XMLManager
+  - TPCPhaseCalibrationXMLManager
+  - TPCSlowControlDCSDumpManager
+  - TargetConfigXMLManager
+  - TriggerChannelConfig
+
+[WARN] Framework/CentralConfig/CentralConfig.cc:682: CheckFingerprints: Incorrect MD5 fingerprints were found for the following configuration files. This implies this configuration file has been altered.
+  - EventSelectorSG
+  - TOFStatusXMLManager
+
+[INFO] Legacy/Clients/DSHACKServerLauncherSG/DSHACKServerLauncherSG.cc:32: Init: Version: Unknown.
+Starting server pparfeno_22734_lxplus013
+DSPACK 1.602,  1 Aug 2007    (DSInterface, server: pparfeno_22734_lxplus013)
+[INFO] Modules/General/EventFileReaderSG/EventFileReader.cc:100: Init: continueOnException 0
+[INFO] Legacy/Clients/ClientInitializerSG/ClientInitializerSG.cc:66: Init: Version: 11189.
+[INFO] Legacy/SetupLegacy/SetupLegacy.cc:99: Update: Keys gotten from HepDB for global key 16_002:
+CA = V15C
+CC = RU09
+CE = RU09.V09B
+DX = cal_def_v12
+GE = RU16.V16A
+VD = V15C
+
+[INFO] Legacy/SetupLegacy/SetupLegacy.cc:108: Update: Keys specified by User:
+CA = default
+CC = default
+CE = default
+DX = default
+GE = default
+MF = default
+MS = default
+PP = default
+SI = default
+TF = default
+TG = default
+TL = default
+TR = default
+VD = V16A
+
+[INFO] Legacy/SetupLegacy/SetupLegacy.cc:115: Update: Final keys:
+CA = V15C
+CC = RU09
+CE = RU09.V09B
+DX = cal_def_v12
+GE = RU16.V16A
+VD = V16A
+
+[WARN] Legacy/SetupLegacy/SetupLegacy.cc:151: FilterOutKeys: CC key extracted from the list!
+CC = RU09
+[WARN] Legacy/SetupLegacy/SetupLegacy.cc:161: FilterOutKeys: VD key extracted from the list!
+VD = V16A
+[WARN] Legacy/SetupLegacy/SetupLegacy.cc:171: FilterOutKeys: DX key extracted from the list!
+DX = cal_def_v12
+VDINIT: /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A
+EDISTO: /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/CLIENTS/EDISTO
+MTRAC: /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/CLIENTS/MTPC/STIRN/init
+Calibration definition file: cal_def_v12
+[INFO] Modules/Analysis/EventSelectorSG/EventSelectorSG.cc:133: Init:  Version: 10693
+	 * doEventHeaderFiltering = 1
+	 * target = any
+	 * triggerId,triggerType = T2,all
+	 * timeStructureCutOnS11UsingWFA = 1
+	 * timeStructureCutOnT4UsingWFA = 1
+	 * timeStructureCutOnS11UsingMHTDC = 0
+	 * timeStructureCutOnT4UsingMHTDC = 0
+	 * bpdTrackQuality = any
+	 * doMainVertexPresenceFiltering = 0
+	 * mainVertexZCut = 0
+	 * thinning = 1
+	 * controlHistogramsFileName = 
+
+[INFO] Modules/Calibration/DriftVelocityFromTOFPK/DriftVelocityFromTOFPK.cc:86: Init:  Version: 11599
+	 * nMinVTPC1Clusters = 20
+	 * nMinVTPC2Clusters = 20
+	 * nMinMTPCLClusters = 40
+	 * nMinMTPCRClusters = 40
+	 * nMinGTPCClusters = 5
+	 * localXLeftMarginGTPCBeamSpot = -2 cm
+	 * localXRightMarginGTPCBeamSpot = 7 cm
+	 * timeOfFlightMin = 44 nanosecond
+	 * timeOfFlightMax = 53 nanosecond
+	 * normalizedChargeMin = 0.7
+	 * normalizedChargeMax = 1.7
+	 * trackMatchOutputFileName = trackMatchDump.root
+
+[INFO] EventIO/BOS/BOSEventFile.cc:355: ReadRunHeader:  run 26056
+
+ pedestal: no
+ trigger type: main trigger
+ inhibit: 35
+ delays: 4381 50388
+ trigger settings:
+   +------+--------+----+----+----+----+
+   | slot | source | T1 | T2 | T3 | T4 |
+   +------+--------+----+----+----+----+
+   |prscl |   --   |  0 |4095|4095|4095|
+   |   0  |   S1   | 1/0| 1/0| 1/0| 1/0|
+   |   1  |   S2   | 1/0| 0/0| 0/0| 0/0|
+   |   2  |   S3   | 0/0| 0/0| 0/0| 0/0|
+   |   3  |   S4   | 0/0| 0/0| 0/0| 0/0|
+   |   4  |   V0   | 0/0| 0/0| 0/0| 0/0|
+   |   5  |   V1   | 1/1| 0/0| 1/1| 0/0|
+   |   8  |   THC  | 0/0| 0/0| 0/0| 0/0|
+   |   9  |   Ced  | 0/0| 0/0| 0/0| 0/0|
+   |  10  |   Ced  | 0/0| 0/0| 0/0| 0/0|
+   |  11  |   Ced  | 0/0| 0/0| 0/0| 0/0|
+   |  12  |   S5   | 0/0| 0/0| 0/0| 0/0|
+   |  13  |   S1_  | 0/0| 1/0| 0/0| 1/0|
+   |  14  |   PSD  | 0/0| 1/1| 0/0| 0/0|
+   +------+--------+----+----+----+----+
+                  (1st=enable, 2nd=veto)
+
+[INFO] EventIO/BOS/BOSEventFile.cc:200: Read: 
+  ============================================
+  event 1, run 26056, tape 0, exp 61, spill 2
+  2016-11-17T16:40:02Z (UTC), 1163436019 (GPS), Unix:1479400802s
+  calib mode: 0 calib events: 0
+  is pedestal event: 0
+  ============================================
+
+
+[WARN] Framework/Managers/Interface/VManager.cc:25: Init: Attempt to initialize an already initialized manager 'G4MaterialFixedManager' with configLink 'G4MaterialFixedManager'!
+[INFO] Framework/Managers/PSD/PSDCalibXMLManager.cc:49: Init: PSD calibration file dir: /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/Shine/detConfig/allyears_latest
+[INFO] Framework/Detector/Detector.cc:68: Detector: Config file for list of Managers: /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/Shine/detConfig/ManagerConfig/V14C/DManagerRegisterConfig.xml
+[INFO] Framework/Detector/Detector.cc:101: Update: to time 2016-11-17T16:40:02Z (UTC), 1163436019 (GPS), Unix:1479400802s and run 26056
+channel MT scaler all at pos 24 24
+channel MT scaler gtd at pos 25 24
+channel T1 scaler all at pos 26 24
+channel T1 scaler gtd at pos 27 24
+channel T2 scaler all at pos 28 24
+channel T2 scaler gtd at pos 29 24
+channel T3 scaler all at pos 30 24
+channel T3 scaler gtd at pos 31 24
+channel T4 scaler all at pos 32 24
+channel T4 scaler gtd at pos 33 24
+channel MT scaler gtd2 at pos 36 24
+channel T1 scaler gtd2 at pos 37 24
+channel T2 scaler gtd2 at pos 38 24
+channel T3 scaler gtd2 at pos 39 24
+channel T4 scaler gtd2 at pos 40 24
+channel nimBeam scaler gtd at pos 45 24
+channel nimBeamPID scaler gtd at pos 46 24
+channel nimInt scaler gtd at pos 47 24
+channel S1 ADC all at pos 48 10
+channel S2 ADC all at pos 49 10
+channel S3 ADC all at pos 50 10
+channel S4 ADC all at pos 51 10
+channel V0 ADC all at pos 52 10
+channel V1 ADC all at pos 53 10
+channel V1p ADC all at pos 54 10
+channel C1 ADC all at pos 56 10
+channel S5 ADC all at pos 57 10
+channel S1_1 ADC all at pos 60 10
+channel S1_2 ADC all at pos 61 10
+channel S1_3 ADC all at pos 62 10
+channel S1_4 ADC all at pos 63 10
+channel Zdet_sum ADC all at pos 67 10
+channel Zdet_1 ADC all at pos 68 10
+channel Zdet_2 ADC all at pos 69 10
+channel Zdet_sum_del ADC all at pos 70 10
+channel PSD ADC all at pos 71 11
+channel tpcPhase TDC all at pos 96 12
+channel S1_2 TDC all at pos 104 12
+channel S1_3 TDC all at pos 105 12
+channel S1_4 TDC all at pos 106 12
+channel S2 TDC all at pos 107 12
+[WARN] Framework/Managers/DAQ/MHTDCCalibrationFixedManager.cc:62: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed MHTDCCalibrationFactors value from           !!!
+!!! MHTDCCalibrationFixedManager.                              !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+[INFO] Framework/Managers/PSD/PSDStaticInfoXMLManager.cc:119: GenericGetData: Hardware generation found: 2
+[INFO] Framework/Managers/PSD/PSDStaticInfoXMLManager.cc:179: GenericGetData: PSD config found!
+[INFO] Framework/Managers/PSD/PSDStaticInfoXMLManager.cc:180: GenericGetData: PSD center X = 13
+[INFO] Framework/Managers/PSD/PSDStaticInfoXMLManager.cc:181: GenericGetData: PSD center Y = -1
+[INFO] Framework/Managers/PSD/PSDStaticInfoXMLManager.cc:182: GenericGetData: PSD center Z = 1189.0699999999999
+[INFO] Framework/Managers/PSD/PSDStaticInfoXMLManager.cc:184: GenericGetData: PSD short module type = 0
+[WARN] Framework/Managers/PSD/PSDGeometryFixedManager.cc:49: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed psdModule geometry                        !!!
+!!!    from PSDModuleGeometryFixedManager.                   !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+[WARN] EventIO/BOS/BOSToBPD.cc:130: BOSToBPD: BPD bos bank (CAMC bank 5) malformed: length=1 (should be 193), first word= 234 (should be 32768), however it is a known problem for the first 2 events of each run.
+[INFO] Modules/General/EventFileReaderSG/EventFileReader.cc:181: Process: Switched to file 'Input/run-026056x000.raw'.
+[INFO] Modules/General/EventFileReaderSG/EventFileReader.cc:198: Process: run = 26056, event = '1'
+[INFO] Legacy/Clients/ClientInitializerSG/ClientInitializerSG.cc:287: Process: Version: 11189, Run: 26056, Event: 1.
+[WARN] Legacy/Clients/ClientInitializerSG/ClientInitializerSG.cc:292: Process: Skip malformed event !!!
+[INFO] Framework/RunController/RunController.cc:420: DoNextInSequence: Received ContinueLoop instruction from module 'ClientInitializerSG'.
+[INFO] EventIO/BOS/BOSEventFile.cc:200: Read: 
+  ============================================
+  event 2, run 26056, tape 0, exp 61, spill 2
+  2016-11-17T16:40:02Z (UTC), 1163436019 (GPS), Unix:1479400802s
+  calib mode: 0 calib events: 0
+  is pedestal event: 0
+  ============================================
+
+
+[WARN] EventIO/BOS/BOSToBPD.cc:130: BOSToBPD: BPD bos bank (CAMC bank 5) malformed: length=192 (should be 193), first word= 32768 (should be 32768), however it is a known problem for the first 2 events of each run.
+[INFO] Modules/General/EventFileReaderSG/EventFileReader.cc:198: Process: run = 26056, event = '2'
+[INFO] Legacy/Clients/ClientInitializerSG/ClientInitializerSG.cc:287: Process: Version: 11189, Run: 26056, Event: 2.
+[WARN] Legacy/Clients/ClientInitializerSG/ClientInitializerSG.cc:292: Process: Skip malformed event !!!
+[INFO] Framework/RunController/RunController.cc:420: DoNextInSequence: Received ContinueLoop instruction from module 'ClientInitializerSG'.
+[INFO] EventIO/BOS/BOSEventFile.cc:200: Read: 
+  ============================================
+  event 3, run 26056, tape 0, exp 61, spill 2
+  2016-11-17T16:40:02Z (UTC), 1163436019 (GPS), Unix:1479400802s
+  calib mode: 0 calib events: 0
+  is pedestal event: 0
+  ============================================
+
+
+[INFO] Modules/General/EventFileReaderSG/EventFileReader.cc:198: Process: run = 26056, event = '3'
+[INFO] Legacy/Clients/ClientInitializerSG/ClientInitializerSG.cc:287: Process: Version: 11189, Run: 26056, Event: 3.
+[INFO] Legacy/SetupLegacy/SetupLegacy.cc:186: LoadCalibration: Looking for calibration files... Run: 26056
+[INFO] Legacy/SetupLegacy/SetupLegacy.cc:205: LoadCalibration: Init file list:
+/afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/init/init_new_up_p+p.ds
+/afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/TL/init/calib07l.ds
+/afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/TR/init/calib07r.ds
+
+[INFO] Framework/Detector/MagneticField/MagneticField.cc:418: Update: field id=0
+[INFO] Framework/Detector/MagneticField/MagneticField.cc:419: Update: loading /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/MF/off.root
+[INFO] Framework/Detector/MagneticField/MagneticField.cc:439: Update: Magnetic field header:
+ version : 1.1
+ date    : 311094
+ type    : CALC/000+
+ polarity: 1
+ scale   : 0.99783 1.0225
+ comment : 
+[INFO] Framework/Detector/MagneticField/MagneticField.cc:444: Update: 
+ original field map will be scaled by 1 (VTX1) and 1 (VTX2)
+[INFO] Legacy/SetupLegacy/SetupLegacy.cc:254: LoadCalibration: Field id: 0
+[INFO] Legacy/SetupLegacy/SetupLegacy.cc:255: LoadCalibration: Loading magnetic field: /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/MF/off.ds
+[INFO] Legacy/SetupLegacy/SetupLegacy.cc:287: LoadCalibration: Load files:
+/afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/CA/ru15-v15c-20490-30000.ds
+/afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/CE/ru09-v09b-7124-20000.ds
+/afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/GE/ru16-v16a-23464-30000.ds
+
+[INFO] Framework/Detector/TPC/TPC.cc:42: Update: TPC Update was called! This may take a while...
+[WARN] Framework/Managers/TPC/TPCPhaseCalibrationFixedManager.cc:62: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed TPCPhaseCalibrationFactors value from        !!!
+!!! TPCPhaseCalibrationFixedManager.                           !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+[WARN] Framework/Managers/DCS/TPCDriftVelocityDCSDumpManager.cc:77: GenericGetData: 
+!!! Getting uncalibrated driftVelocity value from TPCDriftVelocityDCSDumpManager. Please make sure that this is intentional. !!!
+    (TPC:VTPC1, fileName=/afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/Shine/TPC/DriftVelocity/Nominal/V16A/VTPC1.txt)
+
+[WARN] Framework/Managers/TPC/TPCChargeLossCorrectionFixedManager.cc:69: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed chargeLossCorrection value from              !!!
+!!! TPCChargeLossCorrectionFixedManager.                       !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (VTPC1)
+
+[WARN] Framework/Managers/DCS/TPCDriftVelocityDCSDumpManager.cc:77: GenericGetData: 
+!!! Getting uncalibrated driftVelocity value from TPCDriftVelocityDCSDumpManager. Please make sure that this is intentional. !!!
+    (TPC:VTPC2, fileName=/afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/Shine/TPC/DriftVelocity/Nominal/V16A/VTPC2.txt)
+
+[WARN] Framework/Managers/TPC/TPCChargeLossCorrectionFixedManager.cc:69: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed chargeLossCorrection value from              !!!
+!!! TPCChargeLossCorrectionFixedManager.                       !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (VTPC2)
+
+[WARN] Framework/Managers/DCS/TPCDriftVelocityDCSDumpManager.cc:77: GenericGetData: 
+!!! Getting uncalibrated driftVelocity value from TPCDriftVelocityDCSDumpManager. Please make sure that this is intentional. !!!
+    (TPC:MTPCL, fileName=/afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/Shine/TPC/DriftVelocity/Nominal/V16A/MTPCL.txt)
+
+[WARN] Framework/Managers/TPC/TPCChargeLossCorrectionFixedManager.cc:69: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed chargeLossCorrection value from              !!!
+!!! TPCChargeLossCorrectionFixedManager.                       !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (MTPCL)
+
+[WARN] Framework/Managers/DCS/TPCDriftVelocityDCSDumpManager.cc:77: GenericGetData: 
+!!! Getting uncalibrated driftVelocity value from TPCDriftVelocityDCSDumpManager. Please make sure that this is intentional. !!!
+    (TPC:MTPCR, fileName=/afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/Shine/TPC/DriftVelocity/Nominal/V16A/MTPCR.txt)
+
+[WARN] Framework/Managers/TPC/TPCChargeLossCorrectionFixedManager.cc:69: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed chargeLossCorrection value from              !!!
+!!! TPCChargeLossCorrectionFixedManager.                       !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (MTPCR)
+
+[WARN] Framework/Managers/DCS/TPCDriftVelocityDCSDumpManager.cc:77: GenericGetData: 
+!!! Getting uncalibrated driftVelocity value from TPCDriftVelocityDCSDumpManager. Please make sure that this is intentional. !!!
+    (TPC:GTPC, fileName=/afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/Shine/TPC/DriftVelocity/Nominal/V16A/GTPC.txt)
+
+[WARN] Framework/Managers/TPC/TPCChargeLossCorrectionFixedManager.cc:69: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed chargeLossCorrection value from              !!!
+!!! TPCChargeLossCorrectionFixedManager.                       !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (GTPC)
+
+[WARN] Framework/Managers/TPC/TPCDriftVelocityFixedManager.cc:77: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed driftVelocity value from                     !!!
+!!! TPCDriftVelocityFixedManager.                              !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (TPC:LMPDJD, driftVelocity=0.89cm/us)
+
+[WARN] Framework/Managers/DCS/TPCSlowControlFixedManager.cc:104: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed normalizedDriftVelocity value from           !!!
+!!! TPCSlowControlFixedManager.                                !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (LMPDJD)
+
+[WARN] Framework/Managers/DCS/TPCSlowControlFixedManager.cc:140: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed temperature value from                       !!!
+!!! TPCSlowControlFixedManager.                                !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (LMPDJD)
+
+[WARN] Framework/Managers/DCS/TPCSlowControlFixedManager.cc:122: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed highVoltage value from                       !!!
+!!! TPCSlowControlFixedManager.                                !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (LMPDJD)
+
+[WARN] Framework/Managers/DCS/TPCSlowControlFixedManager.cc:172: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed electricFieldData value from                 !!!
+!!! TPCSlowControlFixedManager.                                !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (LMPDJD)
+
+[WARN] Framework/Managers/TPC/TPCChargeLossCorrectionFixedManager.cc:69: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed chargeLossCorrection value from              !!!
+!!! TPCChargeLossCorrectionFixedManager.                       !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (LMPDJD)
+
+[WARN] Framework/Managers/TPC/TPCDriftVelocityFixedManager.cc:77: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed driftVelocity value from                     !!!
+!!! TPCDriftVelocityFixedManager.                              !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (TPC:LMPDJU, driftVelocity=0.89cm/us)
+
+[WARN] Framework/Managers/DCS/TPCSlowControlFixedManager.cc:104: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed normalizedDriftVelocity value from           !!!
+!!! TPCSlowControlFixedManager.                                !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (LMPDJU)
+
+[WARN] Framework/Managers/DCS/TPCSlowControlFixedManager.cc:140: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed temperature value from                       !!!
+!!! TPCSlowControlFixedManager.                                !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (LMPDJU)
+
+[WARN] Framework/Managers/DCS/TPCSlowControlFixedManager.cc:122: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed highVoltage value from                       !!!
+!!! TPCSlowControlFixedManager.                                !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (LMPDJU)
+
+[WARN] Framework/Managers/DCS/TPCSlowControlFixedManager.cc:172: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed electricFieldData value from                 !!!
+!!! TPCSlowControlFixedManager.                                !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (LMPDJU)
+
+[WARN] Framework/Managers/TPC/TPCChargeLossCorrectionFixedManager.cc:69: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed chargeLossCorrection value from              !!!
+!!! TPCChargeLossCorrectionFixedManager.                       !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (LMPDJU)
+
+[WARN] Framework/Managers/TPC/TPCDriftVelocityFixedManager.cc:77: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed driftVelocity value from                     !!!
+!!! TPCDriftVelocityFixedManager.                              !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (TPC:LMPDSU, driftVelocity=0.89cm/us)
+
+[WARN] Framework/Managers/DCS/TPCSlowControlFixedManager.cc:104: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed normalizedDriftVelocity value from           !!!
+!!! TPCSlowControlFixedManager.                                !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (LMPDSU)
+
+[WARN] Framework/Managers/DCS/TPCSlowControlFixedManager.cc:140: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed temperature value from                       !!!
+!!! TPCSlowControlFixedManager.                                !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (LMPDSU)
+
+[WARN] Framework/Managers/DCS/TPCSlowControlFixedManager.cc:122: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed highVoltage value from                       !!!
+!!! TPCSlowControlFixedManager.                                !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (LMPDSU)
+
+[WARN] Framework/Managers/DCS/TPCSlowControlFixedManager.cc:172: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed electricFieldData value from                 !!!
+!!! TPCSlowControlFixedManager.                                !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (LMPDSU)
+
+[WARN] Framework/Managers/TPC/TPCChargeLossCorrectionFixedManager.cc:69: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed chargeLossCorrection value from              !!!
+!!! TPCChargeLossCorrectionFixedManager.                       !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (LMPDSU)
+
+[WARN] Framework/Managers/TPC/TPCDriftVelocityFixedManager.cc:77: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed driftVelocity value from                     !!!
+!!! TPCDriftVelocityFixedManager.                              !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (TPC:LMPDSD, driftVelocity=0.89cm/us)
+
+[WARN] Framework/Managers/DCS/TPCSlowControlFixedManager.cc:104: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed normalizedDriftVelocity value from           !!!
+!!! TPCSlowControlFixedManager.                                !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (LMPDSD)
+
+[WARN] Framework/Managers/DCS/TPCSlowControlFixedManager.cc:140: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed temperature value from                       !!!
+!!! TPCSlowControlFixedManager.                                !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (LMPDSD)
+
+[WARN] Framework/Managers/DCS/TPCSlowControlFixedManager.cc:122: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed highVoltage value from                       !!!
+!!! TPCSlowControlFixedManager.                                !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (LMPDSD)
+
+[WARN] Framework/Managers/DCS/TPCSlowControlFixedManager.cc:172: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed electricFieldData value from                 !!!
+!!! TPCSlowControlFixedManager.                                !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (LMPDSD)
+
+[WARN] Framework/Managers/TPC/TPCChargeLossCorrectionFixedManager.cc:69: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed chargeLossCorrection value from              !!!
+!!! TPCChargeLossCorrectionFixedManager.                       !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (LMPDSD)
+
+[WARN] Framework/Managers/TPC/TPCDriftVelocityFixedManager.cc:77: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed driftVelocity value from                     !!!
+!!! TPCDriftVelocityFixedManager.                              !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (TPC:LMPDP, driftVelocity=0.89cm/us)
+
+[WARN] Framework/Managers/DCS/TPCSlowControlFixedManager.cc:104: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed normalizedDriftVelocity value from           !!!
+!!! TPCSlowControlFixedManager.                                !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (LMPDP)
+
+[WARN] Framework/Managers/DCS/TPCSlowControlFixedManager.cc:140: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed temperature value from                       !!!
+!!! TPCSlowControlFixedManager.                                !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (LMPDP)
+
+[WARN] Framework/Managers/DCS/TPCSlowControlFixedManager.cc:122: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed highVoltage value from                       !!!
+!!! TPCSlowControlFixedManager.                                !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (LMPDP)
+
+[WARN] Framework/Managers/DCS/TPCSlowControlFixedManager.cc:172: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed electricFieldData value from                 !!!
+!!! TPCSlowControlFixedManager.                                !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (LMPDP)
+
+[WARN] Framework/Managers/TPC/TPCChargeLossCorrectionFixedManager.cc:69: GenericGetData: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Getting fixed chargeLossCorrection value from              !!!
+!!! TPCChargeLossCorrectionFixedManager.                       !!!
+!!! Please make sure that this is intentional.                 !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (LMPDP)
+
+Info in <TGeoManager::TGeoManager>: Geometry Geometry, default geometry created
+[WARN] Framework/Detector/TPC/TPCChamber.cc:553: UpdateShapes: Not building shape for TPC chamber 'LMPDJD'
+[WARN] Framework/Detector/TPC/TPCChamber.cc:553: UpdateShapes: Not building shape for TPC chamber 'LMPDJU'
+[WARN] Framework/Detector/TPC/TPCChamber.cc:553: UpdateShapes: Not building shape for TPC chamber 'LMPDSU'
+[WARN] Framework/Detector/TPC/TPCChamber.cc:553: UpdateShapes: Not building shape for TPC chamber 'LMPDSD'
+[WARN] Framework/Detector/TPC/TPCChamber.cc:553: UpdateShapes: Not building shape for TPC chamber 'LMPDP'
+[INFO] Legacy/Clients/MINICLIENTS/MiniModuleSG.cc:74: Process: Executing: "mini many -s ${DSPACK_SERVER}"
+DSPACK 1.602,  1 Aug 2007    (mini_many, server: pparfeno_22734_lxplus013)
+ BPD ADCs pedestals extracted.
+ Trigger crate ADC pedestals extracted.
+
+  warning *** no ZF-corrections found, run number outside given limits 
+ adc-values: 0 0 0  215.6  1.000 -215.6     0.0 
+ adc-values: 0 1 0  214.6  1.000 -214.6     0.0 
+ adc-values: 0 2 0  240.4  1.000 -240.4     0.0 
+ adc-values: 0 3 0  202.5  1.000 -202.5     0.0 
+ adc-values: 0 4 22  232.6  1.000 -210.6     0.0 
+ adc-values: 0 5 14  243.3  1.000 -229.3     0.0 
+ adc-values: 0 6 0  214.8  1.000 -214.8     0.0 
+ adc-values: 0 7 7  220.5  1.000 -213.5     0.0 
+ adc-values: 0 8 120  220.6  1.000 -100.6     0.0 
+ adc-values: 0 9 482  231.2  1.000  250.8   250.8 
+ adc-values: 0 10 1506  241.0  1.000 1265.0  1515.8 
+ adc-values: 0 11 1316  238.3  1.000 1077.7  2593.5 
+ adc-values: 0 12 1580  246.4  1.000 1333.6  3927.1 
+ adc-values: 0 13 739  229.2  1.000  509.8  4436.9 
+ adc-values: 0 14 566  228.7  1.000  337.3  4774.2 
+ adc-values: 0 15 486  238.3  1.000  247.7  5021.9 
+ adc-values: 0 16 433  200.8  1.000  232.2  5254.1 
+ adc-values: 0 17 445  205.7  1.000  239.3  5493.4 
+ adc-values: 0 18 478  219.1  1.000  258.9  5752.3 
+ adc-values: 0 19 472  242.1  1.000  229.9  5982.2 
+ adc-values: 0 20 475  243.6  1.000  231.4  6213.6 
+ adc-values: 0 21 484  242.9  1.000  241.1  6454.7 
+ adc-values: 0 22 470  217.1  1.000  252.9  6707.6 
+ adc-values: 0 23 518  205.7  1.000  312.3  7019.9 
+
+ found peak ( 15) between 9 and 23 incl. 
+mean = 13.829200, rms = 4.077191, charge = 7019.9, width = 15
+bpd_cluster mean = 14.829200, rms = 4.077191, charge = 7020
+rri = 0.467722, rle = 0.832911
+ adc-values: 1 0 383  251.6  1.000  131.4   131.4 
+ adc-values: 1 1 322  249.5  1.000   72.5   203.9 
+ adc-values: 1 2 264  210.7  1.000   53.3   257.2 
+ adc-values: 1 3 264  208.5  1.000   55.5   312.7 
+ adc-values: 1 4 253  218.2  1.000   34.8   347.5 
+ adc-values: 1 5 293  225.3  1.000   67.7   415.2 
+ adc-values: 1 6 303  242.4  1.000   60.6   475.8 
+ adc-values: 1 7 283  223.7  1.000   59.3   535.1 
+ adc-values: 1 8 279  193.3  1.000   85.7   620.8 
+ adc-values: 1 9 230  203.4  1.000   26.6   647.4 
+ adc-values: 1 10 292  203.1  1.000   88.9   736.3 
+ adc-values: 1 11 386  213.5  1.000  172.5   908.8 
+ adc-values: 1 12 332  216.8  1.000  115.2  1024.0 
+ adc-values: 1 13 671  239.6  1.000  431.4  1455.4 
+ adc-values: 1 14 1266  234.8  1.000 1031.2  2486.6 
+ adc-values: 1 15 2422  215.9  1.000 2206.1  4692.7 
+ adc-values: 1 16 1718  227.5  1.000 1490.5  6183.2 
+ adc-values: 1 17 967  240.1  1.000  726.9  6910.1 
+ adc-values: 1 18 573  232.6  1.000  340.4  7250.5 
+ adc-values: 1 19 491  244.0  1.000  247.0  7497.5 
+ adc-values: 1 20 483  241.5  1.000  241.5  7739.0 
+ adc-values: 1 21 458  230.1  1.000  227.9  7966.9 
+ adc-values: 1 22 455  235.9  1.000  219.1  8186.0 
+ adc-values: 1 23 467  248.3  1.000  218.7  8404.7 
+
+ found peak ( 6) between 13 and 18 incl. 
+mean = 15.332691, rms = 1.237110, charge = 6226.5, width = 6
+bpd_cluster mean = 16.332691, rms = 1.237110, charge = 6227
+rri = 0.709331, rle = 0.522708
+ adc-values: 2 0 651  231.3  1.000  419.7   419.7 
+ adc-values: 2 1 373  223.1  1.000  149.9   569.6 
+ adc-values: 2 2 477  247.4  1.000  229.6   799.2 
+ adc-values: 2 3 318  226.0  1.000   92.0   891.2 
+ adc-values: 2 4 446  231.7  1.000  214.3  1105.5 
+ adc-values: 2 5 491  225.0  1.000  266.0  1371.5 
+ adc-values: 2 6 558  248.1  1.000  309.9  1681.4 
+ adc-values: 2 7 880  232.7  1.000  647.3  2328.7 
+ adc-values: 2 8 1544  240.0  1.000 1304.0  3632.7 
+ adc-values: 2 9 2348  219.3  1.000 2128.7  5761.4 
+ adc-values: 2 10 1242  238.8  1.000 1003.2  6764.6 
+ adc-values: 2 11 898  225.5  1.000  672.5  7437.1 
+ adc-values: 2 12 184  241.0  1.000  -57.0  7437.1 
+ adc-values: 2 13 303  218.8  1.000   84.2  7521.3 
+ adc-values: 2 14 324  219.6  1.000  104.4  7625.7 
+ adc-values: 2 15 371  247.6  1.000  123.4  7749.1 
+ adc-values: 2 16 418  252.1  1.000  165.9  7915.0 
+ adc-values: 2 17 345  220.9  1.000  124.1  8039.1 
+ adc-values: 2 18 351  240.9  1.000  110.1  8149.2 
+ adc-values: 2 19 353  244.8  1.000  108.2  8257.4 
+ adc-values: 2 20 180  228.8  1.000  -48.8  8257.4 
+ adc-values: 2 21 320  225.3  1.000   94.7  8352.1 
+ adc-values: 2 22 237  247.3  1.000  -10.3  8352.1 
+ adc-values: 2 23 309  224.0  1.000   85.0  8437.1 
+
+ found peak ( 5) between 7 and 11 incl. 
+mean = 8.956494, rms = 1.147251, charge = 5755.7, width = 5
+bpd_cluster mean = 9.956494, rms = 1.147251, charge = 5756
+rri = 0.528961, rle = 0.657581
+ adc-values: 3 0 584  256.5  1.000  327.5   327.5 
+ adc-values: 3 1 475  248.6  1.000  226.4   553.9 
+ adc-values: 3 2 520  248.9  1.000  271.1   825.0 
+ adc-values: 3 3 468  235.4  1.000  232.6  1057.6 
+ adc-values: 3 4 489  257.6  1.000  231.4  1289.0 
+ adc-values: 3 5 473  233.2  1.000  239.8  1528.8 
+ adc-values: 3 6 443  242.4  1.000  200.6  1729.4 
+ adc-values: 3 7 468  218.6  1.000  249.4  1978.8 
+ adc-values: 3 8 473  232.4  1.000  240.6  2219.4 
+ adc-values: 3 9 473  210.2  1.000  262.8  2482.2 
+ adc-values: 3 10 631  244.9  1.000  386.1  2868.3 
+ adc-values: 3 11 1023  226.2  1.000  796.8  3665.1 
+ adc-values: 3 12 2286  219.4  1.000 2066.6  5731.7 
+ adc-values: 3 13 2737  233.2  1.000 2503.8  8235.5 
+ adc-values: 3 14 1226  222.5  1.000 1003.5  9239.0 
+ adc-values: 3 15 733  212.7  1.000  520.3  9759.3 
+ adc-values: 3 16 575  224.6  1.000  350.4  10109.7 
+ adc-values: 3 17 552  224.2  1.000  327.8  10437.5 
+ adc-values: 3 18 514  219.2  1.000  294.8  10732.3 
+ adc-values: 3 19 524  239.6  1.000  284.4  11016.7 
+ adc-values: 3 20 529  238.3  1.000  290.7  11307.4 
+ adc-values: 3 21 531  235.8  1.000  295.2  11602.6 
+ adc-values: 3 22 559  241.0  1.000  318.0  11920.6 
+ adc-values: 3 23 645  229.4  1.000  415.6  12336.2 
+
+ found peak ( 6) between 10 and 15 incl. 
+mean = 12.618750, rms = 1.215729, charge = 7277.1, width = 6
+bpd_cluster mean = 13.618750, rms = 1.215729, charge = 7277
+rri = 0.447936, rle = 0.835221
+ adc-values: 4 0 438  244.1  1.000  193.9   193.9 
+ adc-values: 4 1 293  232.9  1.000   60.1   254.0 
+ adc-values: 4 2 246  225.5  1.000   20.5   274.5 
+ adc-values: 4 3 308  232.1  1.000   75.9   350.4 
+ adc-values: 4 4 332  231.2  1.000  100.8   451.2 
+ adc-values: 4 5 473  218.6  1.000  254.4   705.6 
+ adc-values: 4 6 881  227.4  1.000  653.6  1359.2 
+ adc-values: 4 7 2225  238.4  1.000 1986.6  3345.8 
+ adc-values: 4 8 1957  220.3  1.000 1736.7  5082.5 
+ adc-values: 4 9 942  242.8  1.000  699.2  5781.7 
+ adc-values: 4 10 421  224.3  1.000  196.7  5978.4 
+ adc-values: 4 11 421  226.7  1.000  194.3  6172.7 
+ adc-values: 4 12 0  214.4  1.000 -214.4  6172.7 
+ adc-values: 4 13 0  240.1  1.000 -240.1  6172.7 
+ adc-values: 4 14 0  223.8  1.000 -223.8  6172.7 
+ adc-values: 4 15 0  248.6  1.000 -248.6  6172.7 
+ adc-values: 4 16 2  238.5  1.000 -236.5  6172.7 
+ adc-values: 4 17 9  231.4  1.000 -222.4  6172.7 
+ adc-values: 4 18 0  228.3  1.000 -228.3  6172.7 
+ adc-values: 4 19 45  239.0  1.000 -194.0  6172.7 
+ adc-values: 4 20 0  240.6  1.000 -240.6  6172.7 
+ adc-values: 4 21 75  253.1  1.000 -178.1  6172.7 
+ adc-values: 4 22 60  263.9  1.000 -203.9  6172.7 
+ adc-values: 4 23 0  215.2  1.000 -215.2  6172.7 
+
+ found peak ( 4) between 6 and 9 incl. 
+mean = 7.488859, rms = 0.884809, charge = 5076.1, width = 4
+bpd_cluster mean = 8.488859, rms = 0.884809, charge = 5076
+rri = 0.879551, rle = 0.395955
+ adc-values: 5 0 89  224.7  1.000 -135.7     0.0 
+ adc-values: 5 1 191  228.8  1.000  -37.8     0.0 
+ adc-values: 5 2 82  211.3  1.000 -129.3     0.0 
+ adc-values: 5 3 242  247.0  1.000   -5.0     0.0 
+ adc-values: 5 4 151  227.9  1.000  -76.9     0.0 
+ adc-values: 5 5 162  221.5  1.000  -59.5     0.0 
+ adc-values: 5 6 213  255.5  1.000  -42.5     0.0 
+ adc-values: 5 7 230  225.9  1.000    4.1     4.1 
+ adc-values: 5 8 487  231.3  1.000  255.7   259.8 
+ adc-values: 5 9 1257  240.0  1.000 1017.0  1276.8 
+ adc-values: 5 10 2166  231.9  1.000 1934.1  3210.9 
+ adc-values: 5 11 1356  248.1  1.000 1107.9  4318.8 
+ adc-values: 5 12 0  206.7  1.000 -206.7  4318.8 
+ adc-values: 5 13 0  205.1  1.000 -205.1  4318.8 
+ adc-values: 5 14 0  244.0  1.000 -244.0  4318.8 
+ adc-values: 5 15 0  262.2  1.000 -262.2  4318.8 
+ adc-values: 5 16 0  261.0  1.000 -261.0  4318.8 
+ adc-values: 5 17 0  223.8  1.000 -223.8  4318.8 
+ adc-values: 5 18 0  235.6  1.000 -235.6  4318.8 
+ adc-values: 5 19 0  198.8  1.000 -198.8  4318.8 
+ adc-values: 5 20 0  240.3  1.000 -240.3  4318.8 
+ adc-values: 5 21 0  239.9  1.000 -239.9  4318.8 
+ adc-values: 5 22 0  255.7  1.000 -255.7  4318.8 
+ adc-values: 5 23 0  228.0  1.000 -228.0  4318.8 
+
+ found peak ( 3) between 9 and 11 incl. 
+mean = 10.022394, rms = 0.723194, charge = 4059.0, width = 3
+bpd_cluster mean = 11.022394, rms = 0.723194, charge = 4059
+rri = 0.626039, rle = 0.580332
+
+ center,pitch : 12.500000 0.200000 
+
+ 1: 0.580840
+
+ 2: 0.566538
+
+ 3: -0.368701
+
+ 4: 0.278750
+
+ 5: -0.622228
+
+ 6: 0.129479
+ VetoWC ADC pedestals extracted.
+ calc_vpc_gain is done: foundpeds = 1 
+
+ vpc_plane = 1 
+
+ HI_thresh(vpc_plane=1) = 100.0 
+ LO_thresh(vpc_plane=1) = 100.0 
+
+ found peak for vpc-plane 0 between 42 and 42 incl. h= 42   
+ mean = 42.00, rms =  0.72, charge =    104.3, width = 1  (42,42)  
+ found peak for vpc-plane 0 between 59 and 59 incl. h= 59   
+ mean = 59.00, rms =  0.72, charge =    127.6, width = 1  (59,59)  
+ search_vpc_cluster error(0) = 0 
+
+ vpc_plane = 2 
+
+ HI_thresh(vpc_plane=2) = 100.0 
+ LO_thresh(vpc_plane=2) = 100.0 
+
+ found peak for vpc-plane 0 between 42 and 42 incl. h= 42   
+ mean = 42.00, rms =  0.72, charge =    100.2, width = 1  (42,42)  
+ search_vpc_cluster error(1) = 0 
+
+ vpc_plane = 3 
+
+ HI_thresh(vpc_plane=3) = 100.0 
+ LO_thresh(vpc_plane=3) = 100.0 
+
+ found peak for vpc-plane 0 between 55 and 55 incl. h= 55   
+ mean = 55.00, rms =  0.72, charge =    105.2, width = 1  (55,55)  
+ search_vpc_cluster error(2) = 0 
+
+ vpc_plane = 4 
+
+ HI_thresh(vpc_plane=4) = 100.0 
+ LO_thresh(vpc_plane=4) = 100.0 
+
+ search_vpc_cluster error(3) = 0 
+ 
+ 
+ npts = 0 , npts1 = 0 , npts2 = 0 
+Unable to allocate vpc_point structure.
+WFA program ZF v1
+Status: Found PEDS BANK 7 - VetoWC ADC pedestals.
+[INFO] Legacy/Clients/DIPT_256_NEW/Dipt256NewModuleSG.cc:45: Process: Executing: "dipt_256 -s ${DSPACK_SERVER} -d 12 -e 12 -t 5 -c gme -C -p --256"
+DSPACK 1.602,  1 Aug 2007    (dipt_256, server: pparfeno_22734_lxplus013)
+ pad-calibrations will be done 
+forcing 256 timebin mode
+Called init_dipt with mask 3
+PADTRANS version from 20011006
+Calling get_db_y_values for detector 2 with name vt2 
+read T0 19.389, vdrift 1.44005 from the vt2 structure
+return from init_tpc
+Calling get_db_y_values for detector 1 with name vt1 
+read T0 18.354, vdrift 1.42285 from the vt1 structure
+return from init_tpc
+getting data from server - patience please...
+ got calib Tpc=2 pads=27648 from calib_vt2
+ allocating stuff...
+Now handling tpc 2
+................................................................................................................................................
+TPC 2: 0 clusters found
+
+TPC 2: 0 clusters recombined
+
+TPC 2: 0 clusters outside of tpc 
+getting data from server - patience please...
+ got calib Tpc=1 pads=27648 from calib_vt1
+ allocating stuff...
+Now handling tpc 1
+................................................................................................................................................
+TPC 1: 0 clusters found
+
+TPC 1: 0 clusters recombined
+
+TPC 1: 0 clusters outside of tpc 
+[INFO] Legacy/Clients/DIPT_256_NEW/Dipt256NewModuleSG.cc:45: Process: Executing: "dipt_256 -s ${DSPACK_SERVER} -d lr -t 5 -c gme -C -p --256"
+DSPACK 1.602,  1 Aug 2007    (dipt_256, server: pparfeno_22734_lxplus013)
+ pad-calibrations will be done 
+forcing 256 timebin mode
+Called init_dipt with mask c
+PADTRANS version from 20011006
+Calling get_db_y_values for detector 4 with name mtr 
+read T0 18.974, vdrift 2.3567 from the mtr structure
+return from init_tpc
+Calling get_db_y_values for detector 3 with name mtl 
+read T0 18.733, vdrift 2.33893 from the mtl structure
+return from init_tpc
+getting data from server - patience please...
+ got calib Tpc=4 pads=63360 from calib_mtr
+ allocating stuff...
+Now handling tpc 4
+..................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+TPC 4: 0 clusters found
+
+TPC 4: 0 clusters recombined
+
+TPC 4: 0 clusters outside of tpc 
+getting data from server - patience please...
+ got calib Tpc=3 pads=63360 from calib_mtl
+ allocating stuff...
+Now handling tpc 3
+..................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+TPC 3: 0 clusters found
+
+TPC 3: 0 clusters recombined
+
+TPC 3: 0 clusters outside of tpc 
+[INFO] Legacy/Clients/DIPT_256_NEW/Dipt256NewModuleSG.cc:45: Process: Executing: "dipt_256 -s ${DSPACK_SERVER} -d g -e g -t 5 -c gme -p -C --256"
+DSPACK 1.602,  1 Aug 2007    (dipt_256, server: pparfeno_22734_lxplus013)
+ pad-calibrations will be done 
+forcing 256 timebin mode
+Called init_dipt with mask 10
+PADTRANS version from 20011006
+Calling get_db_y_values for detector 5 with name gpc 
+read T0 20.48, vdrift 1.67308 from the gpc structure
+return from init_tpc
+getting data from server - patience please...
+ got calib Tpc=5 pads=672 from calib_gpc
+ allocating stuff...
+Now handling tpc 5
+.......
+TPC 5: 0 clusters found
+
+TPC 5: 0 clusters recombined
+
+TPC 5: 0 clusters outside of tpc 
+[INFO] Legacy/Clients/EDISTO/EdistoModuleSG.cc:59: Process: Executing: "edisto -s ${DSPACK_SERVER} -d vt1"
+TPC configuration 2 
+DSPACK 1.602,  1 Aug 2007    (edisto, server: pparfeno_22734_lxplus013)
+WARNING:	cant get point_vt1 (0)!
+0 points corrected
+0 points outside fieldcage volume
+[INFO] Legacy/Clients/DISTORT/VtNcalcModuleSG.cc:43: Process: Executing: "vt_ncalc -s ${DSPACK_SERVER} -d vt1"
+DSPACK 1.602,  1 Aug 2007    (vt_ncalc, server: pparfeno_22734_lxplus013)
+Error: VTPC1, point_vt1vt_ncalc_init arg: 1
+run   = 26056
+event = 3
+E_field: 999.900024
+Drift velocity from VTPC1 is: 1.422851 cm/us
+Electric field assigned: -195.4500 [V/cm]
+Drift velocity assigned: 1.422851 [cm/us]
+geom_vt1_p->y: 0.014234, geom_sec_vt1_p->y: 29.510000
+VTPC1: Frischgrid (EOP) = 29.5242 [cm]
+[INFO] Legacy/Clients/EDISTO/EdistoModuleSG.cc:59: Process: Executing: "edisto -s ${DSPACK_SERVER} -d vt2"
+TPC configuration 4 
+DSPACK 1.602,  1 Aug 2007    (edisto, server: pparfeno_22734_lxplus013)
+WARNING:	cant get point_vt2 (0)!
+0 points corrected
+0 points outside fieldcage volume
+[INFO] Legacy/Clients/DISTORT/VtNcalcModuleSG.cc:43: Process: Executing: "vt_ncalc -s ${DSPACK_SERVER} -d vt2"
+DSPACK 1.602,  1 Aug 2007    (vt_ncalc, server: pparfeno_22734_lxplus013)
+Error: VTPC2, point_vt2vt_ncalc_init arg: 2
+run   = 26056
+event = 3
+E_field: 999.900024
+Drift velocity from VTPC2 is: 1.440046 cm/us
+Electric field assigned: -196.3700 [V/cm]
+Drift velocity assigned: 1.440046 [cm/us]
+geom_vt2_p->y: -0.013129, geom_sec_vt2_p->y: 29.674999
+VTPC2: Frischgrid (EOP) = 29.6619 [cm]
+[INFO] Legacy/Clients/EDISTO/EdistoModuleSG.cc:59: Process: Executing: "edisto -s ${DSPACK_SERVER} -d mtl"
+TPC configuration 8 
+DSPACK 1.602,  1 Aug 2007    (edisto, server: pparfeno_22734_lxplus013)
+WARNING:	cant get point_mtl (0)!
+0 points corrected
+0 points outside fieldcage volume
+[INFO] Legacy/Clients/EDISTO/EdistoModuleSG.cc:59: Process: Executing: "edisto -s ${DSPACK_SERVER} -d mtr"
+TPC configuration 16 
+DSPACK 1.602,  1 Aug 2007    (edisto, server: pparfeno_22734_lxplus013)
+WARNING:	cant get point_mtr (0)!
+0 points corrected
+0 points outside fieldcage volume
+[INFO] Legacy/Clients/DISTORT/VtNcalcModuleSG.cc:43: Process: Executing: "vt_ncalc -s ${DSPACK_SERVER} -d gpc"
+DSPACK 1.602,  1 Aug 2007    (vt_ncalc, server: pparfeno_22734_lxplus013)
+Error: GapTPC, point_gpcvt_ncalc_init arg: 5
+run   = 26056
+event = 3
+E_field: 999.900024
+Drift velocity from GapTPC is: 1.673079 cm/us
+Electric field assigned: -178.7000 [V/cm]
+Drift velocity assigned: 1.673079 [cm/us]
+geom_gpc_p->y: -6.680000, geom_sec_gpc_p->y: 29.879999
+GapTPC: Frischgrid (EOP) = 23.2000 [cm]
+[INFO] Legacy/Clients/RES_CORR_ZG/ResCorrModuleSG.cc:44: Process: Executing: "res_corr -s ${DSPACK_SERVER} -vt1_chris /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/vt1_2009_pp158.corr -vt2_chris /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/vt2_2009_pp158.corr -mtl_chris /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/mtl_2009_pp158.corr -mtr_chris /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/mtr_2009_pp158.corr -p /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/vdrift_2009.txt"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (res_corr, server: pparfeno_22734_lxplus013)
+vt1 christina correction is /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/vt1_2009_pp158.corr 
+vt2 christina correction is /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/vt2_2009_pp158.corr
+mtl christina correction is /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/mtl_2009_pp158.corr
+mtr christina correction is /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/mtr_2009_pp158.corr
+Open: /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/vdrift_2009.txt
+christina par file is /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/vt1_2009_pp158.corr
+xa cycle is 0
+christina par file is /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/vt2_2009_pp158.corr
+xa cycle is 0
+christina par file is /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/mtl_2009_pp158.corr
+xa cycle is 0
+christina par file is /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/mtr_2009_pp158.corr
+xa cycle is 0
+no points in vt1
+no points in vt2
+no points in mtl
+no points in mtr
+Number of events processed: 1
+[INFO] Legacy/Clients/MTPC/MtracModuleSG.cc:58: Process: Executing: "mtrac tracks -s ${DSPACK_SERVER} -m 1"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mtrac, server: pparfeno_22734_lxplus013)
+Using mt_const_t(1), mt_flags_t(1), mt_tracking_t(1)
+mtitracks: Tracking MTL not successful.
+mtitracks: Tracking MTR not successful.
+WARNING!  No tracks found!
+Status: Starting to parse_clientname tracks
+Status: mtrac: Successfully connected to server.
+Status: loading mt_const_t
+Tracking MTPCL (24).
+Tracking MTPCR (24).
+[INFO] Legacy/Clients/MTPC/MtracModuleSG.cc:58: Process: Executing: "mtrac i2rtracks -s ${DSPACK_SERVER}"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mtrac, server: pparfeno_22734_lxplus013)
+No itracks in the server.
+Status: Starting to parse_clientname i2rtracks
+Status: mtrac: Successfully connected to server.
+Status: loading mt_flags_t
+Status: loading geom_target_t
+PADTRANS version from 20011006
+Calling get_db_y_values for detector 3 with name mtl 
+read T0 18.733, vdrift 2.33893 from the mtl structure
+return from init_tpc
+Calling get_db_y_values for detector 4 with name mtr 
+read T0 18.974, vdrift 2.3567 from the mtr structure
+return from init_tpc
+[INFO] Legacy/Clients/MTPC/MtracModuleSG.cc:58: Process: Executing: "mtrac mom -s ${DSPACK_SERVER}"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mtrac, server: pparfeno_22734_lxplus013)
+Status: Starting to parse_clientname mom
+Status: mtrac: Successfully connected to server.
+ Data set: /bxyz_t
+ Type:                  Structure   (at: 0x500f8320)
+   1  version           Real           : 1.2000000e+00
+   2  comment           Character*80   : Magnetic filed OFF
+   3  date              Real           : 6.0895000e+04
+   4  nmaps             Integer        : 0
+ MAGFLD: Initializing magnetic field...
+Status: loading mt_flags_t
+Status: loading sihodo
+Status: loading geom_target_t
+PADTRANS version from 20011006
+Calling get_db_y_values for detector 3 with name mtl 
+read T0 18.733, vdrift 2.33893 from the mtl structure
+return from init_tpc
+Calling get_db_y_values for detector 4 with name mtr 
+read T0 18.974, vdrift 2.3567 from the mtr structure
+return from init_tpc
+[INFO] Legacy/Clients/MPAT/MpatModuleSG.cc:44: Process: Executing: "mpat -s ${DSPACK_SERVER} -p -m -f -on"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mpat, server: pparfeno_22734_lxplus013)
+Setting up is_project!
+[INFO] Legacy/Clients/MPAT/MpatModuleSG.cc:44: Process: Executing: "mpat -s ${DSPACK_SERVER} -r -d vt2 -f -on"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mpat, server: pparfeno_22734_lxplus013)
+Setting up is_road!
+idet: 2
+MPAT follow...
+[INFO] Legacy/Clients/PATREC/PatrecModuleSG.cc:50: Process: Executing: "patrec -s ${DSPACK_SERVER} -d vt2 -pp"
+DSPACK 1.602,  1 Aug 2007    (patrec, server: pparfeno_22734_lxplus013)
+ ppevents option is on
+ PATREC_idet:            2
+PATREC 1.900, 12 Feb 1997    (patrec, server: pparfeno_22734_lxplus013)
+ hits     0 out of   442     2
+rec.F, nfound,ngood   0   0
+[INFO] Legacy/Clients/TPC_ERROR/TpcErrorModuleSG.cc:43: Process: Executing: "tpc_error -s ${DSPACK_SERVER} -d vt2"
+DSPACK 1.602,  1 Aug 2007    (tpc_error, server: pparfeno_22734_lxplus013)
+  tpc_error: run   =        26056
+  tpc_error: event =            3
+  tpc_error error: no point_vt2 str. 
+[INFO] Legacy/Clients/R3D/R3dModuleSG.cc:50: Process: Executing: "r3d -s ${DSPACK_SERVER} -d vt2 -m 1 -on"
+DSPACK 1.602,  1 Aug 2007    (r3d, server: pparfeno_22734_lxplus013)
+ r3d_info[tpc]: vt2
+[INFO] Legacy/Clients/MPAT/MpatModuleSG.cc:44: Process: Executing: "mpat -s ${DSPACK_SERVER} -R -p -d vt2 -f -on"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mpat, server: pparfeno_22734_lxplus013)
+Setting up is_project!
+idet: 2
+release_mtpc_tracks: no g_ptr_lists found - ending
+[INFO] Legacy/Clients/MINICLIENTS/MiniModuleSG.cc:74: Process: Executing: "mini monitor -s ${DSPACK_SERVER} -d vt2"
+DSPACK 1.602,  1 Aug 2007    (mini_monitor, server: pparfeno_22734_lxplus013)
+========================================================================
+--> DATE = 132123409, TIME = 1124354, RUN = 26056
+----->>>>> run 26056, available range from 5000 to 50000
+TZ is "Europe/Zurich"
+--> Time is 1479400802 (UTC) -> 17/11/2016 17:40:2 (Geneva local)
+--> Using run period 1
+---> Calling Find_SC_Data: 1479400802 1 1 960.000000 20.000000 0.000000 0.000000
+ P = 960.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_pressure.txt
+ T = 20.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_T_1.txt
+hv = 13000.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_hv_1.txt
+vd = 1.400000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_vd_1.txt
+Ep = 202.440002, slope = 1.199500 is read from line 2 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_ep_1.txt
+DRIFT_LEN: 66.565
+E OVER P:  202.44
+SLOPE:     1.1995
+--> Found     vd=1.400000 t=20.000000 hv=13000.000000 p=960.000000
+--> Corrected vd=1.408256 t=20.000000 hv=13000.000000 p=960.000000 Ep=203.435226
+--> Scaled    vd=1.408059 t=20.000000 hv=13000.000000 p=960.000000
+[INFO] Legacy/Clients/MPAT/MpatModuleSG.cc:44: Process: Executing: "mpat -s ${DSPACK_SERVER} -r -d vt1 -f -on"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mpat, server: pparfeno_22734_lxplus013)
+Setting up is_road!
+idet: 1
+MPAT follow...
+[INFO] Legacy/Clients/PATREC/PatrecModuleSG.cc:50: Process: Executing: "patrec -s ${DSPACK_SERVER} -d vt1 -pp"
+DSPACK 1.602,  1 Aug 2007    (patrec, server: pparfeno_22734_lxplus013)
+PATREC 1.900, 12 Feb 1997    (patrec, server: pparfeno_22734_lxplus013)
+ ppevents option is on
+ PATREC_idet:            1
+ hits     0 out of   443     1
+rec.F, nfound,ngood   0   0
+[INFO] Legacy/Clients/TPC_ERROR/TpcErrorModuleSG.cc:43: Process: Executing: "tpc_error -s ${DSPACK_SERVER} -d vt1"
+DSPACK 1.602,  1 Aug 2007    (tpc_error, server: pparfeno_22734_lxplus013)
+  tpc_error: run   =        26056
+  tpc_error: event =            3
+  tpc_error error: no point_vt1 str. 
+[INFO] Legacy/Clients/R3D/R3dModuleSG.cc:50: Process: Executing: "r3d -s ${DSPACK_SERVER} -d vt1 -m 1 -on"
+DSPACK 1.602,  1 Aug 2007    (r3d, server: pparfeno_22734_lxplus013)
+ r3d_info[tpc]: vt1
+[INFO] Legacy/Clients/MPAT/MpatModuleSG.cc:44: Process: Executing: "mpat -s ${DSPACK_SERVER} -R -p -d vt1 -f -on"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mpat, server: pparfeno_22734_lxplus013)
+Setting up is_project!
+idet: 1
+release_mtpc_tracks: no g_ptr_lists found - ending
+[INFO] Legacy/Clients/MINICLIENTS/MiniModuleSG.cc:74: Process: Executing: "mini monitor -s ${DSPACK_SERVER} -d vt1"
+DSPACK 1.602,  1 Aug 2007    (mini_monitor, server: pparfeno_22734_lxplus013)
+========================================================================
+--> DATE = 132123409, TIME = 1124354, RUN = 26056
+----->>>>> run 26056, available range from 5000 to 50000
+TZ is "Europe/Zurich"
+--> Time is 1479400802 (UTC) -> 17/11/2016 17:40:2 (Geneva local)
+--> Using run period 1
+---> Calling Find_SC_Data: 1479400802 1 0 960.000000 20.000000 0.000000 0.000000
+ P = 960.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_pressure.txt
+ T = 20.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_T_0.txt
+hv = 13000.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_hv_0.txt
+vd = 1.400000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_vd_0.txt
+Ep = 202.438004, slope = 1.213740 is read from line 2 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_ep_0.txt
+DRIFT_LEN: 66.595
+E OVER P:  202.438
+SLOPE:     1.21374
+--> Found     vd=1.400000 t=20.000000 hv=13000.000000 p=960.000000
+--> Corrected vd=1.407601 t=20.000000 hv=13000.000000 p=960.000000 Ep=203.343597
+--> Scaled    vd=1.407601 t=20.000000 hv=13000.000000 p=960.000000
+[INFO] Legacy/Clients/MTPC/MtracModuleSG.cc:58: Process: Executing: "mtrac tracks -s ${DSPACK_SERVER} -m 2"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mtrac, server: pparfeno_22734_lxplus013)
+Using mt_const_t(2), mt_flags_t(2), mt_tracking_t(2)
+mtitracks: Tracking MTL not successful.
+mtitracks: Tracking MTR not successful.
+WARNING!  No tracks found!
+Status: Starting to parse_clientname tracks
+Status: mtrac: Successfully connected to server.
+Status: loading mt_const_t
+Tracking MTPCL (24).
+Tracking MTPCR (24).
+[INFO] Legacy/Clients/MTPC/MtracModuleSG.cc:58: Process: Executing: "mtrac i2rtracks -s ${DSPACK_SERVER}"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mtrac, server: pparfeno_22734_lxplus013)
+No itracks in the server.
+Status: Starting to parse_clientname i2rtracks
+Status: mtrac: Successfully connected to server.
+Status: loading mt_flags_t
+Status: loading geom_target_t
+PADTRANS version from 20011006
+Calling get_db_y_values for detector 3 with name mtl 
+read T0 18.733, vdrift 2.33893 from the mtl structure
+return from init_tpc
+Calling get_db_y_values for detector 4 with name mtr 
+read T0 18.974, vdrift 2.3567 from the mtr structure
+return from init_tpc
+[INFO] Legacy/Clients/TPC_ERROR/TpcErrorModuleSG.cc:43: Process: Executing: "tpc_error -s ${DSPACK_SERVER} -d mtl"
+DSPACK 1.602,  1 Aug 2007    (tpc_error, server: pparfeno_22734_lxplus013)
+  tpc_error: run   =        26056
+  tpc_error: event =            3
+  tpc_error error: no point_mtl str. 
+[INFO] Legacy/Clients/TPC_ERROR/TpcErrorModuleSG.cc:43: Process: Executing: "tpc_error -s ${DSPACK_SERVER} -d mtr"
+DSPACK 1.602,  1 Aug 2007    (tpc_error, server: pparfeno_22734_lxplus013)
+  tpc_error: run   =        26056
+  tpc_error: event =            3
+  tpc_error error: no point_mtr str. 
+[INFO] Legacy/Clients/MTPC/MtracModuleSG.cc:58: Process: Executing: "mtrac mom -s ${DSPACK_SERVER}"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mtrac, server: pparfeno_22734_lxplus013)
+Status: Starting to parse_clientname mom
+Status: mtrac: Successfully connected to server.
+ Data set: /bxyz_t
+ Type:                  Structure   (at: 0x500f8320)
+   1  version           Real           : 1.2000000e+00
+   2  comment           Character*80   : Magnetic filed OFF
+   3  date              Real           : 6.0895000e+04
+   4  nmaps             Integer        : 0
+ MAGFLD: Initializing magnetic field...
+Status: loading mt_flags_t
+Status: loading sihodo
+Status: loading geom_target_t
+PADTRANS version from 20011006
+Calling get_db_y_values for detector 3 with name mtl 
+read T0 18.733, vdrift 2.33893 from the mtl structure
+return from init_tpc
+Calling get_db_y_values for detector 4 with name mtr 
+read T0 18.974, vdrift 2.3567 from the mtr structure
+return from init_tpc
+[INFO] Legacy/Clients/MTPC/MtracModuleSG.cc:58: Process: Executing: "mtrac decay -s ${DSPACK_SERVER}"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mtrac, server: pparfeno_22734_lxplus013)
+Status: Starting to parse_clientname decay
+Status: mtrac: Successfully connected to server.
+Status: loading geom_target_t
+Status: allocating local memory
+  MINUIT RELEASE 96.03  INITIALIZED.   DIMENSIONS 100/ 50  EPSMAC=  0.89E-15
+Status: loading clusters
+Status: loaded 0 MTL points
+Status: loaded 0 MTR points
+Status: loading tracks
+Status: loaded 0 itracks
+Status: No MTPC data
+Status: Cleaning up memory
+Status: DONE
+[INFO] Legacy/Clients/MINICLIENTS/MiniModuleSG.cc:74: Process: Executing: "mini monitor -s ${DSPACK_SERVER} -d mtl"
+DSPACK 1.602,  1 Aug 2007    (mini_monitor, server: pparfeno_22734_lxplus013)
+========================================================================
+--> DATE = 132123409, TIME = 1124354, RUN = 26056
+----->>>>> run 26056, available range from 5000 to 50000
+TZ is "Europe/Zurich"
+--> Time is 1479400802 (UTC) -> 17/11/2016 17:40:2 (Geneva local)
+--> Using run period 1
+---> Calling Find_SC_Data: 1479400802 1 2 960.000000 20.000000 0.000000 0.000000
+ P = 960.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_pressure.txt
+ T = 20.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_T_2.txt
+hv = 19000.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_hv_2.txt
+vd = 2.300000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_vd_2.txt
+Ep = 175.490005, slope = 1.233300 is read from line 2 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_ep_2.txt
+DRIFT_LEN: 111.735
+E OVER P:  175.49
+SLOPE:     1.2333
+--> Found     vd=2.300000 t=20.000000 hv=19000.000000 p=960.000000
+--> Corrected vd=2.326515 t=20.000000 hv=19000.000000 p=960.000000 Ep=177.130417
+--> Scaled    vd=2.327213 t=20.000000 hv=19000.000000 p=960.000000
+[INFO] Legacy/Clients/MINICLIENTS/MiniModuleSG.cc:74: Process: Executing: "mini monitor -s ${DSPACK_SERVER} -d mtr"
+DSPACK 1.602,  1 Aug 2007    (mini_monitor, server: pparfeno_22734_lxplus013)
+========================================================================
+--> DATE = 132123409, TIME = 1124354, RUN = 26056
+----->>>>> run 26056, available range from 5000 to 50000
+TZ is "Europe/Zurich"
+--> Time is 1479400802 (UTC) -> 17/11/2016 17:40:2 (Geneva local)
+--> Using run period 1
+---> Calling Find_SC_Data: 1479400802 1 3 960.000000 20.000000 0.000000 0.000000
+ P = 960.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_pressure.txt
+ T = 20.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_T_3.txt
+hv = 19000.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_hv_3.txt
+vd = 2.300000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_vd_3.txt
+Ep = 175.490005, slope = 1.236800 is read from line 2 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_ep_3.txt
+DRIFT_LEN: 111.735
+E OVER P:  175.49
+SLOPE:     1.2368
+--> Found     vd=2.300000 t=20.000000 hv=19000.000000 p=960.000000
+--> Corrected vd=2.326591 t=20.000000 hv=19000.000000 p=960.000000 Ep=177.130417
+--> Scaled    vd=2.326428 t=20.000000 hv=19000.000000 p=960.000000
+[INFO] Legacy/Clients/MPAT/MpatModuleSG.cc:44: Process: Executing: "mpat -s ${DSPACK_SERVER} -c -G -f -on"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mpat, server: pparfeno_22734_lxplus013)
+DS_DB Error: 102 Data set not stored
+Cannot move: g_ptr_list, g_ptr_list_old
+0 matches of 0 useable extensions found
+3-detector matches 0, vt1-vt2 0, vt1-mt 0, vt2-mt 0
+0 global rtracks created
+mgt_main: mgt returned 100
+[WARN] Legacy/Clients/MPAT/MpatModuleSG.cc:54: Process: mpat did't find global tracks! Skip an event! (100)
+[INFO] Legacy/Clients/TPC_ERROR/TpcErrorModuleSG.cc:43: Process: Executing: "tpc_error -s ${DSPACK_SERVER} -d all"
+DSPACK 1.602,  1 Aug 2007    (tpc_error, server: pparfeno_22734_lxplus013)
+ GPC yhtpc   23.1999989    
+  tpc_error: run   =        26056
+  tpc_error: event =            3
+  tpc_error error: no point_vt1 str. 
+[INFO] Legacy/Clients/TPC_FLIGHT_TIME/TpcFlightTimeModuleSG.cc:43: Process: Executing: "tpc_flight_time -s ${DSPACK_SERVER} -d all"
+DSPACK 1.602,  1 Aug 2007    (tpc_flight_time, server: pparfeno_22734_lxplus013)
+  run   =        26056
+  event =            3
+  -------------- 
+  n_point_good =            0
+  n_point_bad  =            0
+  -------------- 
+  n_point_good =            0
+  n_point_bad  =            0
+  -------------- 
+  n_point_good =            0
+  n_point_bad  =            0
+  -------------- 
+  n_point_good =            0
+  n_point_bad  =            0
+[INFO] Legacy/Clients/R3D/R3dModuleSG.cc:50: Process: Executing: "r3d -s ${DSPACK_SERVER} -d all -m 1 -on"
+DSPACK 1.602,  1 Aug 2007    (r3d, server: pparfeno_22734_lxplus013)
+ r3d_info[tpc]: all
+[INFO] Legacy/Clients/R3D/VtxModuleSG.cc:43: Process: Executing: "vtx -s ${DSPACK_SERVER} -d all -pp -on"
+DSPACK 1.602,  1 Aug 2007    (vtx, server: pparfeno_22734_lxplus013)
+ ************
+ * VTX_INFO: Error    #201: Nothing to fit
+ ************
+ * Terminating....
+ ************
+[INFO] Legacy/Clients/R3D/R3dModuleSG.cc:50: Process: Executing: "r3d -s ${DSPACK_SERVER} -d all -m 2 -on"
+DSPACK 1.602,  1 Aug 2007    (r3d, server: pparfeno_22734_lxplus013)
+ r3d_info[tpc]: all
+[INFO] Legacy/Clients/PPOINTS/PpointsModuleSG.cc:43: Process: Executing: "ppoints -s ${DSPACK_SERVER}"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (ppoints, server: pparfeno_22734_lxplus013)
+[ppoints] getting parameters
+[ppoints] getting necessary banks
+[ppoints] bank 'g_ptr_list' missing
+[ppoints] bank 'g_track_ref' missing
+[ppoints] error! could not get all necessary banks
+[INFO] Legacy/Clients/GTPC_TRACK/GtpcTrackModuleSG.cc:43: Process: Executing: "gtpc_track -s ${DSPACK_SERVER}"
+DSPACK 1.602,  1 Aug 2007    (gtpc_track, server: pparfeno_22734_lxplus013)
+gtpc_track: Start process
+gtpc_track: Process 26056 3  found 0 tracks 
+gtpc_track: Finished
+[INFO] Legacy/Clients/REFORM/ReformModuleSG.cc:43: Process: Executing: "reform -s ${DSPACK_SERVER} -verbose -check -spiral -join -foil -ppoints -insect"
+DSPACK 1.602,  1 Aug 2007    (reform, server: pparfeno_22734_lxplus013)
+ get ppoints parameters..
+[reform] warning! bank 'vertex_fit' missing
+[reform] warning! bank 'g_ptr_list' missing
+[reform] warning! bank 'rtrack_quali' missing
+[reform] warning! bank 'point_vt1' missing
+[reform] warning! bank 'point_vt2' missing
+[reform] warning! bank 'point_mtl' missing
+[reform] warning! bank 'point_mtr' missing
+[reform] warning! bank 'point_gpc' missing
+[reform] error! could not get all necessary banks
+[reform] Going to exit now... Bye.
+GTPC is ON !!!Modus: 17129
+[INFO] Legacy/Clients/R3D/R3dModuleSG.cc:50: Process: Executing: "r3d -s ${DSPACK_SERVER} -d all -m 1 -r -on"
+DSPACK 1.602,  1 Aug 2007    (r3d, server: pparfeno_22734_lxplus013)
+ r3d_info[tpc]: all
+[INFO] Legacy/Clients/R3D/VtxModuleSG.cc:43: Process: Executing: "vtx -s ${DSPACK_SERVER} -d all -pp -on"
+DSPACK 1.602,  1 Aug 2007    (vtx, server: pparfeno_22734_lxplus013)
+ ************
+ * VTX_INFO: Error    #201: Nothing to fit
+ ************
+ * Terminating....
+ ************
+[INFO] Legacy/Clients/R3D/R3dModuleSG.cc:50: Process: Executing: "r3d -s ${DSPACK_SERVER} -d all -m 2 -r -on"
+DSPACK 1.602,  1 Aug 2007    (r3d, server: pparfeno_22734_lxplus013)
+ r3d_info[tpc]: all
+[INFO] Legacy/Clients/TOFL/ToflModuleSG.cc:50: Process: Executing: "tofl_client -s ${DSPACK_SERVER} -verbose -pp"
+DSPACK 1.602,  1 Aug 2007    (tofl, server: pparfeno_22734_lxplus013)
+Starting tofl_client...
+"calib_mode" = 1
+server : pparfeno_22734
+Run 26056 Event # 3
+Warning!!! : NO main vertex in this event!
+[INFO] Legacy/Clients/TOFR/TofrModuleSG.cc:50: Process: Executing: "tofr_client -s ${DSPACK_SERVER} -verbose -pp"
+DSPACK 1.602,  1 Aug 2007    (tofr, server: pparfeno_22734_lxplus013)
+Starting tofr_client...
+"calib_mode" = 1
+server : pparfeno_22734
+####### Run 26056 Event # 3
+Warning!!! : NO main vertex in this event!
+[INFO] Legacy/Clients/dedxna61/DeDxNa61ModuleSG.cc:71: Process: Executing: "dedxna61 -s ${DSPACK_SERVER}"
+DSPACK 1.602,  1 Aug 2007    (, server: pparfeno_22734_lxplus013)
+ deffile:/afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/DedxCalib/tables/cal_def_v12                                    
+ Version of dedxna61 20130318
+ Called runinit:       26056           3          13
+ Library of calibration constant:        
+ Used keys KEY1=26056    KEY5=        
+ runs            1        1117        1218
+ runs            2        2907        2971
+ runs            3        3664        3726
+ runs            4        3761        3844
+ runs            5        4288        4347
+ runs            6        4633        4788
+ runs            7        2724        2879
+ runs            8        4392        4496
+ runs            9        4558        4620
+ runs           10        1723        1773
+ runs           11        4498        4548
+ runs           12        1742        1764
+ runs           13        3418        3568
+ runs           14        3585        3633
+ runs           15        3727        3760
+ runs           16        1774        1803
+ runs           17        2882        2897
+ runs           18        4352        4491
+ runs           19        1909        1930
+ runs           20        1942        1955
+ runs           21        3370        3378
+ runs           22        2437        2511
+ runs           23        4789        4817
+ runs           24        4105        4157
+ runs           25        3300        3305
+ runs           26        3381        3389
+ runs           27        3311        3369
+ runs           28        4818        4828
+ runs           29        1811        1862
+ runs           30        1868        1889
+ runs           31        2524        2550
+ runs           32        3244        3293
+ runs           33        1956        1974
+ runs           34        4913        5639
+ runs           35        5640        5661
+ runs           36        8376        8769
+ runs           37        8775        8930
+ runs           38        8947        9135
+ runs           39        9162        9389
+ runs           40        9451        9702
+ runs           41        9705        9800
+ runs           42        9805        9900
+ runs           43        9910        9989
+ runs           44        9996       10148
+ runs           45       10521       11106
+ runs           46       11120       11600
+ runs           47       11626       13235
+ runs           48       13671       13691
+ runs           49       13747       14144
+ runs           50       14150       14582
+ runs           51       14588       14676
+ runs           52       14726       15089
+ runs           53       15092       15232
+ runs           54       15235       15245
+ runs           55       15247       15341
+ runs           56       15345       15411
+ runs           57       15412       15456
+ runs           58       15457       15851
+ runs           59       15852       16000
+ runs           60       16001       16057
+ runs           61       16063       16228
+ runs           62       16229       16534
+ runs           63       16535       17008
+ runs           64       17049       17308
+ runs           65       17333       17653
+ runs           66       17658       17868
+ runs           67       17870       17939
+ runs           68       17946       18146
+ runs           69       18604       20039
+ runs           70       20296       20318
+ runs           71       20328       20480
+ runs           72       20532       20645
+ runs           73       20661       20803
+ runs           74       20820       21049
+ runs           75       21058       21268
+ runs           76       21298       21361
+ runs           77       21376       21565
+ runs           78       21566       99999
+ table.v12_v19                                                                                                                                                                                                                                                  
+ table.v14_v19                                                                                                                                                                                                                                                  
+ table.v2_v19                                                                                                                                                                                                                                                   
+ table.mhr_v19                                                                                                                                                                                                                                                  
+ table.msr_v19                                                                                                                                                                                                                                                  
+ Get constants for production :          78  15i 
+ File for ydependence:yc_xxx                          
+ OTABLE:/afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/DedxCalib/tables/yc_xxx                                         
+ Get sector calibration constant from file:s_c_xxx                                                                                                                         
+ /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/DedxCalib/tables/s_c_xxx                                        
+           1   237.059998       14.9090004    
+           2   202.410004       14.0880003    
+           3   185.479996       10.7869997    
+           4   220.100006       14.2860003    
+           5   181.320007       11.5340004    
+           6   186.259995       9.58699989    
+           7   155.389999       10.4180002    
+           8   141.449997       5.99599981    
+           9   147.270004       10.4949999    
+          10   137.300003       10.8979998    
+          11   124.050003       7.29600000    
+          12   127.919998       10.1639996    
+          13   141.660004       6.19799995    
+          14   145.250000       3.32399988    
+          15   127.830002       5.51000023    
+          16   126.500000       6.48199987    
+          17   151.949997       4.34899998    
+          18   144.479996       5.34999990    
+          19   142.789993       5.35900021    
+          20   144.050003       5.82800007    
+          21   139.570007       5.08500004    
+          22   143.800003       6.01599979    
+          23   130.350006       6.47900009    
+          24   127.660004       5.53399992    
+          25   135.720001       5.86399984    
+          26   126.750000       5.47200012    
+          27   143.809998       4.96299982    
+          28   142.350006       4.56500006    
+          29   138.500000       5.21700001    
+          30   121.300003       5.79500008    
+          31   130.820007       5.53599977    
+          32   134.750000       5.33900023    
+          33   156.880005       9.32400036    
+          34   155.600006       10.3559999    
+          35   150.309998       9.66899967    
+          36   139.649994       11.3409996    
+          37   141.009995       13.1040001    
+          38   155.250000       8.89200020    
+          39   150.559998       8.56400013    
+          40   159.610001       7.68100023    
+          41   148.169998       8.04899979    
+          42   155.949997       11.3269997    
+          43   140.320007       4.62900019    
+          44   146.020004       3.62899995    
+          45   149.759995       3.81399989    
+          46   150.130005       4.95400000    
+          47   148.380005       3.90300012    
+          48   144.490005       5.02400017    
+          49   144.380005       4.75799990    
+          50   152.220001       4.21199989    
+          51   153.850006       3.84400010    
+          52   153.759995       4.26900005    
+          53   155.740005       4.22399998    
+          54   146.449997       3.92700005    
+          55   155.190002       4.12799978    
+          56   168.619995       4.22599983    
+          57   156.330002       4.67100000    
+PADTRANS version from 20011006
+Calling get_db_y_values for detector 1 with name vt1 
+read T0 18.354, vdrift 1.42285 from the vt1 structure
+return from init_tpc
+Calling get_db_y_values for detector 2 with name vt2 
+read T0 19.389, vdrift 1.44005 from the vt2 structure
+return from init_tpc
+Calling get_db_y_values for detector 3 with name mtl 
+read T0 18.733, vdrift 2.33893 from the mtl structure
+return from init_tpc
+Calling get_db_y_values for detector 4 with name mtr 
+read T0 18.974, vdrift 2.3567 from the mtr structure
+return from init_tpc
+ Data set: /bxyz_t
+ Type:                  Structure   (at: 0x500f8320)
+   1  version           Real           : 1.2000000e+00
+   2  comment           Character*80   : Magnetic filed OFF
+   3  date              Real           : 6.0895000e+04
+   4  nmaps             Integer        : 0
+          58   169.779999       4.44399977    
+          59   163.860001       3.31399989    
+          60   163.970001       4.69799995    
+          61   166.350006       4.42399979    
+          62   174.240005       4.17899990    
+ aloss =table.v12_v19                                                                                                                                                                                                                                                  
+ tname =/afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/DedxCalib/tables/table.v12_v19                                  
+ For chip gain used file:cg_xxx                          
+ End of file found on chipgain file
+ call inittcor for get files
+ Open file for timedepence correction:td_xxx_tab                      
+ nbxyz=           0
+ after get_na49b nbxyz=           0
+ after new init padtrans ierr=           0
+            TPC: vt1
+ Electric Field:   -195.449997      V/cm. (   0.00000000      -195.449997       0.00000000     )
+ Drift velocity:    1.42285061      cm/us.
+             y0:    29.5242348      cm
+          slope:    0.00000000    
+            TPC: vt2
+ Electric Field:   -196.369995      V/cm. (   0.00000000      -196.369995       0.00000000     )
+ Drift velocity:    1.44004595      cm/us.
+             y0:    29.6618710      cm
+          slope:    0.00000000    
+[WARN] Legacy/EventIO/NA49DST/NA49ToTrigger.cc:21: NA49ToTrigger: trigger data already present
+[INFO] Framework/RunController/RunController.cc:420: DoNextInSequence: Received ContinueLoop instruction from module 'EventSelectorSG'.
+[INFO] EventIO/BOS/BOSEventFile.cc:200: Read: 
+  ============================================
+  event 4, run 26056, tape 0, exp 61, spill 2
+  2016-11-17T16:40:02Z (UTC), 1163436019 (GPS), Unix:1479400802s
+  calib mode: 0 calib events: 0
+  is pedestal event: 0
+  ============================================
+
+
+[INFO] Modules/General/EventFileReaderSG/EventFileReader.cc:198: Process: run = 26056, event = '4'
+[INFO] Legacy/Clients/ClientInitializerSG/ClientInitializerSG.cc:287: Process: Version: 11189, Run: 26056, Event: 4.
+[INFO] Legacy/Clients/MINICLIENTS/MiniModuleSG.cc:74: Process: Executing: "mini many -s ${DSPACK_SERVER}"
+DSPACK 1.602,  1 Aug 2007    (mini_many, server: pparfeno_22734_lxplus013)
+ BPD ADCs pedestals extracted.
+ Trigger crate ADC pedestals extracted.
+
+  warning *** no ZF-corrections found, run number outside given limits 
+ adc-values: 0 0 0  215.6  1.000 -215.6     0.0 
+ adc-values: 0 1 82  214.6  1.000 -132.6     0.0 
+ adc-values: 0 2 128  240.4  1.000 -112.4     0.0 
+ adc-values: 0 3 57  202.5  1.000 -145.5     0.0 
+ adc-values: 0 4 124  232.6  1.000 -108.6     0.0 
+ adc-values: 0 5 112  243.3  1.000 -131.3     0.0 
+ adc-values: 0 6 98  214.8  1.000 -116.8     0.0 
+ adc-values: 0 7 130  220.5  1.000  -90.5     0.0 
+ adc-values: 0 8 177  220.6  1.000  -43.6     0.0 
+ adc-values: 0 9 356  231.2  1.000  124.8   124.8 
+ adc-values: 0 10 899  241.0  1.000  658.0   782.8 
+ adc-values: 0 11 1275  238.3  1.000 1036.7  1819.5 
+ adc-values: 0 12 1614  246.4  1.000 1367.6  3187.1 
+ adc-values: 0 13 761  229.2  1.000  531.8  3718.9 
+ adc-values: 0 14 496  228.7  1.000  267.3  3986.2 
+ adc-values: 0 15 435  238.3  1.000  196.7  4182.9 
+ adc-values: 0 16 328  200.8  1.000  127.2  4310.1 
+ adc-values: 0 17 337  205.7  1.000  131.3  4441.4 
+ adc-values: 0 18 366  219.1  1.000  146.9  4588.3 
+ adc-values: 0 19 341  242.1  1.000   98.9  4687.2 
+ adc-values: 0 20 382  243.6  1.000  138.4  4825.6 
+ adc-values: 0 21 362  242.9  1.000  119.1  4944.7 
+ adc-values: 0 22 342  217.1  1.000  124.9  5069.6 
+ adc-values: 0 23 422  205.7  1.000  216.3  5285.9 
+
+ found peak ( 5) between 10 and 14 incl. 
+mean = 11.666882, rms = 1.119718, charge = 3861.4, width = 5
+bpd_cluster mean = 12.666882, rms = 1.119718, charge = 3861
+rri = 0.471499, rle = 0.789963
+ adc-values: 1 0 234  251.6  1.000  -17.6     0.0 
+ adc-values: 1 1 250  249.5  1.000    0.5     0.5 
+ adc-values: 1 2 206  210.7  1.000   -4.7     0.5 
+ adc-values: 1 3 186  208.5  1.000  -22.5     0.5 
+ adc-values: 1 4 171  218.2  1.000  -47.2     0.5 
+ adc-values: 1 5 186  225.3  1.000  -39.3     0.5 
+ adc-values: 1 6 206  242.4  1.000  -36.4     0.5 
+ adc-values: 1 7 193  223.7  1.000  -30.7     0.5 
+ adc-values: 1 8 160  193.3  1.000  -33.3     0.5 
+ adc-values: 1 9 206  203.4  1.000    2.6     3.1 
+ adc-values: 1 10 170  203.1  1.000  -33.1     3.1 
+ adc-values: 1 11 225  213.5  1.000   11.5    14.6 
+ adc-values: 1 12 424  216.8  1.000  207.2   221.8 
+ adc-values: 1 13 633  239.6  1.000  393.4   615.2 
+ adc-values: 1 14 1193  234.8  1.000  958.2  1573.4 
+ adc-values: 1 15 2351  215.9  1.000 2135.1  3708.5 
+ adc-values: 1 16 1752  227.5  1.000 1524.5  5233.0 
+ adc-values: 1 17 889  240.1  1.000  648.9  5881.9 
+ adc-values: 1 18 542  232.6  1.000  309.4  6191.3 
+ adc-values: 1 19 456  244.0  1.000  212.0  6403.3 
+ adc-values: 1 20 401  241.5  1.000  159.5  6562.8 
+ adc-values: 1 21 425  230.1  1.000  194.9  6757.7 
+ adc-values: 1 22 384  235.9  1.000  148.1  6905.8 
+ adc-values: 1 23 429  248.3  1.000  180.7  7086.5 
+
+ found peak ( 5) between 13 and 17 incl. 
+mean = 15.190331, rms = 1.067250, charge = 5660.1, width = 5
+bpd_cluster mean = 16.190331, rms = 1.067250, charge = 5660
+rri = 0.745215, rle = 0.507444
+ adc-values: 2 0 486  231.3  1.000  254.7   254.7 
+ adc-values: 2 1 325  223.1  1.000  101.9   356.6 
+ adc-values: 2 2 365  247.4  1.000  117.6   474.2 
+ adc-values: 2 3 315  226.0  1.000   89.0   563.2 
+ adc-values: 2 4 367  231.7  1.000  135.3   698.5 
+ adc-values: 2 5 367  225.0  1.000  142.0   840.5 
+ adc-values: 2 6 414  248.1  1.000  165.9  1006.4 
+ adc-values: 2 7 531  232.7  1.000  298.3  1304.7 
+ adc-values: 2 8 722  240.0  1.000  482.0  1786.7 
+ adc-values: 2 9 1443  219.3  1.000 1223.7  3010.4 
+ adc-values: 2 10 2273  238.8  1.000 2034.2  5044.6 
+ adc-values: 2 11 1194  225.5  1.000  968.5  6013.1 
+ adc-values: 2 12 381  241.0  1.000  140.0  6153.1 
+ adc-values: 2 13 344  218.8  1.000  125.2  6278.3 
+ adc-values: 2 14 344  219.6  1.000  124.4  6402.7 
+ adc-values: 2 15 367  247.6  1.000  119.4  6522.1 
+ adc-values: 2 16 354  252.1  1.000  101.9  6624.0 
+ adc-values: 2 17 309  220.9  1.000   88.1  6712.1 
+ adc-values: 2 18 293  240.9  1.000   52.1  6764.2 
+ adc-values: 2 19 372  244.8  1.000  127.2  6891.4 
+ adc-values: 2 20 196  228.8  1.000  -32.8  6891.4 
+ adc-values: 2 21 310  225.3  1.000   84.7  6976.1 
+ adc-values: 2 22 260  247.3  1.000   12.7  6988.8 
+ adc-values: 2 23 283  224.0  1.000   59.0  7047.8 
+
+ found peak ( 4) between 8 and 11 incl. 
+mean = 9.741059, rms = 0.898892, charge = 4708.4, width = 4
+bpd_cluster mean = 10.741059, rms = 0.898892, charge = 4708
+rri = 0.525297, rle = 0.634844
+ adc-values: 3 0 397  256.5  1.000  140.5   140.5 
+ adc-values: 3 1 383  248.6  1.000  134.4   274.9 
+ adc-values: 3 2 382  248.9  1.000  133.1   408.0 
+ adc-values: 3 3 348  235.4  1.000  112.6   520.6 
+ adc-values: 3 4 356  257.6  1.000   98.4   619.0 
+ adc-values: 3 5 381  233.2  1.000  147.8   766.8 
+ adc-values: 3 6 355  242.4  1.000  112.6   879.4 
+ adc-values: 3 7 328  218.6  1.000  109.4   988.8 
+ adc-values: 3 8 350  232.4  1.000  117.6  1106.4 
+ adc-values: 3 9 391  210.2  1.000  180.8  1287.2 
+ adc-values: 3 10 673  244.9  1.000  428.1  1715.3 
+ adc-values: 3 11 1185  226.2  1.000  958.8  2674.1 
+ adc-values: 3 12 2572  219.4  1.000 2352.6  5026.7 
+ adc-values: 3 13 1681  233.2  1.000 1447.8  6474.5 
+ adc-values: 3 14 837  222.5  1.000  614.5  7089.0 
+ adc-values: 3 15 499  212.7  1.000  286.3  7375.3 
+ adc-values: 3 16 455  224.6  1.000  230.4  7605.7 
+ adc-values: 3 17 453  224.2  1.000  228.8  7834.5 
+ adc-values: 3 18 418  219.2  1.000  198.8  8033.3 
+ adc-values: 3 19 460  239.6  1.000  220.4  8253.7 
+ adc-values: 3 20 439  238.3  1.000  200.7  8454.4 
+ adc-values: 3 21 391  235.8  1.000  155.2  8609.6 
+ adc-values: 3 22 455  241.0  1.000  214.0  8823.6 
+ adc-values: 3 23 521  229.4  1.000  291.6  9115.2 
+
+ found peak ( 5) between 10 and 14 incl. 
+mean = 12.148540, rms = 1.054297, charge = 5801.8, width = 5
+bpd_cluster mean = 13.148540, rms = 1.054297, charge = 5802
+rri = 0.653577, rle = 0.460731
+ adc-values: 4 0 0  244.1  1.000 -244.1     0.0 
+ adc-values: 4 1 24  232.9  1.000 -208.9     0.0 
+ adc-values: 4 2 18  225.5  1.000 -207.5     0.0 
+ adc-values: 4 3 68  232.1  1.000 -164.1     0.0 
+ adc-values: 4 4 52  231.2  1.000 -179.2     0.0 
+ adc-values: 4 5 119  218.6  1.000  -99.6     0.0 
+ adc-values: 4 6 163  227.4  1.000  -64.4     0.0 
+ adc-values: 4 7 649  238.4  1.000  410.6   410.6 
+ adc-values: 4 8 1749  220.3  1.000 1528.7  1939.3 
+ adc-values: 4 9 2373  242.8  1.000 2130.2  4069.5 
+ adc-values: 4 10 725  224.3  1.000  500.7  4570.2 
+ adc-values: 4 11 241  226.7  1.000   14.3  4584.5 
+ adc-values: 4 12 0  214.4  1.000 -214.4  4584.5 
+ adc-values: 4 13 112  240.1  1.000 -128.1  4584.5 
+ adc-values: 4 14 33  223.8  1.000 -190.8  4584.5 
+ adc-values: 4 15 60  248.6  1.000 -188.6  4584.5 
+ adc-values: 4 16 35  238.5  1.000 -203.5  4584.5 
+ adc-values: 4 17 56  231.4  1.000 -175.4  4584.5 
+ adc-values: 4 18 0  228.3  1.000 -228.3  4584.5 
+ adc-values: 4 19 49  239.0  1.000 -190.0  4584.5 
+ adc-values: 4 20 0  240.6  1.000 -240.6  4584.5 
+ adc-values: 4 21 78  253.1  1.000 -175.1  4584.5 
+ adc-values: 4 22 54  263.9  1.000 -209.9  4584.5 
+ adc-values: 4 23 0  215.2  1.000 -215.2  4584.5 
+
+ found peak ( 4) between 7 and 10 incl. 
+mean = 8.595378, rms = 0.799818, charge = 4570.2, width = 4
+bpd_cluster mean = 9.595378, rms = 0.799818, charge = 4570
+rri = 0.305520, rle = 0.737042
+ adc-values: 5 0 0  224.7  1.000 -224.7     0.0 
+ adc-values: 5 1 124  228.8  1.000 -104.8     0.0 
+ adc-values: 5 2 46  211.3  1.000 -165.3     0.0 
+ adc-values: 5 3 192  247.0  1.000  -55.0     0.0 
+ adc-values: 5 4 114  227.9  1.000 -113.9     0.0 
+ adc-values: 5 5 139  221.5  1.000  -82.5     0.0 
+ adc-values: 5 6 196  255.5  1.000  -59.5     0.0 
+ adc-values: 5 7 360  225.9  1.000  134.1   134.1 
+ adc-values: 5 8 894  231.3  1.000  662.7   796.8 
+ adc-values: 5 9 2138  240.0  1.000 1898.0  2694.8 
+ adc-values: 5 10 1253  231.9  1.000 1021.1  3715.9 
+ adc-values: 5 11 622  248.1  1.000  373.9  4089.8 
+ adc-values: 5 12 0  206.7  1.000 -206.7  4089.8 
+ adc-values: 5 13 0  205.1  1.000 -205.1  4089.8 
+ adc-values: 5 14 0  244.0  1.000 -244.0  4089.8 
+ adc-values: 5 15 0  262.2  1.000 -262.2  4089.8 
+ adc-values: 5 16 0  261.0  1.000 -261.0  4089.8 
+ adc-values: 5 17 16  223.8  1.000 -207.8  4089.8 
+ adc-values: 5 18 0  235.6  1.000 -235.6  4089.8 
+ adc-values: 5 19 7  198.8  1.000 -191.8  4089.8 
+ adc-values: 5 20 57  240.3  1.000 -183.3  4089.8 
+ adc-values: 5 21 82  239.9  1.000 -157.9  4089.8 
+ adc-values: 5 22 0  255.7  1.000 -255.7  4089.8 
+ adc-values: 5 23 0  228.0  1.000 -228.0  4089.8 
+
+ found peak ( 4) between 8 and 11 incl. 
+mean = 9.279648, rms = 0.851791, charge = 3955.7, width = 4
+bpd_cluster mean = 10.279648, rms = 0.851791, charge = 3956
+rri = 0.586062, rle = 0.418148
+
+ center,pitch : 12.500000 0.200000 
+
+ 1: 0.148376
+
+ 2: 0.538066
+
+ 3: -0.211788
+
+ 4: 0.184708
+
+ 5: -0.400924
+
+ 6: -0.019070
+ VetoWC ADC pedestals extracted.
+ calc_vpc_gain is done: foundpeds = 1 
+
+ vpc_plane = 1 
+
+ HI_thresh(vpc_plane=1) = 100.0 
+ LO_thresh(vpc_plane=1) = 100.0 
+
+ found peak for vpc-plane 0 between 42 and 42 incl. h= 42   
+ mean = 42.00, rms =  0.72, charge =    104.3, width = 1  (42,42)  
+ found peak for vpc-plane 0 between 59 and 59 incl. h= 59   
+ mean = 59.00, rms =  0.72, charge =    127.6, width = 1  (59,59)  
+ search_vpc_cluster error(0) = 0 
+
+ vpc_plane = 2 
+
+ HI_thresh(vpc_plane=2) = 100.0 
+ LO_thresh(vpc_plane=2) = 100.0 
+
+ found peak for vpc-plane 0 between 42 and 42 incl. h= 42   
+ mean = 42.00, rms =  0.72, charge =    100.2, width = 1  (42,42)  
+ search_vpc_cluster error(1) = 0 
+
+ vpc_plane = 3 
+
+ HI_thresh(vpc_plane=3) = 100.0 
+ LO_thresh(vpc_plane=3) = 100.0 
+
+ found peak for vpc-plane 0 between 55 and 55 incl. h= 55   
+ mean = 55.00, rms =  0.72, charge =    105.2, width = 1  (55,55)  
+ search_vpc_cluster error(2) = 0 
+
+ vpc_plane = 4 
+
+ HI_thresh(vpc_plane=4) = 100.0 
+ LO_thresh(vpc_plane=4) = 100.0 
+
+ search_vpc_cluster error(3) = 0 
+ 
+ 
+ npts = 0 , npts1 = 0 , npts2 = 0 
+Unable to allocate vpc_point structure.
+WFA program ZF v1
+Status: Found PEDS BANK 7 - VetoWC ADC pedestals.
+[INFO] Legacy/Clients/DIPT_256_NEW/Dipt256NewModuleSG.cc:45: Process: Executing: "dipt_256 -s ${DSPACK_SERVER} -d 12 -e 12 -t 5 -c gme -C -p --256"
+DSPACK 1.602,  1 Aug 2007    (dipt_256, server: pparfeno_22734_lxplus013)
+ pad-calibrations will be done 
+forcing 256 timebin mode
+Called init_dipt with mask 3
+PADTRANS version from 20011006
+Calling get_db_y_values for detector 2 with name vt2 
+read T0 19.389, vdrift 1.44005 from the vt2 structure
+return from init_tpc
+Calling get_db_y_values for detector 1 with name vt1 
+read T0 18.354, vdrift 1.42285 from the vt1 structure
+return from init_tpc
+getting data from server - patience please...
+ got calib Tpc=2 pads=27648 from calib_vt2
+ allocating stuff...
+Now handling tpc 2
+................................................................................................................................................
+TPC 2: 0 clusters found
+
+TPC 2: 0 clusters recombined
+
+TPC 2: 0 clusters outside of tpc 
+getting data from server - patience please...
+ got calib Tpc=1 pads=27648 from calib_vt1
+ allocating stuff...
+Now handling tpc 1
+................................................................................................................................................
+TPC 1: 0 clusters found
+
+TPC 1: 0 clusters recombined
+
+TPC 1: 0 clusters outside of tpc 
+[INFO] Legacy/Clients/DIPT_256_NEW/Dipt256NewModuleSG.cc:45: Process: Executing: "dipt_256 -s ${DSPACK_SERVER} -d lr -t 5 -c gme -C -p --256"
+DSPACK 1.602,  1 Aug 2007    (dipt_256, server: pparfeno_22734_lxplus013)
+ pad-calibrations will be done 
+forcing 256 timebin mode
+Called init_dipt with mask c
+PADTRANS version from 20011006
+Calling get_db_y_values for detector 4 with name mtr 
+read T0 18.974, vdrift 2.3567 from the mtr structure
+return from init_tpc
+Calling get_db_y_values for detector 3 with name mtl 
+read T0 18.733, vdrift 2.33893 from the mtl structure
+return from init_tpc
+getting data from server - patience please...
+ got calib Tpc=4 pads=63360 from calib_mtr
+ allocating stuff...
+Now handling tpc 4
+..................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+TPC 4: 0 clusters found
+
+TPC 4: 0 clusters recombined
+
+TPC 4: 0 clusters outside of tpc 
+getting data from server - patience please...
+ got calib Tpc=3 pads=63360 from calib_mtl
+ allocating stuff...
+Now handling tpc 3
+..................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+TPC 3: 0 clusters found
+
+TPC 3: 0 clusters recombined
+
+TPC 3: 0 clusters outside of tpc 
+[INFO] Legacy/Clients/DIPT_256_NEW/Dipt256NewModuleSG.cc:45: Process: Executing: "dipt_256 -s ${DSPACK_SERVER} -d g -e g -t 5 -c gme -p -C --256"
+DSPACK 1.602,  1 Aug 2007    (dipt_256, server: pparfeno_22734_lxplus013)
+ pad-calibrations will be done 
+forcing 256 timebin mode
+Called init_dipt with mask 10
+PADTRANS version from 20011006
+Calling get_db_y_values for detector 5 with name gpc 
+read T0 20.48, vdrift 1.67308 from the gpc structure
+return from init_tpc
+getting data from server - patience please...
+ got calib Tpc=5 pads=672 from calib_gpc
+ allocating stuff...
+Now handling tpc 5
+.......
+TPC 5: 0 clusters found
+
+TPC 5: 0 clusters recombined
+
+TPC 5: 0 clusters outside of tpc 
+[INFO] Legacy/Clients/EDISTO/EdistoModuleSG.cc:59: Process: Executing: "edisto -s ${DSPACK_SERVER} -d vt1"
+TPC configuration 2 
+DSPACK 1.602,  1 Aug 2007    (edisto, server: pparfeno_22734_lxplus013)
+WARNING:	cant get point_vt1 (0)!
+0 points corrected
+0 points outside fieldcage volume
+[INFO] Legacy/Clients/DISTORT/VtNcalcModuleSG.cc:43: Process: Executing: "vt_ncalc -s ${DSPACK_SERVER} -d vt1"
+DSPACK 1.602,  1 Aug 2007    (vt_ncalc, server: pparfeno_22734_lxplus013)
+Error: VTPC1, point_vt1vt_ncalc_init arg: 1
+run   = 26056
+event = 4
+E_field: 999.900024
+Drift velocity from VTPC1 is: 1.422851 cm/us
+Electric field assigned: -195.4500 [V/cm]
+Drift velocity assigned: 1.422851 [cm/us]
+geom_vt1_p->y: 0.014234, geom_sec_vt1_p->y: 29.510000
+VTPC1: Frischgrid (EOP) = 29.5242 [cm]
+[INFO] Legacy/Clients/EDISTO/EdistoModuleSG.cc:59: Process: Executing: "edisto -s ${DSPACK_SERVER} -d vt2"
+TPC configuration 4 
+DSPACK 1.602,  1 Aug 2007    (edisto, server: pparfeno_22734_lxplus013)
+WARNING:	cant get point_vt2 (0)!
+0 points corrected
+0 points outside fieldcage volume
+[INFO] Legacy/Clients/DISTORT/VtNcalcModuleSG.cc:43: Process: Executing: "vt_ncalc -s ${DSPACK_SERVER} -d vt2"
+DSPACK 1.602,  1 Aug 2007    (vt_ncalc, server: pparfeno_22734_lxplus013)
+Error: VTPC2, point_vt2vt_ncalc_init arg: 2
+run   = 26056
+event = 4
+E_field: 999.900024
+Drift velocity from VTPC2 is: 1.440046 cm/us
+Electric field assigned: -196.3700 [V/cm]
+Drift velocity assigned: 1.440046 [cm/us]
+geom_vt2_p->y: -0.013129, geom_sec_vt2_p->y: 29.674999
+VTPC2: Frischgrid (EOP) = 29.6619 [cm]
+[INFO] Legacy/Clients/EDISTO/EdistoModuleSG.cc:59: Process: Executing: "edisto -s ${DSPACK_SERVER} -d mtl"
+TPC configuration 8 
+DSPACK 1.602,  1 Aug 2007    (edisto, server: pparfeno_22734_lxplus013)
+WARNING:	cant get point_mtl (0)!
+0 points corrected
+0 points outside fieldcage volume
+[INFO] Legacy/Clients/EDISTO/EdistoModuleSG.cc:59: Process: Executing: "edisto -s ${DSPACK_SERVER} -d mtr"
+TPC configuration 16 
+DSPACK 1.602,  1 Aug 2007    (edisto, server: pparfeno_22734_lxplus013)
+WARNING:	cant get point_mtr (0)!
+0 points corrected
+0 points outside fieldcage volume
+[INFO] Legacy/Clients/DISTORT/VtNcalcModuleSG.cc:43: Process: Executing: "vt_ncalc -s ${DSPACK_SERVER} -d gpc"
+DSPACK 1.602,  1 Aug 2007    (vt_ncalc, server: pparfeno_22734_lxplus013)
+Error: GapTPC, point_gpcvt_ncalc_init arg: 5
+run   = 26056
+event = 4
+E_field: 999.900024
+Drift velocity from GapTPC is: 1.673079 cm/us
+Electric field assigned: -178.7000 [V/cm]
+Drift velocity assigned: 1.673079 [cm/us]
+geom_gpc_p->y: -6.680000, geom_sec_gpc_p->y: 29.879999
+GapTPC: Frischgrid (EOP) = 23.2000 [cm]
+[INFO] Legacy/Clients/RES_CORR_ZG/ResCorrModuleSG.cc:44: Process: Executing: "res_corr -s ${DSPACK_SERVER} -vt1_chris /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/vt1_2009_pp158.corr -vt2_chris /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/vt2_2009_pp158.corr -mtl_chris /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/mtl_2009_pp158.corr -mtr_chris /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/mtr_2009_pp158.corr -p /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/vdrift_2009.txt"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (res_corr, server: pparfeno_22734_lxplus013)
+vt1 christina correction is /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/vt1_2009_pp158.corr 
+vt2 christina correction is /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/vt2_2009_pp158.corr
+mtl christina correction is /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/mtl_2009_pp158.corr
+mtr christina correction is /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/mtr_2009_pp158.corr
+Open: /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/vdrift_2009.txt
+christina par file is /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/vt1_2009_pp158.corr
+xa cycle is 0
+christina par file is /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/vt2_2009_pp158.corr
+xa cycle is 0
+christina par file is /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/mtl_2009_pp158.corr
+xa cycle is 0
+christina par file is /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/mtr_2009_pp158.corr
+xa cycle is 0
+no points in vt1
+no points in vt2
+no points in mtl
+no points in mtr
+Number of events processed: 1
+[INFO] Legacy/Clients/MTPC/MtracModuleSG.cc:58: Process: Executing: "mtrac tracks -s ${DSPACK_SERVER} -m 1"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mtrac, server: pparfeno_22734_lxplus013)
+Using mt_const_t(1), mt_flags_t(1), mt_tracking_t(1)
+mtitracks: Tracking MTL not successful.
+mtitracks: Tracking MTR not successful.
+WARNING!  No tracks found!
+Status: Starting to parse_clientname tracks
+Status: mtrac: Successfully connected to server.
+Status: loading mt_const_t
+Tracking MTPCL (24).
+Tracking MTPCR (24).
+[INFO] Legacy/Clients/MTPC/MtracModuleSG.cc:58: Process: Executing: "mtrac i2rtracks -s ${DSPACK_SERVER}"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mtrac, server: pparfeno_22734_lxplus013)
+No itracks in the server.
+Status: Starting to parse_clientname i2rtracks
+Status: mtrac: Successfully connected to server.
+Status: loading mt_flags_t
+Status: loading geom_target_t
+PADTRANS version from 20011006
+Calling get_db_y_values for detector 3 with name mtl 
+read T0 18.733, vdrift 2.33893 from the mtl structure
+return from init_tpc
+Calling get_db_y_values for detector 4 with name mtr 
+read T0 18.974, vdrift 2.3567 from the mtr structure
+return from init_tpc
+[INFO] Legacy/Clients/MTPC/MtracModuleSG.cc:58: Process: Executing: "mtrac mom -s ${DSPACK_SERVER}"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mtrac, server: pparfeno_22734_lxplus013)
+Status: Starting to parse_clientname mom
+Status: mtrac: Successfully connected to server.
+ Data set: /bxyz_t
+ Type:                  Structure   (at: 0x500f8320)
+   1  version           Real           : 1.2000000e+00
+   2  comment           Character*80   : Magnetic filed OFF
+   3  date              Real           : 6.0895000e+04
+   4  nmaps             Integer        : 0
+ MAGFLD: Initializing magnetic field...
+Status: loading mt_flags_t
+Status: loading sihodo
+Status: loading geom_target_t
+PADTRANS version from 20011006
+Calling get_db_y_values for detector 3 with name mtl 
+read T0 18.733, vdrift 2.33893 from the mtl structure
+return from init_tpc
+Calling get_db_y_values for detector 4 with name mtr 
+read T0 18.974, vdrift 2.3567 from the mtr structure
+return from init_tpc
+[INFO] Legacy/Clients/MPAT/MpatModuleSG.cc:44: Process: Executing: "mpat -s ${DSPACK_SERVER} -p -m -f -on"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mpat, server: pparfeno_22734_lxplus013)
+Setting up is_project!
+[INFO] Legacy/Clients/MPAT/MpatModuleSG.cc:44: Process: Executing: "mpat -s ${DSPACK_SERVER} -r -d vt2 -f -on"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mpat, server: pparfeno_22734_lxplus013)
+Setting up is_road!
+idet: 2
+MPAT follow...
+[INFO] Legacy/Clients/PATREC/PatrecModuleSG.cc:50: Process: Executing: "patrec -s ${DSPACK_SERVER} -d vt2 -pp"
+DSPACK 1.602,  1 Aug 2007    (patrec, server: pparfeno_22734_lxplus013)
+PATREC 1.900, 12 Feb 1997    (patrec, server: pparfeno_22734_lxplus013)
+ ppevents option is on
+ PATREC_idet:            2
+ hits     0 out of   442     2
+rec.F, nfound,ngood   0   0
+[INFO] Legacy/Clients/TPC_ERROR/TpcErrorModuleSG.cc:43: Process: Executing: "tpc_error -s ${DSPACK_SERVER} -d vt2"
+DSPACK 1.602,  1 Aug 2007    (tpc_error, server: pparfeno_22734_lxplus013)
+  tpc_error: run   =        26056
+  tpc_error: event =            4
+  tpc_error error: no point_vt2 str. 
+[INFO] Legacy/Clients/R3D/R3dModuleSG.cc:50: Process: Executing: "r3d -s ${DSPACK_SERVER} -d vt2 -m 1 -on"
+DSPACK 1.602,  1 Aug 2007    (r3d, server: pparfeno_22734_lxplus013)
+ r3d_info[tpc]: vt2
+[INFO] Legacy/Clients/MPAT/MpatModuleSG.cc:44: Process: Executing: "mpat -s ${DSPACK_SERVER} -R -p -d vt2 -f -on"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mpat, server: pparfeno_22734_lxplus013)
+Setting up is_project!
+idet: 2
+release_mtpc_tracks: no g_ptr_lists found - ending
+[INFO] Legacy/Clients/MINICLIENTS/MiniModuleSG.cc:74: Process: Executing: "mini monitor -s ${DSPACK_SERVER} -d vt2"
+DSPACK 1.602,  1 Aug 2007    (mini_monitor, server: pparfeno_22734_lxplus013)
+========================================================================
+--> DATE = 132123409, TIME = 1124354, RUN = 26056
+----->>>>> run 26056, available range from 5000 to 50000
+TZ is "Europe/Zurich"
+--> Time is 1479400802 (UTC) -> 17/11/2016 17:40:2 (Geneva local)
+--> Using run period 1
+---> Calling Find_SC_Data: 1479400802 1 1 960.000000 20.000000 0.000000 0.000000
+ P = 960.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_pressure.txt
+ T = 20.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_T_1.txt
+hv = 13000.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_hv_1.txt
+vd = 1.400000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_vd_1.txt
+Ep = 202.440002, slope = 1.199500 is read from line 2 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_ep_1.txt
+DRIFT_LEN: 66.565
+E OVER P:  202.44
+SLOPE:     1.1995
+--> Found     vd=1.400000 t=20.000000 hv=13000.000000 p=960.000000
+--> Corrected vd=1.408256 t=20.000000 hv=13000.000000 p=960.000000 Ep=203.435226
+--> Scaled    vd=1.408059 t=20.000000 hv=13000.000000 p=960.000000
+[INFO] Legacy/Clients/MPAT/MpatModuleSG.cc:44: Process: Executing: "mpat -s ${DSPACK_SERVER} -r -d vt1 -f -on"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mpat, server: pparfeno_22734_lxplus013)
+Setting up is_road!
+idet: 1
+MPAT follow...
+[INFO] Legacy/Clients/PATREC/PatrecModuleSG.cc:50: Process: Executing: "patrec -s ${DSPACK_SERVER} -d vt1 -pp"
+DSPACK 1.602,  1 Aug 2007    (patrec, server: pparfeno_22734_lxplus013)
+PATREC 1.900, 12 Feb 1997    (patrec, server: pparfeno_22734_lxplus013)
+ ppevents option is on
+ PATREC_idet:            1
+ hits     0 out of   443     1
+rec.F, nfound,ngood   0   0
+[INFO] Legacy/Clients/TPC_ERROR/TpcErrorModuleSG.cc:43: Process: Executing: "tpc_error -s ${DSPACK_SERVER} -d vt1"
+DSPACK 1.602,  1 Aug 2007    (tpc_error, server: pparfeno_22734_lxplus013)
+  tpc_error: run   =        26056
+  tpc_error: event =            4
+  tpc_error error: no point_vt1 str. 
+[INFO] Legacy/Clients/R3D/R3dModuleSG.cc:50: Process: Executing: "r3d -s ${DSPACK_SERVER} -d vt1 -m 1 -on"
+DSPACK 1.602,  1 Aug 2007    (r3d, server: pparfeno_22734_lxplus013)
+ r3d_info[tpc]: vt1
+[INFO] Legacy/Clients/MPAT/MpatModuleSG.cc:44: Process: Executing: "mpat -s ${DSPACK_SERVER} -R -p -d vt1 -f -on"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mpat, server: pparfeno_22734_lxplus013)
+Setting up is_project!
+idet: 1
+release_mtpc_tracks: no g_ptr_lists found - ending
+[INFO] Legacy/Clients/MINICLIENTS/MiniModuleSG.cc:74: Process: Executing: "mini monitor -s ${DSPACK_SERVER} -d vt1"
+DSPACK 1.602,  1 Aug 2007    (mini_monitor, server: pparfeno_22734_lxplus013)
+========================================================================
+--> DATE = 132123409, TIME = 1124354, RUN = 26056
+----->>>>> run 26056, available range from 5000 to 50000
+TZ is "Europe/Zurich"
+--> Time is 1479400802 (UTC) -> 17/11/2016 17:40:2 (Geneva local)
+--> Using run period 1
+---> Calling Find_SC_Data: 1479400802 1 0 960.000000 20.000000 0.000000 0.000000
+ P = 960.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_pressure.txt
+ T = 20.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_T_0.txt
+hv = 13000.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_hv_0.txt
+vd = 1.400000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_vd_0.txt
+Ep = 202.438004, slope = 1.213740 is read from line 2 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_ep_0.txt
+DRIFT_LEN: 66.595
+E OVER P:  202.438
+SLOPE:     1.21374
+--> Found     vd=1.400000 t=20.000000 hv=13000.000000 p=960.000000
+--> Corrected vd=1.407601 t=20.000000 hv=13000.000000 p=960.000000 Ep=203.343597
+--> Scaled    vd=1.407601 t=20.000000 hv=13000.000000 p=960.000000
+[INFO] Legacy/Clients/MTPC/MtracModuleSG.cc:58: Process: Executing: "mtrac tracks -s ${DSPACK_SERVER} -m 2"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mtrac, server: pparfeno_22734_lxplus013)
+Using mt_const_t(2), mt_flags_t(2), mt_tracking_t(2)
+mtitracks: Tracking MTL not successful.
+mtitracks: Tracking MTR not successful.
+WARNING!  No tracks found!
+Status: Starting to parse_clientname tracks
+Status: mtrac: Successfully connected to server.
+Status: loading mt_const_t
+Tracking MTPCL (24).
+Tracking MTPCR (24).
+[INFO] Legacy/Clients/MTPC/MtracModuleSG.cc:58: Process: Executing: "mtrac i2rtracks -s ${DSPACK_SERVER}"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mtrac, server: pparfeno_22734_lxplus013)
+No itracks in the server.
+Status: Starting to parse_clientname i2rtracks
+Status: mtrac: Successfully connected to server.
+Status: loading mt_flags_t
+Status: loading geom_target_t
+PADTRANS version from 20011006
+Calling get_db_y_values for detector 3 with name mtl 
+read T0 18.733, vdrift 2.33893 from the mtl structure
+return from init_tpc
+Calling get_db_y_values for detector 4 with name mtr 
+read T0 18.974, vdrift 2.3567 from the mtr structure
+return from init_tpc
+[INFO] Legacy/Clients/TPC_ERROR/TpcErrorModuleSG.cc:43: Process: Executing: "tpc_error -s ${DSPACK_SERVER} -d mtl"
+DSPACK 1.602,  1 Aug 2007    (tpc_error, server: pparfeno_22734_lxplus013)
+  tpc_error: run   =        26056
+  tpc_error: event =            4
+  tpc_error error: no point_mtl str. 
+[INFO] Legacy/Clients/TPC_ERROR/TpcErrorModuleSG.cc:43: Process: Executing: "tpc_error -s ${DSPACK_SERVER} -d mtr"
+DSPACK 1.602,  1 Aug 2007    (tpc_error, server: pparfeno_22734_lxplus013)
+  tpc_error: run   =        26056
+  tpc_error: event =            4
+  tpc_error error: no point_mtr str. 
+[INFO] Legacy/Clients/MTPC/MtracModuleSG.cc:58: Process: Executing: "mtrac mom -s ${DSPACK_SERVER}"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mtrac, server: pparfeno_22734_lxplus013)
+Status: Starting to parse_clientname mom
+Status: mtrac: Successfully connected to server.
+ Data set: /bxyz_t
+ Type:                  Structure   (at: 0x500f8320)
+   1  version           Real           : 1.2000000e+00
+   2  comment           Character*80   : Magnetic filed OFF
+   3  date              Real           : 6.0895000e+04
+   4  nmaps             Integer        : 0
+ MAGFLD: Initializing magnetic field...
+Status: loading mt_flags_t
+Status: loading sihodo
+Status: loading geom_target_t
+PADTRANS version from 20011006
+Calling get_db_y_values for detector 3 with name mtl 
+read T0 18.733, vdrift 2.33893 from the mtl structure
+return from init_tpc
+Calling get_db_y_values for detector 4 with name mtr 
+read T0 18.974, vdrift 2.3567 from the mtr structure
+return from init_tpc
+[INFO] Legacy/Clients/MTPC/MtracModuleSG.cc:58: Process: Executing: "mtrac decay -s ${DSPACK_SERVER}"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mtrac, server: pparfeno_22734_lxplus013)
+Status: Starting to parse_clientname decay
+Status: mtrac: Successfully connected to server.
+Status: loading geom_target_t
+Status: allocating local memory
+  MINUIT RELEASE 96.03  INITIALIZED.   DIMENSIONS 100/ 50  EPSMAC=  0.89E-15
+Status: loading clusters
+Status: loaded 0 MTL points
+Status: loaded 0 MTR points
+Status: loading tracks
+Status: loaded 0 itracks
+Status: No MTPC data
+Status: Cleaning up memory
+Status: DONE
+[INFO] Legacy/Clients/MINICLIENTS/MiniModuleSG.cc:74: Process: Executing: "mini monitor -s ${DSPACK_SERVER} -d mtl"
+DSPACK 1.602,  1 Aug 2007    (mini_monitor, server: pparfeno_22734_lxplus013)
+========================================================================
+--> DATE = 132123409, TIME = 1124354, RUN = 26056
+----->>>>> run 26056, available range from 5000 to 50000
+TZ is "Europe/Zurich"
+--> Time is 1479400802 (UTC) -> 17/11/2016 17:40:2 (Geneva local)
+--> Using run period 1
+---> Calling Find_SC_Data: 1479400802 1 2 960.000000 20.000000 0.000000 0.000000
+ P = 960.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_pressure.txt
+ T = 20.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_T_2.txt
+hv = 19000.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_hv_2.txt
+vd = 2.300000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_vd_2.txt
+Ep = 175.490005, slope = 1.233300 is read from line 2 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_ep_2.txt
+DRIFT_LEN: 111.735
+E OVER P:  175.49
+SLOPE:     1.2333
+--> Found     vd=2.300000 t=20.000000 hv=19000.000000 p=960.000000
+--> Corrected vd=2.326515 t=20.000000 hv=19000.000000 p=960.000000 Ep=177.130417
+--> Scaled    vd=2.327213 t=20.000000 hv=19000.000000 p=960.000000
+[INFO] Legacy/Clients/MINICLIENTS/MiniModuleSG.cc:74: Process: Executing: "mini monitor -s ${DSPACK_SERVER} -d mtr"
+DSPACK 1.602,  1 Aug 2007    (mini_monitor, server: pparfeno_22734_lxplus013)
+========================================================================
+--> DATE = 132123409, TIME = 1124354, RUN = 26056
+----->>>>> run 26056, available range from 5000 to 50000
+TZ is "Europe/Zurich"
+--> Time is 1479400802 (UTC) -> 17/11/2016 17:40:2 (Geneva local)
+--> Using run period 1
+---> Calling Find_SC_Data: 1479400802 1 3 960.000000 20.000000 0.000000 0.000000
+ P = 960.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_pressure.txt
+ T = 20.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_T_3.txt
+hv = 19000.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_hv_3.txt
+vd = 2.300000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_vd_3.txt
+Ep = 175.490005, slope = 1.236800 is read from line 2 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_ep_3.txt
+DRIFT_LEN: 111.735
+E OVER P:  175.49
+SLOPE:     1.2368
+--> Found     vd=2.300000 t=20.000000 hv=19000.000000 p=960.000000
+--> Corrected vd=2.326591 t=20.000000 hv=19000.000000 p=960.000000 Ep=177.130417
+--> Scaled    vd=2.326428 t=20.000000 hv=19000.000000 p=960.000000
+[INFO] Legacy/Clients/MPAT/MpatModuleSG.cc:44: Process: Executing: "mpat -s ${DSPACK_SERVER} -c -G -f -on"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mpat, server: pparfeno_22734_lxplus013)
+DS_DB Error: 102 Data set not stored
+Cannot move: g_ptr_list, g_ptr_list_old
+0 matches of 0 useable extensions found
+3-detector matches 0, vt1-vt2 0, vt1-mt 0, vt2-mt 0
+0 global rtracks created
+mgt_main: mgt returned 100
+[WARN] Legacy/Clients/MPAT/MpatModuleSG.cc:54: Process: mpat did't find global tracks! Skip an event! (100)
+[INFO] Legacy/Clients/TPC_ERROR/TpcErrorModuleSG.cc:43: Process: Executing: "tpc_error -s ${DSPACK_SERVER} -d all"
+DSPACK 1.602,  1 Aug 2007    (tpc_error, server: pparfeno_22734_lxplus013)
+ GPC yhtpc   23.1999989    
+  tpc_error: run   =        26056
+  tpc_error: event =            4
+  tpc_error error: no point_vt1 str. 
+[INFO] Legacy/Clients/TPC_FLIGHT_TIME/TpcFlightTimeModuleSG.cc:43: Process: Executing: "tpc_flight_time -s ${DSPACK_SERVER} -d all"
+DSPACK 1.602,  1 Aug 2007    (tpc_flight_time, server: pparfeno_22734_lxplus013)
+  run   =        26056
+  event =            4
+  -------------- 
+  n_point_good =            0
+  n_point_bad  =            0
+  -------------- 
+  n_point_good =            0
+  n_point_bad  =            0
+  -------------- 
+  n_point_good =            0
+  n_point_bad  =            0
+  -------------- 
+  n_point_good =            0
+  n_point_bad  =            0
+[INFO] Legacy/Clients/R3D/R3dModuleSG.cc:50: Process: Executing: "r3d -s ${DSPACK_SERVER} -d all -m 1 -on"
+DSPACK 1.602,  1 Aug 2007    (r3d, server: pparfeno_22734_lxplus013)
+ r3d_info[tpc]: all
+[INFO] Legacy/Clients/R3D/VtxModuleSG.cc:43: Process: Executing: "vtx -s ${DSPACK_SERVER} -d all -pp -on"
+DSPACK 1.602,  1 Aug 2007    (vtx, server: pparfeno_22734_lxplus013)
+ ************
+ * VTX_INFO: Error    #201: Nothing to fit
+ ************
+ * Terminating....
+ ************
+[INFO] Legacy/Clients/R3D/R3dModuleSG.cc:50: Process: Executing: "r3d -s ${DSPACK_SERVER} -d all -m 2 -on"
+DSPACK 1.602,  1 Aug 2007    (r3d, server: pparfeno_22734_lxplus013)
+ r3d_info[tpc]: all
+[INFO] Legacy/Clients/PPOINTS/PpointsModuleSG.cc:43: Process: Executing: "ppoints -s ${DSPACK_SERVER}"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (ppoints, server: pparfeno_22734_lxplus013)
+[ppoints] getting parameters
+[ppoints] getting necessary banks
+[ppoints] bank 'g_ptr_list' missing
+[ppoints] bank 'g_track_ref' missing
+[ppoints] error! could not get all necessary banks
+[INFO] Legacy/Clients/GTPC_TRACK/GtpcTrackModuleSG.cc:43: Process: Executing: "gtpc_track -s ${DSPACK_SERVER}"
+DSPACK 1.602,  1 Aug 2007    (gtpc_track, server: pparfeno_22734_lxplus013)
+gtpc_track: Start process
+gtpc_track: Process 26056 4  found 0 tracks 
+gtpc_track: Finished
+[INFO] Legacy/Clients/REFORM/ReformModuleSG.cc:43: Process: Executing: "reform -s ${DSPACK_SERVER} -verbose -check -spiral -join -foil -ppoints -insect"
+DSPACK 1.602,  1 Aug 2007    (reform, server: pparfeno_22734_lxplus013)
+ get ppoints parameters..
+[reform] warning! bank 'vertex_fit' missing
+[reform] warning! bank 'g_ptr_list' missing
+[reform] warning! bank 'rtrack_quali' missing
+[reform] warning! bank 'point_vt1' missing
+[reform] warning! bank 'point_vt2' missing
+[reform] warning! bank 'point_mtl' missing
+[reform] warning! bank 'point_mtr' missing
+[reform] warning! bank 'point_gpc' missing
+[reform] error! could not get all necessary banks
+[reform] Going to exit now... Bye.
+GTPC is ON !!!Modus: 17129
+[INFO] Legacy/Clients/R3D/R3dModuleSG.cc:50: Process: Executing: "r3d -s ${DSPACK_SERVER} -d all -m 1 -r -on"
+DSPACK 1.602,  1 Aug 2007    (r3d, server: pparfeno_22734_lxplus013)
+ r3d_info[tpc]: all
+[INFO] Legacy/Clients/R3D/VtxModuleSG.cc:43: Process: Executing: "vtx -s ${DSPACK_SERVER} -d all -pp -on"
+DSPACK 1.602,  1 Aug 2007    (vtx, server: pparfeno_22734_lxplus013)
+ ************
+ * VTX_INFO: Error    #201: Nothing to fit
+ ************
+ * Terminating....
+ ************
+[INFO] Legacy/Clients/R3D/R3dModuleSG.cc:50: Process: Executing: "r3d -s ${DSPACK_SERVER} -d all -m 2 -r -on"
+DSPACK 1.602,  1 Aug 2007    (r3d, server: pparfeno_22734_lxplus013)
+ r3d_info[tpc]: all
+[INFO] Legacy/Clients/TOFL/ToflModuleSG.cc:50: Process: Executing: "tofl_client -s ${DSPACK_SERVER} -verbose -pp"
+DSPACK 1.602,  1 Aug 2007    (tofl, server: pparfeno_22734_lxplus013)
+Starting tofl_client...
+"calib_mode" = 1
+server : pparfeno_22734
+Run 26056 Event # 4
+Warning!!! : NO main vertex in this event!
+[INFO] Legacy/Clients/TOFR/TofrModuleSG.cc:50: Process: Executing: "tofr_client -s ${DSPACK_SERVER} -verbose -pp"
+DSPACK 1.602,  1 Aug 2007    (tofr, server: pparfeno_22734_lxplus013)
+Starting tofr_client...
+"calib_mode" = 1
+server : pparfeno_22734
+####### Run 26056 Event # 4
+Warning!!! : NO main vertex in this event!
+[INFO] Legacy/Clients/dedxna61/DeDxNa61ModuleSG.cc:71: Process: Executing: "dedxna61 -s ${DSPACK_SERVER}"
+DSPACK 1.602,  1 Aug 2007    (, server: pparfeno_22734_lxplus013)
+ deffile:/afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/DedxCalib/tables/cal_def_v12                                    
+ Version of dedxna61 20130318
+ Called runinit:       26056           4          13
+ Library of calibration constant:        
+ Used keys KEY1=26056    KEY5=        
+ runs            1        1117        1218
+ runs            2        2907        2971
+ runs            3        3664        3726
+ runs            4        3761        3844
+ runs            5        4288        4347
+ runs            6        4633        4788
+ runs            7        2724        2879
+ runs            8        4392        4496
+ runs            9        4558        4620
+ runs           10        1723        1773
+ runs           11        4498        4548
+ runs           12        1742        1764
+ runs           13        3418        3568
+ runs           14        3585        3633
+ runs           15        3727        3760
+ runs           16        1774        1803
+ runs           17        2882        2897
+ runs           18        4352        4491
+ runs           19        1909        1930
+ runs           20        1942        1955
+ runs           21        3370        3378
+ runs           22        2437        2511
+ runs           23        4789        4817
+ runs           24        4105        4157
+ runs           25        3300        3305
+ runs           26        3381        3389
+ runs           27        3311        3369
+ runs           28        4818        4828
+ runs           29        1811        1862
+ runs           30        1868        1889
+ runs           31        2524        2550
+ runs           32        3244        3293
+ runs           33        1956        1974
+ runs           34        4913        5639
+ runs           35        5640        5661
+ runs           36        8376        8769
+ runs           37        8775        8930
+ runs           38        8947        9135
+ runs           39        9162        9389
+ runs           40        9451        9702
+ runs           41        9705        9800
+ runs           42        9805        9900
+ runs           43        9910        9989
+ runs           44        9996       10148
+ runs           45       10521       11106
+ runs           46       11120       11600
+ runs           47       11626       13235
+ runs           48       13671       13691
+ runs           49       13747       14144
+ runs           50       14150       14582
+ runs           51       14588       14676
+ runs           52       14726       15089
+ runs           53       15092       15232
+ runs           54       15235       15245
+ runs           55       15247       15341
+ runs           56       15345       15411
+ runs           57       15412       15456
+ runs           58       15457       15851
+ runs           59       15852       16000
+ runs           60       16001       16057
+ runs           61       16063       16228
+ runs           62       16229       16534
+ runs           63       16535       17008
+ runs           64       17049       17308
+ runs           65       17333       17653
+ runs           66       17658       17868
+ runs           67       17870       17939
+ runs           68       17946       18146
+ runs           69       18604       20039
+ runs           70       20296       20318
+ runs           71       20328       20480
+ runs           72       20532       20645
+ runs           73       20661       20803
+ runs           74       20820       21049
+ runs           75       21058       21268
+ runs           76       21298       21361
+ runs           77       21376       21565
+ runs           78       21566       99999
+ table.v12_v19                                                                                                                                                                                                                                                  
+ table.v14_v19                                                                                                                                                                                                                                                  
+ table.v2_v19                                                                                                                                                                                                                                                   
+ table.mhr_v19                                                                                                                                                                                                                                                  
+ table.msr_v19                                                                                                                                                                                                                                                  
+ Get constants for production :          78  15i 
+ File for ydependence:yc_xxx                          
+ OTABLE:/afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/DedxCalib/tables/yc_xxx                                         
+ Get sector calibration constant from file:s_c_xxx                                                                                                                         
+ /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/DedxCalib/tables/s_c_xxx                                        
+           1   237.059998       14.9090004    
+           2   202.410004       14.0880003    
+           3   185.479996       10.7869997    
+           4   220.100006       14.2860003    
+           5   181.320007       11.5340004    
+           6   186.259995       9.58699989    
+           7   155.389999       10.4180002    
+           8   141.449997       5.99599981    
+           9   147.270004       10.4949999    
+          10   137.300003       10.8979998    
+          11   124.050003       7.29600000    
+          12   127.919998       10.1639996    
+          13   141.660004       6.19799995    
+          14   145.250000       3.32399988    
+          15   127.830002       5.51000023    
+          16   126.500000       6.48199987    
+          17   151.949997       4.34899998    
+          18   144.479996       5.34999990    
+          19   142.789993       5.35900021    
+          20   144.050003       5.82800007    
+          21   139.570007       5.08500004    
+          22   143.800003       6.01599979    
+          23   130.350006       6.47900009    
+          24   127.660004       5.53399992    
+          25   135.720001       5.86399984    
+          26   126.750000       5.47200012    
+          27   143.809998       4.96299982    
+          28   142.350006       4.56500006    
+          29   138.500000       5.21700001    
+          30   121.300003       5.79500008    
+          31   130.820007       5.53599977    
+          32   134.750000       5.33900023    
+          33   156.880005       9.32400036    
+          34   155.600006       10.3559999    
+          35   150.309998       9.66899967    
+          36   139.649994       11.3409996    
+          37   141.009995       13.1040001    
+          38   155.250000       8.89200020    
+          39   150.559998       8.56400013    
+          40   159.610001       7.68100023    
+          41   148.169998       8.04899979    
+          42   155.949997       11.3269997    
+          43   140.320007       4.62900019    
+          44   146.020004       3.62899995    
+          45   149.759995       3.81399989    
+          46   150.130005       4.95400000    
+          47   148.380005       3.90300012    
+          48   144.490005       5.02400017    
+          49   144.380005       4.75799990    
+          50   152.220001       4.21199989    
+          51   153.850006       3.84400010    
+          52   153.759995       4.26900005    
+          53   155.740005       4.22399998    
+          54   146.449997       3.92700005    
+          55   155.190002       4.12799978    
+          56   168.619995       4.22599983    
+          57   156.330002       4.67100000    
+PADTRANS version from 20011006
+Calling get_db_y_values for detector 1 with name vt1 
+read T0 18.354, vdrift 1.42285 from the vt1 structure
+return from init_tpc
+Calling get_db_y_values for detector 2 with name vt2 
+read T0 19.389, vdrift 1.44005 from the vt2 structure
+return from init_tpc
+Calling get_db_y_values for detector 3 with name mtl 
+read T0 18.733, vdrift 2.33893 from the mtl structure
+return from init_tpc
+Calling get_db_y_values for detector 4 with name mtr 
+read T0 18.974, vdrift 2.3567 from the mtr structure
+return from init_tpc
+ Data set: /bxyz_t
+ Type:                  Structure   (at: 0x500f8320)
+   1  version           Real           : 1.2000000e+00
+   2  comment           Character*80   : Magnetic filed OFF
+   3  date              Real           : 6.0895000e+04
+   4  nmaps             Integer        : 0
+          58   169.779999       4.44399977    
+          59   163.860001       3.31399989    
+          60   163.970001       4.69799995    
+          61   166.350006       4.42399979    
+          62   174.240005       4.17899990    
+ aloss =table.v12_v19                                                                                                                                                                                                                                                  
+ tname =/afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/DedxCalib/tables/table.v12_v19                                  
+ For chip gain used file:cg_xxx                          
+ End of file found on chipgain file
+ call inittcor for get files
+ Open file for timedepence correction:td_xxx_tab                      
+ nbxyz=           0
+ after get_na49b nbxyz=           0
+ after new init padtrans ierr=           0
+            TPC: vt1
+ Electric Field:   -195.449997      V/cm. (   0.00000000      -195.449997       0.00000000     )
+ Drift velocity:    1.42285061      cm/us.
+             y0:    29.5242348      cm
+          slope:    0.00000000    
+            TPC: vt2
+ Electric Field:   -196.369995      V/cm. (   0.00000000      -196.369995       0.00000000     )
+ Drift velocity:    1.44004595      cm/us.
+             y0:    29.6618710      cm
+          slope:    0.00000000    
+[WARN] Legacy/EventIO/NA49DST/NA49ToTrigger.cc:21: NA49ToTrigger: trigger data already present
+[INFO] Framework/RunController/RunController.cc:420: DoNextInSequence: Received ContinueLoop instruction from module 'EventSelectorSG'.
+[INFO] EventIO/BOS/BOSEventFile.cc:200: Read: 
+  ============================================
+  event 5, run 26056, tape 0, exp 61, spill 2
+  2016-11-17T16:40:02Z (UTC), 1163436019 (GPS), Unix:1479400802s
+  calib mode: 0 calib events: 0
+  is pedestal event: 0
+  ============================================
+
+
+[INFO] Modules/General/EventFileReaderSG/EventFileReader.cc:198: Process: run = 26056, event = '5'
+[INFO] Legacy/Clients/ClientInitializerSG/ClientInitializerSG.cc:287: Process: Version: 11189, Run: 26056, Event: 5.
+[INFO] Legacy/Clients/MINICLIENTS/MiniModuleSG.cc:74: Process: Executing: "mini many -s ${DSPACK_SERVER}"
+DSPACK 1.602,  1 Aug 2007    (mini_many, server: pparfeno_22734_lxplus013)
+ BPD ADCs pedestals extracted.
+ Trigger crate ADC pedestals extracted.
+
+  warning *** no ZF-corrections found, run number outside given limits 
+ adc-values: 0 0 340  215.6  1.000  124.4   124.4 
+ adc-values: 0 1 255  214.6  1.000   40.4   164.8 
+ adc-values: 0 2 300  240.4  1.000   59.6   224.4 
+ adc-values: 0 3 262  202.5  1.000   59.5   283.9 
+ adc-values: 0 4 300  232.6  1.000   67.4   351.3 
+ adc-values: 0 5 346  243.3  1.000  102.7   454.0 
+ adc-values: 0 6 358  214.8  1.000  143.2   597.2 
+ adc-values: 0 7 374  220.5  1.000  153.5   750.7 
+ adc-values: 0 8 685  220.6  1.000  464.4  1215.1 
+ adc-values: 0 9 1349  231.2  1.000 1117.8  2332.9 
+ adc-values: 0 10 2267  241.0  1.000 2026.0  4358.9 
+ adc-values: 0 11 1117  238.3  1.000  878.7  5237.6 
+ adc-values: 0 12 365  246.4  1.000  118.6  5356.2 
+ adc-values: 0 13 294  229.2  1.000   64.8  5421.0 
+ adc-values: 0 14 202  228.7  1.000  -26.7  5421.0 
+ adc-values: 0 15 256  238.3  1.000   17.7  5438.7 
+ adc-values: 0 16 205  200.8  1.000    4.2  5442.9 
+ adc-values: 0 17 205  205.7  1.000   -0.7  5442.9 
+ adc-values: 0 18 229  219.1  1.000    9.9  5452.8 
+ adc-values: 0 19 241  242.1  1.000   -1.1  5452.8 
+ adc-values: 0 20 272  243.6  1.000   28.4  5481.2 
+ adc-values: 0 21 237  242.9  1.000   -5.9  5481.2 
+ adc-values: 0 22 228  217.1  1.000   10.9  5492.1 
+ adc-values: 0 23 187  205.7  1.000  -18.7  5492.1 
+
+ found peak ( 4) between 8 and 11 incl. 
+mean = 9.739708, rms = 0.889515, charge = 4486.9, width = 4
+bpd_cluster mean = 10.739708, rms = 0.889515, charge = 4487
+rri = 0.492722, rle = 0.595060
+ adc-values: 1 0 193  251.6  1.000  -58.6     0.0 
+ adc-values: 1 1 226  249.5  1.000  -23.5     0.0 
+ adc-values: 1 2 159  210.7  1.000  -51.7     0.0 
+ adc-values: 1 3 187  208.5  1.000  -21.5     0.0 
+ adc-values: 1 4 203  218.2  1.000  -15.2     0.0 
+ adc-values: 1 5 179  225.3  1.000  -46.3     0.0 
+ adc-values: 1 6 266  242.4  1.000   23.6    23.6 
+ adc-values: 1 7 213  223.7  1.000  -10.7    23.6 
+ adc-values: 1 8 209  193.3  1.000   15.7    39.3 
+ adc-values: 1 9 293  203.4  1.000   89.6   128.9 
+ adc-values: 1 10 262  203.1  1.000   58.9   187.8 
+ adc-values: 1 11 298  213.5  1.000   84.5   272.3 
+ adc-values: 1 12 727  216.8  1.000  510.2   782.5 
+ adc-values: 1 13 1530  239.6  1.000 1290.4  2072.9 
+ adc-values: 1 14 2287  234.8  1.000 2052.2  4125.1 
+ adc-values: 1 15 995  215.9  1.000  779.1  4904.2 
+ adc-values: 1 16 499  227.5  1.000  271.5  5175.7 
+ adc-values: 1 17 322  240.1  1.000   81.9  5257.6 
+ adc-values: 1 18 280  232.6  1.000   47.4  5305.0 
+ adc-values: 1 19 248  244.0  1.000    4.0  5309.0 
+ adc-values: 1 20 256  241.5  1.000   14.5  5323.5 
+ adc-values: 1 21 248  230.1  1.000   17.9  5341.4 
+ adc-values: 1 22 255  235.9  1.000   19.1  5360.5 
+ adc-values: 1 23 307  248.3  1.000   58.7  5419.2 
+
+ found peak ( 4) between 12 and 15 incl. 
+mean = 13.669315, rms = 0.882060, charge = 4631.9, width = 4
+bpd_cluster mean = 14.669315, rms = 0.882060, charge = 4632
+rri = 0.435068, rle = 0.668999
+ adc-values: 2 0 105  231.3  1.000 -126.3     0.0 
+ adc-values: 2 1 152  223.1  1.000  -71.1     0.0 
+ adc-values: 2 2 194  247.4  1.000  -53.4     0.0 
+ adc-values: 2 3 171  226.0  1.000  -55.0     0.0 
+ adc-values: 2 4 178  231.7  1.000  -53.7     0.0 
+ adc-values: 2 5 214  225.0  1.000  -11.0     0.0 
+ adc-values: 2 6 292  248.1  1.000   43.9    43.9 
+ adc-values: 2 7 410  232.7  1.000  177.3   221.2 
+ adc-values: 2 8 867  240.0  1.000  627.0   848.2 
+ adc-values: 2 9 2085  219.3  1.000 1865.7  2713.9 
+ adc-values: 2 10 1429  238.8  1.000 1190.2  3904.1 
+ adc-values: 2 11 514  225.5  1.000  288.5  4192.6 
+ adc-values: 2 12 532  241.0  1.000  291.0  4483.6 
+ adc-values: 2 13 324  218.8  1.000  105.2  4588.8 
+ adc-values: 2 14 295  219.6  1.000   75.4  4664.2 
+ adc-values: 2 15 264  247.6  1.000   16.4  4680.6 
+ adc-values: 2 16 272  252.1  1.000   19.9  4700.5 
+ adc-values: 2 17 268  220.9  1.000   47.1  4747.6 
+ adc-values: 2 18 339  240.9  1.000   98.1  4845.7 
+ adc-values: 2 19 248  244.8  1.000    3.2  4848.9 
+ adc-values: 2 20 231  228.8  1.000    2.2  4851.1 
+ adc-values: 2 21 284  225.3  1.000   58.7  4909.8 
+ adc-values: 2 22 318  247.3  1.000   70.7  4980.5 
+ adc-values: 2 23 322  224.0  1.000   98.0  5078.5 
+
+ found peak ( 5) between 8 and 12 incl. 
+mean = 9.472316, rms = 1.043280, charge = 4262.4, width = 5
+bpd_cluster mean = 10.472316, rms = 1.043280, charge = 4262
+rri = 0.685372, rle = 0.415827
+ adc-values: 3 0 153  256.5  1.000 -103.5     0.0 
+ adc-values: 3 1 155  248.6  1.000  -93.6     0.0 
+ adc-values: 3 2 156  248.9  1.000  -92.9     0.0 
+ adc-values: 3 3 175  235.4  1.000  -60.4     0.0 
+ adc-values: 3 4 162  257.6  1.000  -95.6     0.0 
+ adc-values: 3 5 146  233.2  1.000  -87.2     0.0 
+ adc-values: 3 6 169  242.4  1.000  -73.4     0.0 
+ adc-values: 3 7 145  218.6  1.000  -73.6     0.0 
+ adc-values: 3 8 224  232.4  1.000   -8.4     0.0 
+ adc-values: 3 9 357  210.2  1.000  146.8   146.8 
+ adc-values: 3 10 920  244.9  1.000  675.1   821.9 
+ adc-values: 3 11 2191  226.2  1.000 1964.8  2786.7 
+ adc-values: 3 12 1612  219.4  1.000 1392.6  4179.3 
+ adc-values: 3 13 655  233.2  1.000  421.8  4601.1 
+ adc-values: 3 14 273  222.5  1.000   50.5  4651.6 
+ adc-values: 3 15 137  212.7  1.000  -75.7  4651.6 
+ adc-values: 3 16 107  224.6  1.000 -117.6  4651.6 
+ adc-values: 3 17 120  224.2  1.000 -104.2  4651.6 
+ adc-values: 3 18 133  219.2  1.000  -86.2  4651.6 
+ adc-values: 3 19 153  239.6  1.000  -86.6  4651.6 
+ adc-values: 3 20 115  238.3  1.000 -123.3  4651.6 
+ adc-values: 3 21 121  235.8  1.000 -114.8  4651.6 
+ adc-values: 3 22 175  241.0  1.000  -66.0  4651.6 
+ adc-values: 3 23 134  229.4  1.000  -95.4  4651.6 
+
+ found peak ( 4) between 10 and 13 incl. 
+mean = 11.350471, rms = 0.848619, charge = 4454.3, width = 4
+bpd_cluster mean = 12.350471, rms = 0.848619, charge = 4454
+rri = 0.735737, rle = 0.419900
+ adc-values: 4 0 223  244.1  1.000  -21.1     0.0 
+ adc-values: 4 1 238  232.9  1.000    5.1     5.1 
+ adc-values: 4 2 221  225.5  1.000   -4.5     5.1 
+ adc-values: 4 3 212  232.1  1.000  -20.1     5.1 
+ adc-values: 4 4 242  231.2  1.000   10.8    15.9 
+ adc-values: 4 5 272  218.6  1.000   53.4    69.3 
+ adc-values: 4 6 493  227.4  1.000  265.6   334.9 
+ adc-values: 4 7 1038  238.4  1.000  799.6  1134.5 
+ adc-values: 4 8 2284  220.3  1.000 2063.7  3198.2 
+ adc-values: 4 9 1632  242.8  1.000 1389.2  4587.4 
+ adc-values: 4 10 658  224.3  1.000  433.7  5021.1 
+ adc-values: 4 11 305  226.7  1.000   78.3  5099.4 
+ adc-values: 4 12 440  214.4  1.000  225.6  5325.0 
+ adc-values: 4 13 354  240.1  1.000  113.9  5438.9 
+ adc-values: 4 14 317  223.8  1.000   93.2  5532.1 
+ adc-values: 4 15 344  248.6  1.000   95.4  5627.5 
+ adc-values: 4 16 328  238.5  1.000   89.5  5717.0 
+ adc-values: 4 17 310  231.4  1.000   78.6  5795.6 
+ adc-values: 4 18 286  228.3  1.000   57.7  5853.3 
+ adc-values: 4 19 318  239.0  1.000   79.0  5932.3 
+ adc-values: 4 20 322  240.6  1.000   81.4  6013.7 
+ adc-values: 4 21 319  253.1  1.000   65.9  6079.6 
+ adc-values: 4 22 327  263.9  1.000   63.1  6142.7 
+ adc-values: 4 23 284  215.2  1.000   68.8  6211.5 
+
+ found peak ( 4) between 7 and 10 incl. 
+mean = 8.310912, rms = 0.860586, charge = 4686.2, width = 4
+bpd_cluster mean = 9.310912, rms = 0.860586, charge = 4686
+rri = 0.714536, rle = 0.454466
+ adc-values: 5 0 291  224.7  1.000   66.3    66.3 
+ adc-values: 5 1 268  228.8  1.000   39.2   105.5 
+ adc-values: 5 2 289  211.3  1.000   77.7   183.2 
+ adc-values: 5 3 275  247.0  1.000   28.0   211.2 
+ adc-values: 5 4 292  227.9  1.000   64.1   275.3 
+ adc-values: 5 5 329  221.5  1.000  107.5   382.8 
+ adc-values: 5 6 397  255.5  1.000  141.5   524.3 
+ adc-values: 5 7 562  225.9  1.000  336.1   860.4 
+ adc-values: 5 8 1207  231.3  1.000  975.7  1836.1 
+ adc-values: 5 9 2224  240.0  1.000 1984.0  3820.1 
+ adc-values: 5 10 1232  231.9  1.000 1000.1  4820.2 
+ adc-values: 5 11 458  248.1  1.000  209.9  5030.1 
+ adc-values: 5 12 661  206.7  1.000  454.3  5484.4 
+ adc-values: 5 13 406  205.1  1.000  200.9  5685.3 
+ adc-values: 5 14 480  244.0  1.000  236.0  5921.3 
+ adc-values: 5 15 439  262.2  1.000  176.8  6098.1 
+ adc-values: 5 16 439  261.0  1.000  178.0  6276.1 
+ adc-values: 5 17 362  223.8  1.000  138.2  6414.3 
+ adc-values: 5 18 373  235.6  1.000  137.4  6551.7 
+ adc-values: 5 19 307  198.8  1.000  108.2  6659.9 
+ adc-values: 5 20 381  240.3  1.000  140.7  6800.6 
+ adc-values: 5 21 373  239.9  1.000  133.1  6933.7 
+ adc-values: 5 22 406  255.7  1.000  150.3  7084.0 
+ adc-values: 5 23 595  228.0  1.000  367.0  7451.0 
+
+ found peak ( 4) between 7 and 10 incl. 
+mean = 8.849205, rms = 0.866105, charge = 4295.9, width = 4
+bpd_cluster mean = 9.849205, rms = 0.866105, charge = 4296
+rri = 0.553957, rle = 0.542716
+
+ center,pitch : 12.500000 0.200000 
+
+ 1: -0.237058
+
+ 2: 0.233863
+
+ 3: -0.265537
+
+ 4: 0.025094
+
+ 5: -0.457818
+
+ 6: -0.105159
+ VetoWC ADC pedestals extracted.
+ calc_vpc_gain is done: foundpeds = 1 
+
+ vpc_plane = 1 
+
+ HI_thresh(vpc_plane=1) = 100.0 
+ LO_thresh(vpc_plane=1) = 100.0 
+
+ found peak for vpc-plane 0 between 42 and 42 incl. h= 42   
+ mean = 42.00, rms =  0.72, charge =    104.3, width = 1  (42,42)  
+ found peak for vpc-plane 0 between 59 and 59 incl. h= 59   
+ mean = 59.00, rms =  0.72, charge =    127.6, width = 1  (59,59)  
+ search_vpc_cluster error(0) = 0 
+
+ vpc_plane = 2 
+
+ HI_thresh(vpc_plane=2) = 100.0 
+ LO_thresh(vpc_plane=2) = 100.0 
+
+ found peak for vpc-plane 0 between 42 and 42 incl. h= 42   
+ mean = 42.00, rms =  0.72, charge =    100.2, width = 1  (42,42)  
+ search_vpc_cluster error(1) = 0 
+
+ vpc_plane = 3 
+
+ HI_thresh(vpc_plane=3) = 100.0 
+ LO_thresh(vpc_plane=3) = 100.0 
+
+ found peak for vpc-plane 0 between 55 and 55 incl. h= 55   
+ mean = 55.00, rms =  0.72, charge =    105.2, width = 1  (55,55)  
+ search_vpc_cluster error(2) = 0 
+
+ vpc_plane = 4 
+
+ HI_thresh(vpc_plane=4) = 100.0 
+ LO_thresh(vpc_plane=4) = 100.0 
+
+ search_vpc_cluster error(3) = 0 
+ 
+ 
+ npts = 0 , npts1 = 0 , npts2 = 0 
+Unable to allocate vpc_point structure.
+WFA program ZF v1
+Status: Found PEDS BANK 7 - VetoWC ADC pedestals.
+[INFO] Legacy/Clients/DIPT_256_NEW/Dipt256NewModuleSG.cc:45: Process: Executing: "dipt_256 -s ${DSPACK_SERVER} -d 12 -e 12 -t 5 -c gme -C -p --256"
+DSPACK 1.602,  1 Aug 2007    (dipt_256, server: pparfeno_22734_lxplus013)
+ pad-calibrations will be done 
+forcing 256 timebin mode
+Called init_dipt with mask 3
+PADTRANS version from 20011006
+Calling get_db_y_values for detector 2 with name vt2 
+read T0 19.389, vdrift 1.44005 from the vt2 structure
+return from init_tpc
+Calling get_db_y_values for detector 1 with name vt1 
+read T0 18.354, vdrift 1.42285 from the vt1 structure
+return from init_tpc
+getting data from server - patience please...
+ got calib Tpc=2 pads=27648 from calib_vt2
+ allocating stuff...
+Now handling tpc 2
+................................................................................................................................................
+TPC 2: 0 clusters found
+
+TPC 2: 0 clusters recombined
+
+TPC 2: 0 clusters outside of tpc 
+getting data from server - patience please...
+ got calib Tpc=1 pads=27648 from calib_vt1
+ allocating stuff...
+Now handling tpc 1
+................................................................................................................................................
+TPC 1: 0 clusters found
+
+TPC 1: 0 clusters recombined
+
+TPC 1: 0 clusters outside of tpc 
+[INFO] Legacy/Clients/DIPT_256_NEW/Dipt256NewModuleSG.cc:45: Process: Executing: "dipt_256 -s ${DSPACK_SERVER} -d lr -t 5 -c gme -C -p --256"
+DSPACK 1.602,  1 Aug 2007    (dipt_256, server: pparfeno_22734_lxplus013)
+ pad-calibrations will be done 
+forcing 256 timebin mode
+Called init_dipt with mask c
+PADTRANS version from 20011006
+Calling get_db_y_values for detector 4 with name mtr 
+read T0 18.974, vdrift 2.3567 from the mtr structure
+return from init_tpc
+Calling get_db_y_values for detector 3 with name mtl 
+read T0 18.733, vdrift 2.33893 from the mtl structure
+return from init_tpc
+getting data from server - patience please...
+ got calib Tpc=4 pads=63360 from calib_mtr
+ allocating stuff...
+Now handling tpc 4
+..................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+TPC 4: 0 clusters found
+
+TPC 4: 0 clusters recombined
+
+TPC 4: 0 clusters outside of tpc 
+getting data from server - patience please...
+ got calib Tpc=3 pads=63360 from calib_mtl
+ allocating stuff...
+Now handling tpc 3
+..................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+TPC 3: 0 clusters found
+
+TPC 3: 0 clusters recombined
+
+TPC 3: 0 clusters outside of tpc 
+[INFO] Legacy/Clients/DIPT_256_NEW/Dipt256NewModuleSG.cc:45: Process: Executing: "dipt_256 -s ${DSPACK_SERVER} -d g -e g -t 5 -c gme -p -C --256"
+DSPACK 1.602,  1 Aug 2007    (dipt_256, server: pparfeno_22734_lxplus013)
+ pad-calibrations will be done 
+forcing 256 timebin mode
+Called init_dipt with mask 10
+PADTRANS version from 20011006
+Calling get_db_y_values for detector 5 with name gpc 
+read T0 20.48, vdrift 1.67308 from the gpc structure
+return from init_tpc
+getting data from server - patience please...
+ got calib Tpc=5 pads=672 from calib_gpc
+ allocating stuff...
+Now handling tpc 5
+.......
+TPC 5: 0 clusters found
+
+TPC 5: 0 clusters recombined
+
+TPC 5: 0 clusters outside of tpc 
+[INFO] Legacy/Clients/EDISTO/EdistoModuleSG.cc:59: Process: Executing: "edisto -s ${DSPACK_SERVER} -d vt1"
+TPC configuration 2 
+DSPACK 1.602,  1 Aug 2007    (edisto, server: pparfeno_22734_lxplus013)
+WARNING:	cant get point_vt1 (0)!
+0 points corrected
+0 points outside fieldcage volume
+[INFO] Legacy/Clients/DISTORT/VtNcalcModuleSG.cc:43: Process: Executing: "vt_ncalc -s ${DSPACK_SERVER} -d vt1"
+DSPACK 1.602,  1 Aug 2007    (vt_ncalc, server: pparfeno_22734_lxplus013)
+Error: VTPC1, point_vt1vt_ncalc_init arg: 1
+run   = 26056
+event = 5
+E_field: 999.900024
+Drift velocity from VTPC1 is: 1.422851 cm/us
+Electric field assigned: -195.4500 [V/cm]
+Drift velocity assigned: 1.422851 [cm/us]
+geom_vt1_p->y: 0.014234, geom_sec_vt1_p->y: 29.510000
+VTPC1: Frischgrid (EOP) = 29.5242 [cm]
+[INFO] Legacy/Clients/EDISTO/EdistoModuleSG.cc:59: Process: Executing: "edisto -s ${DSPACK_SERVER} -d vt2"
+TPC configuration 4 
+DSPACK 1.602,  1 Aug 2007    (edisto, server: pparfeno_22734_lxplus013)
+WARNING:	cant get point_vt2 (0)!
+0 points corrected
+0 points outside fieldcage volume
+[INFO] Legacy/Clients/DISTORT/VtNcalcModuleSG.cc:43: Process: Executing: "vt_ncalc -s ${DSPACK_SERVER} -d vt2"
+DSPACK 1.602,  1 Aug 2007    (vt_ncalc, server: pparfeno_22734_lxplus013)
+Error: VTPC2, point_vt2vt_ncalc_init arg: 2
+run   = 26056
+event = 5
+E_field: 999.900024
+Drift velocity from VTPC2 is: 1.440046 cm/us
+Electric field assigned: -196.3700 [V/cm]
+Drift velocity assigned: 1.440046 [cm/us]
+geom_vt2_p->y: -0.013129, geom_sec_vt2_p->y: 29.674999
+VTPC2: Frischgrid (EOP) = 29.6619 [cm]
+[INFO] Legacy/Clients/EDISTO/EdistoModuleSG.cc:59: Process: Executing: "edisto -s ${DSPACK_SERVER} -d mtl"
+TPC configuration 8 
+DSPACK 1.602,  1 Aug 2007    (edisto, server: pparfeno_22734_lxplus013)
+WARNING:	cant get point_mtl (0)!
+0 points corrected
+0 points outside fieldcage volume
+[INFO] Legacy/Clients/EDISTO/EdistoModuleSG.cc:59: Process: Executing: "edisto -s ${DSPACK_SERVER} -d mtr"
+TPC configuration 16 
+DSPACK 1.602,  1 Aug 2007    (edisto, server: pparfeno_22734_lxplus013)
+WARNING:	cant get point_mtr (0)!
+0 points corrected
+0 points outside fieldcage volume
+[INFO] Legacy/Clients/DISTORT/VtNcalcModuleSG.cc:43: Process: Executing: "vt_ncalc -s ${DSPACK_SERVER} -d gpc"
+DSPACK 1.602,  1 Aug 2007    (vt_ncalc, server: pparfeno_22734_lxplus013)
+Error: GapTPC, point_gpcvt_ncalc_init arg: 5
+run   = 26056
+event = 5
+E_field: 999.900024
+Drift velocity from GapTPC is: 1.673079 cm/us
+Electric field assigned: -178.7000 [V/cm]
+Drift velocity assigned: 1.673079 [cm/us]
+geom_gpc_p->y: -6.680000, geom_sec_gpc_p->y: 29.879999
+GapTPC: Frischgrid (EOP) = 23.2000 [cm]
+[INFO] Legacy/Clients/RES_CORR_ZG/ResCorrModuleSG.cc:44: Process: Executing: "res_corr -s ${DSPACK_SERVER} -vt1_chris /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/vt1_2009_pp158.corr -vt2_chris /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/vt2_2009_pp158.corr -mtl_chris /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/mtl_2009_pp158.corr -mtr_chris /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/mtr_2009_pp158.corr -p /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/vdrift_2009.txt"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (res_corr, server: pparfeno_22734_lxplus013)
+vt1 christina correction is /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/vt1_2009_pp158.corr 
+vt2 christina correction is /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/vt2_2009_pp158.corr
+mtl christina correction is /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/mtl_2009_pp158.corr
+mtr christina correction is /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/mtr_2009_pp158.corr
+Open: /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/vdrift_2009.txt
+christina par file is /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/vt1_2009_pp158.corr
+xa cycle is 0
+christina par file is /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/vt2_2009_pp158.corr
+xa cycle is 0
+christina par file is /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/mtl_2009_pp158.corr
+xa cycle is 0
+christina par file is /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/ResidualCorr/mtr_2009_pp158.corr
+xa cycle is 0
+no points in vt1
+no points in vt2
+no points in mtl
+no points in mtr
+Number of events processed: 1
+[INFO] Legacy/Clients/MTPC/MtracModuleSG.cc:58: Process: Executing: "mtrac tracks -s ${DSPACK_SERVER} -m 1"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mtrac, server: pparfeno_22734_lxplus013)
+Using mt_const_t(1), mt_flags_t(1), mt_tracking_t(1)
+mtitracks: Tracking MTL not successful.
+mtitracks: Tracking MTR not successful.
+WARNING!  No tracks found!
+Status: Starting to parse_clientname tracks
+Status: mtrac: Successfully connected to server.
+Status: loading mt_const_t
+Tracking MTPCL (24).
+Tracking MTPCR (24).
+[INFO] Legacy/Clients/MTPC/MtracModuleSG.cc:58: Process: Executing: "mtrac i2rtracks -s ${DSPACK_SERVER}"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mtrac, server: pparfeno_22734_lxplus013)
+No itracks in the server.
+Status: Starting to parse_clientname i2rtracks
+Status: mtrac: Successfully connected to server.
+Status: loading mt_flags_t
+Status: loading geom_target_t
+PADTRANS version from 20011006
+Calling get_db_y_values for detector 3 with name mtl 
+read T0 18.733, vdrift 2.33893 from the mtl structure
+return from init_tpc
+Calling get_db_y_values for detector 4 with name mtr 
+read T0 18.974, vdrift 2.3567 from the mtr structure
+return from init_tpc
+[INFO] Legacy/Clients/MTPC/MtracModuleSG.cc:58: Process: Executing: "mtrac mom -s ${DSPACK_SERVER}"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mtrac, server: pparfeno_22734_lxplus013)
+Status: Starting to parse_clientname mom
+Status: mtrac: Successfully connected to server.
+ Data set: /bxyz_t
+ Type:                  Structure   (at: 0x500f8320)
+   1  version           Real           : 1.2000000e+00
+   2  comment           Character*80   : Magnetic filed OFF
+   3  date              Real           : 6.0895000e+04
+   4  nmaps             Integer        : 0
+ MAGFLD: Initializing magnetic field...
+Status: loading mt_flags_t
+Status: loading sihodo
+Status: loading geom_target_t
+PADTRANS version from 20011006
+Calling get_db_y_values for detector 3 with name mtl 
+read T0 18.733, vdrift 2.33893 from the mtl structure
+return from init_tpc
+Calling get_db_y_values for detector 4 with name mtr 
+read T0 18.974, vdrift 2.3567 from the mtr structure
+return from init_tpc
+[INFO] Legacy/Clients/MPAT/MpatModuleSG.cc:44: Process: Executing: "mpat -s ${DSPACK_SERVER} -p -m -f -on"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mpat, server: pparfeno_22734_lxplus013)
+Setting up is_project!
+[INFO] Legacy/Clients/MPAT/MpatModuleSG.cc:44: Process: Executing: "mpat -s ${DSPACK_SERVER} -r -d vt2 -f -on"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mpat, server: pparfeno_22734_lxplus013)
+Setting up is_road!
+idet: 2
+MPAT follow...
+[INFO] Legacy/Clients/PATREC/PatrecModuleSG.cc:50: Process: Executing: "patrec -s ${DSPACK_SERVER} -d vt2 -pp"
+DSPACK 1.602,  1 Aug 2007    (patrec, server: pparfeno_22734_lxplus013)
+PATREC 1.900, 12 Feb 1997    (patrec, server: pparfeno_22734_lxplus013)
+ ppevents option is on
+ PATREC_idet:            2
+ hits     0 out of   442     2
+rec.F, nfound,ngood   0   0
+[INFO] Legacy/Clients/TPC_ERROR/TpcErrorModuleSG.cc:43: Process: Executing: "tpc_error -s ${DSPACK_SERVER} -d vt2"
+DSPACK 1.602,  1 Aug 2007    (tpc_error, server: pparfeno_22734_lxplus013)
+  tpc_error: run   =        26056
+  tpc_error: event =            5
+  tpc_error error: no point_vt2 str. 
+[INFO] Legacy/Clients/R3D/R3dModuleSG.cc:50: Process: Executing: "r3d -s ${DSPACK_SERVER} -d vt2 -m 1 -on"
+DSPACK 1.602,  1 Aug 2007    (r3d, server: pparfeno_22734_lxplus013)
+ r3d_info[tpc]: vt2
+[INFO] Legacy/Clients/MPAT/MpatModuleSG.cc:44: Process: Executing: "mpat -s ${DSPACK_SERVER} -R -p -d vt2 -f -on"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mpat, server: pparfeno_22734_lxplus013)
+Setting up is_project!
+idet: 2
+release_mtpc_tracks: no g_ptr_lists found - ending
+[INFO] Legacy/Clients/MINICLIENTS/MiniModuleSG.cc:74: Process: Executing: "mini monitor -s ${DSPACK_SERVER} -d vt2"
+DSPACK 1.602,  1 Aug 2007    (mini_monitor, server: pparfeno_22734_lxplus013)
+========================================================================
+--> DATE = 132123409, TIME = 1124354, RUN = 26056
+----->>>>> run 26056, available range from 5000 to 50000
+TZ is "Europe/Zurich"
+--> Time is 1479400802 (UTC) -> 17/11/2016 17:40:2 (Geneva local)
+--> Using run period 1
+---> Calling Find_SC_Data: 1479400802 1 1 960.000000 20.000000 0.000000 0.000000
+ P = 960.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_pressure.txt
+ T = 20.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_T_1.txt
+hv = 13000.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_hv_1.txt
+vd = 1.400000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_vd_1.txt
+Ep = 202.440002, slope = 1.199500 is read from line 2 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_ep_1.txt
+DRIFT_LEN: 66.565
+E OVER P:  202.44
+SLOPE:     1.1995
+--> Found     vd=1.400000 t=20.000000 hv=13000.000000 p=960.000000
+--> Corrected vd=1.408256 t=20.000000 hv=13000.000000 p=960.000000 Ep=203.435226
+--> Scaled    vd=1.408059 t=20.000000 hv=13000.000000 p=960.000000
+[INFO] Legacy/Clients/MPAT/MpatModuleSG.cc:44: Process: Executing: "mpat -s ${DSPACK_SERVER} -r -d vt1 -f -on"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mpat, server: pparfeno_22734_lxplus013)
+Setting up is_road!
+idet: 1
+MPAT follow...
+[INFO] Legacy/Clients/PATREC/PatrecModuleSG.cc:50: Process: Executing: "patrec -s ${DSPACK_SERVER} -d vt1 -pp"
+DSPACK 1.602,  1 Aug 2007    (patrec, server: pparfeno_22734_lxplus013)
+PATREC 1.900, 12 Feb 1997    (patrec, server: pparfeno_22734_lxplus013)
+ ppevents option is on
+ PATREC_idet:            1
+ hits     0 out of   443     1
+rec.F, nfound,ngood   0   0
+[INFO] Legacy/Clients/TPC_ERROR/TpcErrorModuleSG.cc:43: Process: Executing: "tpc_error -s ${DSPACK_SERVER} -d vt1"
+DSPACK 1.602,  1 Aug 2007    (tpc_error, server: pparfeno_22734_lxplus013)
+  tpc_error: run   =        26056
+  tpc_error: event =            5
+  tpc_error error: no point_vt1 str. 
+[INFO] Legacy/Clients/R3D/R3dModuleSG.cc:50: Process: Executing: "r3d -s ${DSPACK_SERVER} -d vt1 -m 1 -on"
+DSPACK 1.602,  1 Aug 2007    (r3d, server: pparfeno_22734_lxplus013)
+ r3d_info[tpc]: vt1
+[INFO] Legacy/Clients/MPAT/MpatModuleSG.cc:44: Process: Executing: "mpat -s ${DSPACK_SERVER} -R -p -d vt1 -f -on"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mpat, server: pparfeno_22734_lxplus013)
+Setting up is_project!
+idet: 1
+release_mtpc_tracks: no g_ptr_lists found - ending
+[INFO] Legacy/Clients/MINICLIENTS/MiniModuleSG.cc:74: Process: Executing: "mini monitor -s ${DSPACK_SERVER} -d vt1"
+DSPACK 1.602,  1 Aug 2007    (mini_monitor, server: pparfeno_22734_lxplus013)
+========================================================================
+--> DATE = 132123409, TIME = 1124354, RUN = 26056
+----->>>>> run 26056, available range from 5000 to 50000
+TZ is "Europe/Zurich"
+--> Time is 1479400802 (UTC) -> 17/11/2016 17:40:2 (Geneva local)
+--> Using run period 1
+---> Calling Find_SC_Data: 1479400802 1 0 960.000000 20.000000 0.000000 0.000000
+ P = 960.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_pressure.txt
+ T = 20.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_T_0.txt
+hv = 13000.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_hv_0.txt
+vd = 1.400000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_vd_0.txt
+Ep = 202.438004, slope = 1.213740 is read from line 2 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_ep_0.txt
+DRIFT_LEN: 66.595
+E OVER P:  202.438
+SLOPE:     1.21374
+--> Found     vd=1.400000 t=20.000000 hv=13000.000000 p=960.000000
+--> Corrected vd=1.407601 t=20.000000 hv=13000.000000 p=960.000000 Ep=203.343597
+--> Scaled    vd=1.407601 t=20.000000 hv=13000.000000 p=960.000000
+[INFO] Legacy/Clients/MTPC/MtracModuleSG.cc:58: Process: Executing: "mtrac tracks -s ${DSPACK_SERVER} -m 2"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mtrac, server: pparfeno_22734_lxplus013)
+Using mt_const_t(2), mt_flags_t(2), mt_tracking_t(2)
+mtitracks: Tracking MTL not successful.
+mtitracks: Tracking MTR not successful.
+WARNING!  No tracks found!
+Status: Starting to parse_clientname tracks
+Status: mtrac: Successfully connected to server.
+Status: loading mt_const_t
+Tracking MTPCL (24).
+Tracking MTPCR (24).
+[INFO] Legacy/Clients/MTPC/MtracModuleSG.cc:58: Process: Executing: "mtrac i2rtracks -s ${DSPACK_SERVER}"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mtrac, server: pparfeno_22734_lxplus013)
+No itracks in the server.
+Status: Starting to parse_clientname i2rtracks
+Status: mtrac: Successfully connected to server.
+Status: loading mt_flags_t
+Status: loading geom_target_t
+PADTRANS version from 20011006
+Calling get_db_y_values for detector 3 with name mtl 
+read T0 18.733, vdrift 2.33893 from the mtl structure
+return from init_tpc
+Calling get_db_y_values for detector 4 with name mtr 
+read T0 18.974, vdrift 2.3567 from the mtr structure
+return from init_tpc
+[INFO] Legacy/Clients/TPC_ERROR/TpcErrorModuleSG.cc:43: Process: Executing: "tpc_error -s ${DSPACK_SERVER} -d mtl"
+DSPACK 1.602,  1 Aug 2007    (tpc_error, server: pparfeno_22734_lxplus013)
+  tpc_error: run   =        26056
+  tpc_error: event =            5
+  tpc_error error: no point_mtl str. 
+[INFO] Legacy/Clients/TPC_ERROR/TpcErrorModuleSG.cc:43: Process: Executing: "tpc_error -s ${DSPACK_SERVER} -d mtr"
+DSPACK 1.602,  1 Aug 2007    (tpc_error, server: pparfeno_22734_lxplus013)
+  tpc_error: run   =        26056
+  tpc_error: event =            5
+  tpc_error error: no point_mtr str. 
+[INFO] Legacy/Clients/MTPC/MtracModuleSG.cc:58: Process: Executing: "mtrac mom -s ${DSPACK_SERVER}"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mtrac, server: pparfeno_22734_lxplus013)
+Status: Starting to parse_clientname mom
+Status: mtrac: Successfully connected to server.
+ Data set: /bxyz_t
+ Type:                  Structure   (at: 0x500f8320)
+   1  version           Real           : 1.2000000e+00
+   2  comment           Character*80   : Magnetic filed OFF
+   3  date              Real           : 6.0895000e+04
+   4  nmaps             Integer        : 0
+ MAGFLD: Initializing magnetic field...
+Status: loading mt_flags_t
+Status: loading sihodo
+Status: loading geom_target_t
+PADTRANS version from 20011006
+Calling get_db_y_values for detector 3 with name mtl 
+read T0 18.733, vdrift 2.33893 from the mtl structure
+return from init_tpc
+Calling get_db_y_values for detector 4 with name mtr 
+read T0 18.974, vdrift 2.3567 from the mtr structure
+return from init_tpc
+[INFO] Legacy/Clients/MTPC/MtracModuleSG.cc:58: Process: Executing: "mtrac decay -s ${DSPACK_SERVER}"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mtrac, server: pparfeno_22734_lxplus013)
+Status: Starting to parse_clientname decay
+Status: mtrac: Successfully connected to server.
+Status: loading geom_target_t
+Status: allocating local memory
+  MINUIT RELEASE 96.03  INITIALIZED.   DIMENSIONS 100/ 50  EPSMAC=  0.89E-15
+Status: loading clusters
+Status: loaded 0 MTL points
+Status: loaded 0 MTR points
+Status: loading tracks
+Status: loaded 0 itracks
+Status: No MTPC data
+Status: Cleaning up memory
+Status: DONE
+[INFO] Legacy/Clients/MINICLIENTS/MiniModuleSG.cc:74: Process: Executing: "mini monitor -s ${DSPACK_SERVER} -d mtl"
+DSPACK 1.602,  1 Aug 2007    (mini_monitor, server: pparfeno_22734_lxplus013)
+========================================================================
+--> DATE = 132123409, TIME = 1124354, RUN = 26056
+----->>>>> run 26056, available range from 5000 to 50000
+TZ is "Europe/Zurich"
+--> Time is 1479400802 (UTC) -> 17/11/2016 17:40:2 (Geneva local)
+--> Using run period 1
+---> Calling Find_SC_Data: 1479400802 1 2 960.000000 20.000000 0.000000 0.000000
+ P = 960.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_pressure.txt
+ T = 20.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_T_2.txt
+hv = 19000.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_hv_2.txt
+vd = 2.300000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_vd_2.txt
+Ep = 175.490005, slope = 1.233300 is read from line 2 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_ep_2.txt
+DRIFT_LEN: 111.735
+E OVER P:  175.49
+SLOPE:     1.2333
+--> Found     vd=2.300000 t=20.000000 hv=19000.000000 p=960.000000
+--> Corrected vd=2.326515 t=20.000000 hv=19000.000000 p=960.000000 Ep=177.130417
+--> Scaled    vd=2.327213 t=20.000000 hv=19000.000000 p=960.000000
+[INFO] Legacy/Clients/MINICLIENTS/MiniModuleSG.cc:74: Process: Executing: "mini monitor -s ${DSPACK_SERVER} -d mtr"
+DSPACK 1.602,  1 Aug 2007    (mini_monitor, server: pparfeno_22734_lxplus013)
+========================================================================
+--> DATE = 132123409, TIME = 1124354, RUN = 26056
+----->>>>> run 26056, available range from 5000 to 50000
+TZ is "Europe/Zurich"
+--> Time is 1479400802 (UTC) -> 17/11/2016 17:40:2 (Geneva local)
+--> Using run period 1
+---> Calling Find_SC_Data: 1479400802 1 3 960.000000 20.000000 0.000000 0.000000
+ P = 960.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_pressure.txt
+ T = 20.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_T_3.txt
+hv = 19000.000000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_hv_3.txt
+vd = 2.300000 is read from lines 2-3 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_vd_3.txt
+Ep = 175.490005, slope = 1.236800 is read from line 2 of /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/vdrift/V16A/sc_data_db_ep_3.txt
+DRIFT_LEN: 111.735
+E OVER P:  175.49
+SLOPE:     1.2368
+--> Found     vd=2.300000 t=20.000000 hv=19000.000000 p=960.000000
+--> Corrected vd=2.326591 t=20.000000 hv=19000.000000 p=960.000000 Ep=177.130417
+--> Scaled    vd=2.326428 t=20.000000 hv=19000.000000 p=960.000000
+[INFO] Legacy/Clients/MPAT/MpatModuleSG.cc:44: Process: Executing: "mpat -s ${DSPACK_SERVER} -c -G -f -on"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (mpat, server: pparfeno_22734_lxplus013)
+DS_DB Error: 102 Data set not stored
+Cannot move: g_ptr_list, g_ptr_list_old
+0 matches of 0 useable extensions found
+3-detector matches 0, vt1-vt2 0, vt1-mt 0, vt2-mt 0
+0 global rtracks created
+mgt_main: mgt returned 100
+[WARN] Legacy/Clients/MPAT/MpatModuleSG.cc:54: Process: mpat did't find global tracks! Skip an event! (100)
+[INFO] Legacy/Clients/TPC_ERROR/TpcErrorModuleSG.cc:43: Process: Executing: "tpc_error -s ${DSPACK_SERVER} -d all"
+DSPACK 1.602,  1 Aug 2007    (tpc_error, server: pparfeno_22734_lxplus013)
+ GPC yhtpc   23.1999989    
+  tpc_error: run   =        26056
+  tpc_error: event =            5
+  tpc_error error: no point_vt1 str. 
+[INFO] Legacy/Clients/TPC_FLIGHT_TIME/TpcFlightTimeModuleSG.cc:43: Process: Executing: "tpc_flight_time -s ${DSPACK_SERVER} -d all"
+DSPACK 1.602,  1 Aug 2007    (tpc_flight_time, server: pparfeno_22734_lxplus013)
+  run   =        26056
+  event =            5
+  -------------- 
+  n_point_good =            0
+  n_point_bad  =            0
+  -------------- 
+  n_point_good =            0
+  n_point_bad  =            0
+  -------------- 
+  n_point_good =            0
+  n_point_bad  =            0
+  -------------- 
+  n_point_good =            0
+  n_point_bad  =            0
+[INFO] Legacy/Clients/R3D/R3dModuleSG.cc:50: Process: Executing: "r3d -s ${DSPACK_SERVER} -d all -m 1 -on"
+DSPACK 1.602,  1 Aug 2007    (r3d, server: pparfeno_22734_lxplus013)
+ r3d_info[tpc]: all
+[INFO] Legacy/Clients/R3D/VtxModuleSG.cc:43: Process: Executing: "vtx -s ${DSPACK_SERVER} -d all -pp -on"
+DSPACK 1.602,  1 Aug 2007    (vtx, server: pparfeno_22734_lxplus013)
+ ************
+ * VTX_INFO: Error    #201: Nothing to fit
+ ************
+ * Terminating....
+ ************
+[INFO] Legacy/Clients/R3D/R3dModuleSG.cc:50: Process: Executing: "r3d -s ${DSPACK_SERVER} -d all -m 2 -on"
+DSPACK 1.602,  1 Aug 2007    (r3d, server: pparfeno_22734_lxplus013)
+ r3d_info[tpc]: all
+[INFO] Legacy/Clients/PPOINTS/PpointsModuleSG.cc:43: Process: Executing: "ppoints -s ${DSPACK_SERVER}"
+Init DSHACK as Client/Server
+DSPACK 1.602,  1 Aug 2007    (ppoints, server: pparfeno_22734_lxplus013)
+[ppoints] getting parameters
+[ppoints] getting necessary banks
+[ppoints] bank 'g_ptr_list' missing
+[ppoints] bank 'g_track_ref' missing
+[ppoints] error! could not get all necessary banks
+[INFO] Legacy/Clients/GTPC_TRACK/GtpcTrackModuleSG.cc:43: Process: Executing: "gtpc_track -s ${DSPACK_SERVER}"
+DSPACK 1.602,  1 Aug 2007    (gtpc_track, server: pparfeno_22734_lxplus013)
+gtpc_track: Start process
+gtpc_track: Process 26056 5  found 0 tracks 
+gtpc_track: Finished
+[INFO] Legacy/Clients/REFORM/ReformModuleSG.cc:43: Process: Executing: "reform -s ${DSPACK_SERVER} -verbose -check -spiral -join -foil -ppoints -insect"
+DSPACK 1.602,  1 Aug 2007    (reform, server: pparfeno_22734_lxplus013)
+ get ppoints parameters..
+[reform] warning! bank 'vertex_fit' missing
+[reform] warning! bank 'g_ptr_list' missing
+[reform] warning! bank 'rtrack_quali' missing
+[reform] warning! bank 'point_vt1' missing
+[reform] warning! bank 'point_vt2' missing
+[reform] warning! bank 'point_mtl' missing
+[reform] warning! bank 'point_mtr' missing
+[reform] warning! bank 'point_gpc' missing
+[reform] error! could not get all necessary banks
+[reform] Going to exit now... Bye.
+GTPC is ON !!!Modus: 17129
+[INFO] Legacy/Clients/R3D/R3dModuleSG.cc:50: Process: Executing: "r3d -s ${DSPACK_SERVER} -d all -m 1 -r -on"
+DSPACK 1.602,  1 Aug 2007    (r3d, server: pparfeno_22734_lxplus013)
+ r3d_info[tpc]: all
+[INFO] Legacy/Clients/R3D/VtxModuleSG.cc:43: Process: Executing: "vtx -s ${DSPACK_SERVER} -d all -pp -on"
+DSPACK 1.602,  1 Aug 2007    (vtx, server: pparfeno_22734_lxplus013)
+ ************
+ * VTX_INFO: Error    #201: Nothing to fit
+ ************
+ * Terminating....
+ ************
+[INFO] Legacy/Clients/R3D/R3dModuleSG.cc:50: Process: Executing: "r3d -s ${DSPACK_SERVER} -d all -m 2 -r -on"
+DSPACK 1.602,  1 Aug 2007    (r3d, server: pparfeno_22734_lxplus013)
+ r3d_info[tpc]: all
+[INFO] Legacy/Clients/TOFL/ToflModuleSG.cc:50: Process: Executing: "tofl_client -s ${DSPACK_SERVER} -verbose -pp"
+DSPACK 1.602,  1 Aug 2007    (tofl, server: pparfeno_22734_lxplus013)
+Starting tofl_client...
+"calib_mode" = 1
+server : pparfeno_22734
+Run 26056 Event # 5
+Warning!!! : NO main vertex in this event!
+[INFO] Legacy/Clients/TOFR/TofrModuleSG.cc:50: Process: Executing: "tofr_client -s ${DSPACK_SERVER} -verbose -pp"
+DSPACK 1.602,  1 Aug 2007    (tofr, server: pparfeno_22734_lxplus013)
+Starting tofr_client...
+"calib_mode" = 1
+server : pparfeno_22734
+####### Run 26056 Event # 5
+Warning!!! : NO main vertex in this event!
+[INFO] Legacy/Clients/dedxna61/DeDxNa61ModuleSG.cc:71: Process: Executing: "dedxna61 -s ${DSPACK_SERVER}"
+DSPACK 1.602,  1 Aug 2007    (, server: pparfeno_22734_lxplus013)
+ deffile:/afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/DedxCalib/tables/cal_def_v12                                    
+ Version of dedxna61 20130318
+ Called runinit:       26056           5          13
+ Library of calibration constant:        
+ Used keys KEY1=26056    KEY5=        
+ runs            1        1117        1218
+ runs            2        2907        2971
+ runs            3        3664        3726
+ runs            4        3761        3844
+ runs            5        4288        4347
+ runs            6        4633        4788
+ runs            7        2724        2879
+ runs            8        4392        4496
+ runs            9        4558        4620
+ runs           10        1723        1773
+ runs           11        4498        4548
+ runs           12        1742        1764
+ runs           13        3418        3568
+ runs           14        3585        3633
+ runs           15        3727        3760
+ runs           16        1774        1803
+ runs           17        2882        2897
+ runs           18        4352        4491
+ runs           19        1909        1930
+ runs           20        1942        1955
+ runs           21        3370        3378
+ runs           22        2437        2511
+ runs           23        4789        4817
+ runs           24        4105        4157
+ runs           25        3300        3305
+ runs           26        3381        3389
+ runs           27        3311        3369
+ runs           28        4818        4828
+ runs           29        1811        1862
+ runs           30        1868        1889
+ runs           31        2524        2550
+ runs           32        3244        3293
+ runs           33        1956        1974
+ runs           34        4913        5639
+ runs           35        5640        5661
+ runs           36        8376        8769
+ runs           37        8775        8930
+ runs           38        8947        9135
+ runs           39        9162        9389
+ runs           40        9451        9702
+ runs           41        9705        9800
+ runs           42        9805        9900
+ runs           43        9910        9989
+ runs           44        9996       10148
+ runs           45       10521       11106
+ runs           46       11120       11600
+ runs           47       11626       13235
+ runs           48       13671       13691
+ runs           49       13747       14144
+ runs           50       14150       14582
+ runs           51       14588       14676
+ runs           52       14726       15089
+ runs           53       15092       15232
+ runs           54       15235       15245
+ runs           55       15247       15341
+ runs           56       15345       15411
+ runs           57       15412       15456
+ runs           58       15457       15851
+ runs           59       15852       16000
+ runs           60       16001       16057
+ runs           61       16063       16228
+ runs           62       16229       16534
+ runs           63       16535       17008
+ runs           64       17049       17308
+ runs           65       17333       17653
+ runs           66       17658       17868
+ runs           67       17870       17939
+ runs           68       17946       18146
+ runs           69       18604       20039
+ runs           70       20296       20318
+ runs           71       20328       20480
+ runs           72       20532       20645
+ runs           73       20661       20803
+ runs           74       20820       21049
+ runs           75       21058       21268
+ runs           76       21298       21361
+ runs           77       21376       21565
+ runs           78       21566       99999
+ table.v12_v19                                                                                                                                                                                                                                                  
+ table.v14_v19                                                                                                                                                                                                                                                  
+ table.v2_v19                                                                                                                                                                                                                                                   
+ table.mhr_v19                                                                                                                                                                                                                                                  
+ table.msr_v19                                                                                                                                                                                                                                                  
+ Get constants for production :          78  15i 
+ File for ydependence:yc_xxx                          
+ OTABLE:/afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/DedxCalib/tables/yc_xxx                                         
+ Get sector calibration constant from file:s_c_xxx                                                                                                                         
+ /afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/DedxCalib/tables/s_c_xxx                                        
+           1   237.059998       14.9090004    
+           2   202.410004       14.0880003    
+           3   185.479996       10.7869997    
+           4   220.100006       14.2860003    
+           5   181.320007       11.5340004    
+           6   186.259995       9.58699989    
+           7   155.389999       10.4180002    
+           8   141.449997       5.99599981    
+           9   147.270004       10.4949999    
+          10   137.300003       10.8979998    
+          11   124.050003       7.29600000    
+          12   127.919998       10.1639996    
+          13   141.660004       6.19799995    
+          14   145.250000       3.32399988    
+          15   127.830002       5.51000023    
+          16   126.500000       6.48199987    
+          17   151.949997       4.34899998    
+          18   144.479996       5.34999990    
+          19   142.789993       5.35900021    
+          20   144.050003       5.82800007    
+          21   139.570007       5.08500004    
+          22   143.800003       6.01599979    
+          23   130.350006       6.47900009    
+          24   127.660004       5.53399992    
+          25   135.720001       5.86399984    
+          26   126.750000       5.47200012    
+          27   143.809998       4.96299982    
+          28   142.350006       4.56500006    
+          29   138.500000       5.21700001    
+          30   121.300003       5.79500008    
+          31   130.820007       5.53599977    
+          32   134.750000       5.33900023    
+          33   156.880005       9.32400036    
+          34   155.600006       10.3559999    
+          35   150.309998       9.66899967    
+          36   139.649994       11.3409996    
+          37   141.009995       13.1040001    
+          38   155.250000       8.89200020    
+          39   150.559998       8.56400013    
+          40   159.610001       7.68100023    
+          41   148.169998       8.04899979    
+          42   155.949997       11.3269997    
+          43   140.320007       4.62900019    
+          44   146.020004       3.62899995    
+          45   149.759995       3.81399989    
+          46   150.130005       4.95400000    
+          47   148.380005       3.90300012    
+          48   144.490005       5.02400017    
+          49   144.380005       4.75799990    
+          50   152.220001       4.21199989    
+          51   153.850006       3.84400010    
+          52   153.759995       4.26900005    
+          53   155.740005       4.22399998    
+          54   146.449997       3.92700005    
+          55   155.190002       4.12799978    
+          56   168.619995       4.22599983    
+          57   156.330002       4.67100000    
+PADTRANS version from 20011006
+Calling get_db_y_values for detector 1 with name vt1 
+read T0 18.354, vdrift 1.42285 from the vt1 structure
+return from init_tpc
+Calling get_db_y_values for detector 2 with name vt2 
+read T0 19.389, vdrift 1.44005 from the vt2 structure
+return from init_tpc
+Calling get_db_y_values for detector 3 with name mtl 
+read T0 18.733, vdrift 2.33893 from the mtl structure
+return from init_tpc
+Calling get_db_y_values for detector 4 with name mtr 
+read T0 18.974, vdrift 2.3567 from the mtr structure
+return from init_tpc
+ Data set: /bxyz_t
+ Type:                  Structure   (at: 0x500f8320)
+   1  version           Real           : 1.2000000e+00
+   2  comment           Character*80   : Magnetic filed OFF
+   3  date              Real           : 6.0895000e+04
+   4  nmaps             Integer        : 0
+          58   169.779999       4.44399977    
+          59   163.860001       3.31399989    
+          60   163.970001       4.69799995    
+          61   166.350006       4.42399979    
+          62   174.240005       4.17899990    
+ aloss =table.v12_v19                                                                                                                                                                                                                                                  
+ tname =/afs/cern.ch/work/p/pparfeno/public/Soft/ShineMay/DB/v2/NA49/DB/DedxCalib/tables/table.v12_v19                                  
+ For chip gain used file:cg_xxx                          
+ End of file found on chipgain file
+ call inittcor for get files
+ Open file for timedepence correction:td_xxx_tab                      
+ nbxyz=           0
+ after get_na49b nbxyz=           0
+ after new init padtrans ierr=           0
+            TPC: vt1
+ Electric Field:   -195.449997      V/cm. (   0.00000000      -195.449997       0.00000000     )
+ Drift velocity:    1.42285061      cm/us.
+             y0:    29.5242348      cm
+          slope:    0.00000000    
+            TPC: vt2
+ Electric Field:   -196.369995      V/cm. (   0.00000000      -196.369995       0.00000000     )
+ Drift velocity:    1.44004595      cm/us.
+             y0:    29.6618710      cm
+          slope:    0.00000000    
+[WARN] Legacy/EventIO/NA49DST/NA49ToTrigger.cc:21: NA49ToTrigger: trigger data already present
+[INFO] Framework/RunController/RunController.cc:420: DoNextInSequence: Received ContinueLoop instruction from module 'EventSelectorSG'.
+[INFO] Modules/Calibration/DriftVelocityFromTOFPK/DriftVelocityFromTOFPK.cc:240: Finish: Finished.
+
+[INFO] Modules/Analysis/EventSelectorSG/EventSelectorSG.cc:334: Finish: Event counts:
+	 * nAllEvents = 3
+	 * nTargetCutPassedEvents = 3
+	 * nEmptyEventCutPassedEvents = 3
+	 * nTriggerSelectionPassedEvents = 0
+	 * nTimeStructureCutPassedEvents = 0
+	 * nBPDTrackQualityCutPassedEvents = 0
+	 * nMainVertexPresenceCutPassedEvents = 0
+	 * nMainVertexZCutPassedEvents = 0
+	 * nThinningCutPassedEvents = 0
+	 * nPassedEvents = 0
+Finished.
+
+[INFO] Modules/General/EventFileReaderSG/EventFileReader.cc:218: Finish: Read 5 events in 80.6691 sec, 0.0619816 ev/sec, with 16.3384% cpu usage.
+[INFO] Legacy/Clients/DSHACKServerLauncherSG/DSHACKServerLauncherSG.cc:85: Finish: Killing DSHACK server
+[INFO] Framework/RunController/RunController.cc:261: FinishBranch: 
+
+CPU user and system time in Module::Run()
+                Module:   USR    SYS    %  
+-------------------------------------------
+DriftVelocityFromTOFPK:   0     0       0  
+       EventSelectorSG:   0.01  0       0.1
+NA49ToShineConverterSG:   0.02  0       0.2
+      DeDxNa61ModuleSG:   0     0.02    0.2
+          TofrModuleSG:   0     0.01    0.1
+          ToflModuleSG:   0     0.01    0.1
+        ReformModuleSG:   0     0.01    0.1
+     GtpcTrackModuleSG:   0     0.02    0.2
+       PpointsModuleSG:   0.01  0       0.1
+           VtxModuleSG:   0.01  0.01    0.2
+ TpcFlightTimeModuleSG:   0     0.01    0.1
+           R3dModuleSG:   0     0.05    0.4
+      TpcErrorModuleSG:   0.01  0.02    0.2
+        PatrecModuleSG:   0     0.03    0.2
+          MpatModuleSG:   0.01  0.09    0.8
+         MtracModuleSG:   0.01  0.09    0.8
+       ResCorrModuleSG:   0     0       0  
+       VtNcalcModuleSG:   0     0.03    0.2
+        EdistoModuleSG:   0.01  0.04    0.4
+    Dipt256NewModuleSG:   0.02  0.03    0.4
+          MiniModuleSG:   0     0.04    0.3
+   ClientInitializerSG:  11.21  0.44   93.3
+     EventFileReaderSG:   0.06  0.03    0.7
+DSHACKServerLauncherSG:   0     0       0  
+-------------------------------------------
+           All modules:  11.38  0.98   99  
+                 Total:  11.46  1.02  100  
+
+[INFO] Framework/RunController/RunController.cc:266: FinishBranch: Total real time of the run: 78.8984 sec.
+                                                    
+====================================================
+End of run: Shine Offline Framework v1r7p0-svn_trunk
+SVN revision number: 13001M                         
+====================================================
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<GlobalT0
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="[SCHEMAPATH]/TPCGlobalT0_DBFormat.xsd"
+  t0unit="nanosecond">
+
+  <Entry runStart="26389" runStop="26389"> 2085.41 </Entry>
+
+</GlobalT0>
+

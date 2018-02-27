@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- $Id: EventFileReader.xml 8018 2012-10-12 09:32:58Z munger $ -->
+
+<!-- Configuration of Module EventFileReader -->
+<EventFileReader
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation='[SCHEMAPATH]/EventFileReader.xsd'>
+
+  <ReportFilenames/>
+
+  <!-- the list of filenames (space delimited) -->
+  <InputFilenames>
+    <!--../../../../doc/SampleEvents/run-009917x054_shoe.root-->
+    `ls $INPUTFILE`
+  </InputFilenames>
+
+  <!-- default, silent, terse, verbose, annoying -->
+  <verbosity> verbose </verbosity>
+
+  <!-- catch exception and return eContinueLoop if true,
+       return eFailure otherwise -->
+  <continueOnException> 0 </continueOnException>
+
+  <!-- force no unpacking of TPC BOS data -->
+  <forceNoTPCBOSData> 0 </forceNoTPCBOSData>
+
+</EventFileReader>

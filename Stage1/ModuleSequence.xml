@@ -1,0 +1,23 @@
+<!-- A dummy sequence for calibration -->
+<!-- $Id: ModuleSequence.xml 10693 2014-04-24 09:17:34Z laszlo $ -->
+
+<sequenceFile
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation='[SCHEMAPATH]/ModuleSequence.xsd'>
+
+  <enableTiming/>
+
+  <moduleControl>
+
+    <loop numTimes="unbounded">
+
+      <module> EventFileReaderSG   </module>
+      <module> EventSelectorSG     </module>
+      <module> TPCPhaseShiftCalibratorAL  </module>
+      <module> MHTDCCalibratorAL   </module>
+
+    </loop>
+
+  </moduleControl>
+
+</sequenceFile>

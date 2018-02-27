@@ -1,0 +1,89 @@
+<!-- A dummy sequence for reconstruction -->
+<!-- ModuleSequence.NA49.xml -->
+
+<sequenceFile
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation='[SCHEMAPATH]/ModuleSequence.xsd'>
+
+  <enableTiming/>
+
+  <moduleControl>
+
+    <loop numTimes="unbounded">
+
+      <module>                  DSHACKServerLauncherSG </module>
+      <module>                  EventFileReaderSG      </module>
+      <module>                  ClientInitializerSG    </module>
+      <try>
+        <module config="many">    MiniModuleSG           </module>
+<!--        <module config="vdinit">  MiniModuleSG           </module>
+        <module config="All">     VdriftCorrModuleSG     </module>-->
+        <module config="VTPCs">   Dipt256NewModuleSG     </module>
+        <module config="MTPCs">   Dipt256NewModuleSG     </module>
+        <module config="GPC">     Dipt256NewModuleSG     </module>
+        <module config="VT1">     EdistoModuleSG         </module>
+        <module config="VT1">     VtNcalcModuleSG        </module>
+        <module config="VT2">     EdistoModuleSG         </module>
+        <module config="VT2">     VtNcalcModuleSG        </module>
+        <module config="MTL">     EdistoModuleSG         </module>
+        <module config="MTR">     EdistoModuleSG         </module>
+        <module config="GPC">     VtNcalcModuleSG        </module>
+        <module config="ALL">     ResCorrModuleSG        </module>
+        <module config="TrckM1">  MtracModuleSG          </module>
+        <module config="I2RTrck"> MtracModuleSG          </module>
+        <module config="MOM">     MtracModuleSG          </module>
+        <module config="MTPCs">   MpatModuleSG           </module>
+        <module config="VT-2">    MpatModuleSG           </module>
+        <module config="VT2">   PatrecModuleSG         </module>
+        <module config="VT2">     TpcErrorModuleSG       </module>
+        <module config="VT2M1">   R3dModuleSG            </module>
+        <module config="P-VT2">   MpatModuleSG           </module>
+        <module config="monVT2">  MiniModuleSG           </module>
+        <module config="VT-1">    MpatModuleSG           </module>
+        <module config="VT1">   PatrecModuleSG         </module>
+        <module config="VT1">     TpcErrorModuleSG       </module>
+        <module config="VT1M1">   R3dModuleSG            </module>
+        <module config="P-VT1">   MpatModuleSG           </module>
+        <module config="monVT1">  MiniModuleSG           </module>
+        <module config="TrckM2">  MtracModuleSG          </module>
+        <module config="I2RTrck"> MtracModuleSG          </module>
+        <module config="MTL">     TpcErrorModuleSG       </module>
+        <module config="MTR">     TpcErrorModuleSG       </module>
+        <module config="MOM">     MtracModuleSG          </module>
+        <module config="Decay">   MtracModuleSG          </module>
+        <module config="monMTL">  MiniModuleSG           </module>
+        <module config="monMTR">  MiniModuleSG           </module>
+        <module config="GLOBAL">  MpatModuleSG           </module>
+        <module config="ALL">     TpcErrorModuleSG       </module>
+        <module config="ALL">     TpcFlightTimeModuleSG  </module>
+        <module config="ALLM1">   R3dModuleSG            </module>
+        <module config="ALL">   VtxModuleSG            </module>
+        <module config="ALLM2">   R3dModuleSG            </module>
+        <module config="ALL">     PpointsModuleSG        </module>
+        <module config="ALL">     GtpcTrackModuleSG      </module>
+        <module config="FULL">    ReformModuleSG         </module>
+        <module config="ALLM1R">  R3dModuleSG            </module>
+        <module config="ALL">   VtxModuleSG            </module>
+        <module config="ALLM2R">  R3dModuleSG            </module>
+
+        <!--<module config="ALL">   FtofNewModuleSG        </module>-->
+        <module config="VERB">  ToflModuleSG           </module>
+        <module config="VERB">  TofrModuleSG           </module>
+        <module config="ALL">     DeDxNa61ModuleSG       </module>
+        <!--<module config="ALL">   V0FindModuleSG         </module>-->
+        <!--<module config="ALL">     V0FitModuleSG          </module>-->
+        <!--<module config="ALL">   XiFitModuleSG         </module>-->
+    </try>
+    <!--<module>                  DSDumpSG </module>-->
+    <module>                  NA49ToShineConverterSG </module>
+    <!--<module>                  V0FinderSG         </module>-->
+    <!-- These are the calibration-analysis modules -->
+    <module> EventSelectorSG </module>
+    <module> DriftVelocityFromTOFPK </module>
+    <!--<module>                  ShineFileExporterSG    </module>-->
+
+    </loop>
+
+  </moduleControl>
+
+</sequenceFile>

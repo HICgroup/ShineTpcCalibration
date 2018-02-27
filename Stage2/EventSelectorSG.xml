@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- Configuration of Module EventSelectorSG -->
+
+<EventSelectorSG
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation='[SCHEMAPATH]/EventSelectorSG.xsd'>
+
+  <!-- filter out events with noninitialized event header? -->
+  <doEventHeaderFiltering> 1 </doEventHeaderFiltering>
+
+  <target> any </target>
+
+  <!-- trigger channel selection (T1, T2, T3, T4 or MT). -->
+  <triggerId> T4 </triggerId>
+  <!-- trigger type selection (prsc, gtd or all). -->
+  <triggerType> all </triggerType>
+
+  <!-- time structure cut for S1_1, using WFA. -->
+  <timeStructureCutOnS11UsingWFA>
+    <isOn> 1 </isOn>
+    <min unit="microsecond"> -5.0 </min>
+    <max unit="microsecond"> 5.0 </max>
+  </timeStructureCutOnS11UsingWFA>
+  <timeStructureS11UsingWFAHist>
+    <nBinsX>  100 </nBinsX>
+    <xMin>    -50.0 </xMin>
+    <xMax>    50.0 </xMax>
+    <hisTitle> Time structure of S1_1 on WFA </hisTitle>
+    <xAxisTitle> Time </xAxisTitle>
+    <xAxisUnit> microsecond </xAxisUnit>
+    <yAxisTitle> Entries </yAxisTitle>
+  </timeStructureS11UsingWFAHist>
+  <!-- time structure cut for T4, using WFA. -->
+  <timeStructureCutOnT4UsingWFA>
+    <isOn> 1 </isOn>
+    <min unit="microsecond"> -5.0 </min>
+    <max unit="microsecond"> 5.0 </max>
+  </timeStructureCutOnT4UsingWFA>
+  <timeStructureT4UsingWFAHist>
+    <nBinsX>  100 </nBinsX>
+    <xMin>    -50.0 </xMin>
+    <xMax>    50.0 </xMax>
+    <hisTitle> Time structure of T4 on WFA </hisTitle>
+    <xAxisTitle> Time </xAxisTitle>
+    <xAxisUnit> microsecond </xAxisUnit>
+    <yAxisTitle> Entries </yAxisTitle>
+  </timeStructureT4UsingWFAHist>
+  <!-- time structure cut for S1_1, using MHTDC. -->
+  <timeStructureCutOnS11UsingMHTDC>
+    <isOn> 0 </isOn>
+    <min unit="microsecond"> -5.0 </min>
+    <max unit="microsecond"> 5.0 </max>
+  </timeStructureCutOnS11UsingMHTDC>
+  <timeStructureS11UsingMHTDCHist>
+    <nBinsX>  100 </nBinsX>
+    <xMin>    -50.0 </xMin>
+    <xMax>    50.0 </xMax>
+    <hisTitle> Time structure of S1_1 on MHTDC </hisTitle>
+    <xAxisTitle> time </xAxisTitle>
+    <xAxisUnit> microsecond </xAxisUnit>
+    <yAxisTitle> Entries </yAxisTitle>
+  </timeStructureS11UsingMHTDCHist>
+  <!-- time structure cut for T4, using MHTDC. -->
+  <timeStructureCutOnT4UsingMHTDC>
+    <isOn> 0 </isOn>
+    <min unit="microsecond"> -50.0 </min>
+    <max unit="microsecond"> 50.0 </max>
+  </timeStructureCutOnT4UsingMHTDC>
+  <timeStructureT4UsingMHTDCHist>
+    <nBinsX>  100 </nBinsX>
+    <xMin>    -50.0 </xMin>
+    <xMax>    50.0 </xMax>
+    <hisTitle> Time structure of T4 on MHTDC </hisTitle>
+    <xAxisTitle> time </xAxisTitle>
+    <xAxisUnit> microsecond </xAxisUnit>
+    <yAxisTitle> Entries </yAxisTitle>
+  </timeStructureT4UsingMHTDCHist>
+
+  <!-- BPD track quality requirement (any, perfect, oneUpstreamBPDCanMiss). -->
+  <bpdTrackQuality> any </bpdTrackQuality>
+
+  <!-- require main vertex to be present? -->
+  <doMainVertexPresenceFiltering> 0 </doMainVertexPresenceFiltering>
+
+  <!-- main vertex z-cut. -->
+  <mainVertexZCut>
+    <isOn> 0 </isOn>
+    <min unit="cm"> -650.0 </min>
+    <max unit="cm"> -530.0 </max>
+  </mainVertexZCut>
+  <mainVertexZHist>
+    <nBinsX>  100 </nBinsX>
+    <xMin>    -650.0 </xMin>
+    <xMax>    -530.0 </xMax>
+    <hisTitle> Main Vertex global-z distribution before cut </hisTitle>
+    <xAxisTitle> Vz </xAxisTitle>
+    <xAxisUnit> cm </xAxisUnit>
+    <yAxisTitle> Entries </yAxisTitle>
+  </mainVertexZHist>
+
+  <thinning> 1 </thinning>
+
+  <!-- file name of control histograms. -->
+  <controlHistogramsFileName>  </controlHistogramsFileName>
+
+</EventSelectorSG>

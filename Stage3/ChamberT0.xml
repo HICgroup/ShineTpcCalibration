@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ChamberT0List
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="[SCHEMAPATH]/TPCChamberT0_DBFormat.xsd">
+
+  <ChamberT0 t0unit="nanosecond" runStart="26389" runStop="26389">
+    <TPC name="GTPC"> 0 </TPC>
+    <TPC name="MTPCL"> -242.608 </TPC>
+    <TPC name="MTPCR"> -314.679 </TPC>
+    <TPC name="VTPC1"> -94.6 </TPC>
+    <TPC name="VTPC2"> -40.4674 </TPC>
+  </ChamberT0>
+
+</ChamberT0List>
+
