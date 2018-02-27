@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- Configuration of Module TPCPhaseShiftCalibratorAL -->
+
+<TPCPhaseShiftCalibratorAL
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation='[SCHEMAPATH]/TPCPhaseShiftCalibratorAL.xsd'>
+
+  <!-- file name of output file for root TTree for analysis -->
+  <tpcPhaseOutputFileName> tpcPhases.root </tpcPhaseOutputFileName>
+
+</TPCPhaseShiftCalibratorAL>

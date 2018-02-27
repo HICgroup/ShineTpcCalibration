@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- Configuration of Module DriftVelocityFromTOFPK -->
+
+<DriftVelocityFromTOFPK
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation='[SCHEMAPATH]/DriftVelocityFromTOFPK.xsd'>
+
+  <!-- number of clusters cut on local tracks -->
+  <nMinVTPC1Clusters> 20 </nMinVTPC1Clusters>
+  <nMinVTPC2Clusters> 20 </nMinVTPC2Clusters>
+  <nMinMTPCLClusters> 40 </nMinMTPCLClusters>
+  <nMinMTPCRClusters> 40 </nMinMTPCRClusters>
+  <nMinGTPCClusters>  5  </nMinGTPCClusters>
+  <!-- GTPC beam spot cut in X strip to reject off-times -->
+  <localXLeftMarginGTPCBeamSpot unit="cm"> -2.0 </localXLeftMarginGTPCBeamSpot>
+  <localXRightMarginGTPCBeamSpot unit="cm"> 7.0 </localXRightMarginGTPCBeamSpot>
+  <!-- ToF hit validity cut -->
+  <timeOfFlightMin unit="nanosecond"> 44.0 </timeOfFlightMin>
+  <timeOfFlightMax unit="nanosecond"> 53.0 </timeOfFlightMax>
+  <normalizedChargeMin> 0.7 </normalizedChargeMin>
+  <normalizedChargeMax> 1.7 </normalizedChargeMax>
+
+  <!-- file name of output root file with track matching differences -->
+  <trackMatchOutputFileName> trackMatchDump.root </trackMatchOutputFileName>
+
+</DriftVelocityFromTOFPK>

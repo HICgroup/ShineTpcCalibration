@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- Configuration of Module MHTDCCalibratorAL -->
+
+<MHTDCCalibratorAL
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation='[SCHEMAPATH]/MHTDCCalibratorAL.xsd'>
+
+  <!-- file name of output root file with MTacc-S11 differences -->
+  <mhtdcOutputFileName> mhtdcDiffs.root </mhtdcOutputFileName>
+
+</MHTDCCalibratorAL>

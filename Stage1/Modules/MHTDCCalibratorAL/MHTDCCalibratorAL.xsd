@@ -1,0 +1,17 @@
+<xsd:schema
+  xmlns:xsd='http://www.w3.org/2001/XMLSchema'
+  xmlns:shine="http://cern.ch/na61/schema/types">
+
+  <xsd:import
+    namespace="http://cern.ch/na61/schema/types"
+    schemaLocation="[SCHEMAPATH_IMPORTS]/ShineSchemaTypes.xsd"/>
+
+  <xsd:element name="MHTDCCalibratorAL">
+     <xsd:complexType>
+       <xsd:sequence>
+         <xsd:element name="mhtdcOutputFileName" type="xsd:string"/>
+       </xsd:sequence>
+     </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>

@@ -1,0 +1,41 @@
+<xsd:schema
+  xmlns:xsd='http://www.w3.org/2001/XMLSchema'
+  xmlns:shine="http://cern.ch/na61/schema/types">
+
+  <xsd:import
+    namespace="http://cern.ch/na61/schema/types"
+    schemaLocation="[SCHEMAPATH_IMPORTS]/ShineSchemaTypes.xsd"/>
+
+  <xsd:element name="TPCBottomPointExtractorAB">
+     <xsd:complexType>
+       <xsd:sequence>
+         <xsd:element name="localXRatioMargin" type="xsd:double"/>
+         <xsd:element name="padRowNumberMargin" type="xsd:unsignedInt"/>
+         <xsd:element name="padRowNumberMarginGTPC" type="xsd:unsignedInt"/>
+         <xsd:element name="timeSliceMarginIn512Mode" type="xsd:unsignedInt"/>
+         <xsd:element name="localXLeftMarginGTPCBeamSpot" type="shine:doubleWithUnit"/>
+         <xsd:element name="localXRightMarginGTPCBeamSpot" type="shine:doubleWithUnit"/>
+         <xsd:element ref="nMinClusters"/>
+         <xsd:element name="tpcBottomPointsOutputFileName" type="xsd:string"/>
+       </xsd:sequence>
+     </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="nMinClusters">
+     <xsd:complexType>
+       <xsd:sequence>
+         <xsd:element name="VTPC1" type="xsd:unsignedInt"/>
+         <xsd:element name="VTPC2" type="xsd:unsignedInt"/>
+         <xsd:element name="MTPCL" type="xsd:unsignedInt"/>
+         <xsd:element name="MTPCR" type="xsd:unsignedInt"/>
+         <xsd:element name="GTPC" type="xsd:unsignedInt"/>
+         <xsd:element name="LMPDJD" type="xsd:unsignedInt"/>
+         <xsd:element name="LMPDJU" type="xsd:unsignedInt"/>
+         <xsd:element name="LMPDSU" type="xsd:unsignedInt"/>
+         <xsd:element name="LMPDSD" type="xsd:unsignedInt"/>
+         <xsd:element name="LMPDP" type="xsd:unsignedInt"/>
+       </xsd:sequence>
+     </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>

@@ -1,0 +1,28 @@
+<xsd:schema
+  xmlns:xsd='http://www.w3.org/2001/XMLSchema'
+  xmlns:shine="http://cern.ch/na61/schema/types">
+
+  <xsd:import
+    namespace="http://cern.ch/na61/schema/types"
+    schemaLocation="[SCHEMAPATH_IMPORTS]/ShineSchemaTypes.xsd"/>
+
+  <xsd:element name="DriftVelocityFromTOFPK">
+     <xsd:complexType>
+       <xsd:sequence>
+         <xsd:element name="nMinVTPC1Clusters" type="xsd:unsignedInt"/>
+         <xsd:element name="nMinVTPC2Clusters" type="xsd:unsignedInt"/>
+         <xsd:element name="nMinMTPCLClusters" type="xsd:unsignedInt"/>
+         <xsd:element name="nMinMTPCRClusters" type="xsd:unsignedInt"/>
+         <xsd:element name="nMinGTPCClusters" type="xsd:unsignedInt"/>
+         <xsd:element name="localXLeftMarginGTPCBeamSpot" type="shine:doubleWithUnit"/>
+         <xsd:element name="localXRightMarginGTPCBeamSpot" type="shine:doubleWithUnit"/>
+         <xsd:element name="timeOfFlightMin" type="shine:doubleWithUnit"/>
+         <xsd:element name="timeOfFlightMax" type="shine:doubleWithUnit"/>
+         <xsd:element name="normalizedChargeMin" type="xsd:double"/>
+         <xsd:element name="normalizedChargeMax" type="xsd:double"/>
+         <xsd:element name="trackMatchOutputFileName" type="xsd:string"/>
+       </xsd:sequence>
+     </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>

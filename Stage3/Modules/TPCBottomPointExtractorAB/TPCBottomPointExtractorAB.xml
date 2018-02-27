@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- Configuration of Module TPCBottomPointExtractorAB -->
+
+<TPCBottomPointExtractorAB
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation='[SCHEMAPATH]/TPCBottomPointExtractorAB.xsd'>
+
+  <!-- margin to keep away from sides in local X coordinate (measured in detection plane width) -->
+  <localXRatioMargin> 0.1 </localXRatioMargin>
+  <!-- margin to keep away from sides in local Z (measured in padrow number) -->
+  <padRowNumberMargin> 2 </padRowNumberMargin>
+  <!-- margin to keep away from sides in local Z for GTPC (measured in padrow number) -->
+  <padRowNumberMarginGTPC> 1 </padRowNumberMarginGTPC>
+  <!-- margin to keep away from top side in local Y (measured in time slice count in 512TB mode) -->
+  <timeSliceMarginIn512Mode> 128 </timeSliceMarginIn512Mode>
+
+  <!-- left margin to cut away beam spot in local X in GTPC -->
+  <localXLeftMarginGTPCBeamSpot unit="cm"> -2.0 </localXLeftMarginGTPCBeamSpot>
+  <!-- right margin to cut away beam spot in local X in GTPC -->
+  <localXRightMarginGTPCBeamSpot unit="cm"> 7.0 </localXRightMarginGTPCBeamSpot>
+
+  <!-- Minimal number of clusters. -->
+  <nMinClusters>
+    <VTPC1>   32 </VTPC1>
+    <VTPC2>   32 </VTPC2>
+    <MTPCL>   32 </MTPCL>
+    <MTPCR>   32 </MTPCR>
+    <GTPC>     4 </GTPC>
+    <LMPDJD>   4 </LMPDJD>
+    <LMPDJU>   4 </LMPDJU>
+    <LMPDSU>   4 </LMPDSU>
+    <LMPDSD>   4 </LMPDSD>
+    <LMPDP>    4 </LMPDP>
+  </nMinClusters>
+
+  <!-- file name for output data -->
+  <tpcBottomPointsOutputFileName> tpcBottomPoints.root </tpcBottomPointsOutputFileName>
+
+</TPCBottomPointExtractorAB>
