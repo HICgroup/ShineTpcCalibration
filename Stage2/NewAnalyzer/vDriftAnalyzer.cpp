@@ -91,6 +91,15 @@ int main(int argc, char** argv)
 	}
 	//-----------------------------------------------------------------------------//
 
+	const double Ylimit = 2.;
+	const int    Nbins  = 500;
+	std::map<std::string,double> Xlimit;
+	Xlimit["MTPCLvsTOFL"] = 60;
+	Xlimit["MTPCRvsTOFR"] = 60;
+	Xlimit["VTPC2vsMTPCL"] = 30;
+	Xlimit["VTPC2vsMTPCR"] = 30;
+	Xlimit["VTPC1vsVTPC2"] = 30;
+
 	std::cout << "Getting TTree* from file." << std::endl;
 
 	std::map<std::string, TTree*> dataTrees;
@@ -187,18 +196,63 @@ int main(int argc, char** argv)
 			TGraph* gr = new TGraph(vY[i_sect].size(),&(vY[i_sect][0]),&(vDY[i_sect][0]));
 			gr->SetName(("g_"+v_order.at(i)+"_Id_"+patch::to_string(i_sect)).c_str());
 			gr->SetTitle(("graph of dY vs Y from "+v_order.at(i)+" for section "+patch::to_string(i_sect)).c_str());
-			TF1* func = new TF1("func","pol1",-Xlimit,Xlimit);
-			if (is_verbose) gr->Fit(func,"R");
-			if (!is_verbose) gr->Fit(func,"RQ");
+			
+			//std::cout << vY[i_sect].size() << " " << vDY[i_sect].size() << " "  << gr->GetN() << " " << gr->GetMinimum() << " " <<gr->GetMaximum() << std::endl;
+			
+			TF1* func = new TF1("func","pol1",-Xlimit[v_order.at(i)],Xlimit[v_order.at(i)]);
+			if (is_verbose && gr->GetN() > 0) gr->Fit(func,"R");
+			if (!is_verbose && gr->GetN() > 0) gr->Fit(func,"RQ");
+
 			v_slope.push_back(func->GetParameter(1));
+			TProfile* pr = new TProfile(("p_"+v_order.at(i)+"_Id_"+patch::to_string(i_sect)).c_str(),("graph of dY vs Y from "+v_order.at(i)+" for section "+patch::to_string(i_sect)).c_str(),Nbins,-Xlimit[v_order.at(i)],Xlimit[v_order.at(i)],-Ylimit,Ylimit);
+			for (int i_prof=0;i_prof<vY[i_sect].size();i_prof++){
+				pr->Fill(vY[i_sect].at(i_prof),vDY[i_sect].at(i_prof));
+			}
+			TF1* p_func = new TF1("p_func","pol1",-Xlimit[v_order.at(i)],Xlimit[v_order.at(i)]);
+			if (pr->GetEntries() > 0) pr->Fit(p_func,"RQ");
+			
+			TCanvas* c_gr = 0;
+			TLegend* g_leg = 0;
+			if (gr->GetN() > 0){
+				c_gr = new TCanvas(("c_graph_"+v_order.at(i)+"_Id_"+patch::to_string(i_sect)).c_str(),("graph of dY vs Y from "+v_order.at(i)+" for section "+patch::to_string(i_sect)).c_str());
+				g_leg = new TLegend(0.65,0.65,0.9,0.9);
+				g_leg->AddEntry(gr->GetFunction("func"),"Linear Fit","l");
+				g_leg->AddEntry(gr->GetFunction("func"),("Slope = " + patch::to_string(gr->GetFunction("func")->GetParameter(1)) + " +- " + patch::to_string(gr->GetFunction("func")->GetParError(1))).c_str(),"");
+				c_gr->cd();
+				gr->Draw("AP");
+				g_leg->Draw();
+			}
+
+			TCanvas* c_pr = 0;
+			TLegend* p_leg = 0;
+			if (pr->GetEntries() > 0){
+				c_pr = new TCanvas(("c_prof_"+v_order.at(i)+"_Id_"+patch::to_string(i_sect)).c_str(),("profile of dY vs Y from "+v_order.at(i)+" for section "+patch::to_string(i_sect)).c_str());
+				p_leg = new TLegend(0.65,0.65,0.9,0.9);
+				p_leg->AddEntry(pr->GetFunction("p_func"),"Linear Fit","l");
+				p_leg->AddEntry(pr->GetFunction("p_func"),("Slope = " + patch::to_string(pr->GetFunction("p_func")->GetParameter(1)) + " +- " + patch::to_string(pr->GetFunction("p_func")->GetParError(1))).c_str(),"");
+				c_pr->cd();
+				pr->Draw();
+				p_leg->Draw();
+			}
+
+
 			if (is_root_output){
 				// std::cout << "  Writing in root file." << std::endl;
 				f_out->cd(v_order.at(i).c_str());
 				gr->Write();
+				pr->Write();
+				if (gr->GetN() > 0) c_gr->Write();
+				if (pr->GetEntries() > 0) c_pr->Write();
 			}
 
 			delete gr;
+			delete pr;
 			delete func;
+			delete p_func;
+			if (c_gr != 0) delete c_gr;
+			if (c_pr != 0) delete c_pr;
+			if (g_leg != 0) delete g_leg;
+			if (p_leg != 0) delete p_leg;
 			vY[i_sect].clear();
 			vDY[i_sect].clear();
 		}
@@ -267,16 +321,25 @@ int main(int argc, char** argv)
 			TGraph* gr = new TGraph(slave_Y_fixed[i_sect].size(),&(v_master_Y[i_sect][0]),&(slave_Y_fixed[i_sect][0]));
 			gr->SetName(("g_fixed"+v_order.at(i)+"_Id_"+patch::to_string(i_sect)).c_str());
 			gr->SetTitle(("graph of fixed dY vs Y from "+v_order.at(i)+" for section "+patch::to_string(i_sect)).c_str());
-			TF1* func = new TF1("func","pol1",-Xlimit,Xlimit);
-			gr->Fit(func,"RQ");
+			TF1* func = new TF1("func","pol1",-Xlimit[v_order.at(i)],Xlimit[v_order.at(i)]);
+			if (gr->GetN() > 0) gr->Fit(func,"RQ");
+			TProfile* pr = new TProfile(("p_fixed"+v_order.at(i)+"_Id_"+patch::to_string(i_sect)).c_str(),("graph of dY vs Y from "+v_order.at(i)+" for section "+patch::to_string(i_sect)).c_str(),Nbins,-Xlimit[v_order.at(i)],Xlimit[v_order.at(i)],-Ylimit,Ylimit);
+			for (int i_prof=0;i_prof<v_master_Y[i_sect].size();i_prof++){
+				pr->Fill(v_master_Y[i_sect].at(i_prof),slave_Y_fixed[i_sect].at(i_prof));
+			}
+			TF1* p_func = new TF1("p_func","pol1",-Xlimit[v_order.at(i)],Xlimit[v_order.at(i)]);
+			if (pr->GetEntries() > 0) pr->Fit(p_func,"RQ");
 			if (is_root_output){
 				// std::cout << "  Writing in root file." << std::endl;
 				f_out->cd(v_order.at(i).c_str());
 				gr->Write();
+				pr->Write();
 			}
 
 			delete gr;
+			delete pr;
 			delete func;
+			delete p_func;
 			slave_Y_fixed[i_sect].clear();
 			v_master_Y[i_sect].clear();
 		}

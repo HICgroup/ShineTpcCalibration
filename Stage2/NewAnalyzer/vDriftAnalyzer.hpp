@@ -15,6 +15,9 @@
 #include "TH1.h"
 #include "TF1.h"
 #include "TGraph.h"
+#include "TProfile.h"
+#include "TLegend.h"
+#include "TCanvas.h"
 
 #define _N_AGREGATE 300
 
@@ -40,8 +43,6 @@ const int error_code[] = {10,11,12,13,14};
 ////    13 - file not found
 ////    14 - uncorrect parameter in GetSlope("string",std::map<...>)
 
-const double Ylimit = 2.;
-const double Xlimit = 60.;
 
 #pragma pack(push, 1)
 struct vDriftTreeStructure{
